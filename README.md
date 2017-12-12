@@ -96,3 +96,4 @@ Visualstudio 打开tankServer   SocketServer工程开始执行
 ![输入图片说明](https://gitee.com/uploads/images/2017/1213/012851_de37ef70_11587.png "图片4.png")
 ![输入图片说明](https://gitee.com/uploads/images/2017/1213/012857_2fe2f862_11587.png "图片5.png")
 ![输入图片说明](https://gitee.com/uploads/images/2017/1213/012907_5208f91b_11587.png "图片6.png")
+[输入链接说明](https://v.qq.com/x/page/u05182pooi4.html)
