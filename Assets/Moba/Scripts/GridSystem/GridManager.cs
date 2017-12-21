@@ -11,27 +11,60 @@ public class GridManager : MonoBehaviour {
     {
         Instance = this;
     }
-    public void LoadMap(string jsonData)
-    {
-        Debug.LogError("LoadMap");
-        var data = SimpleJSON.JSON.Parse(jsonData);
-        width = System.Convert.ToInt32(data[0]["width"].AsFloat);
-        height = Convert.ToInt32(data[0]["height"].AsFloat);
 
-        var cenArray = data[0]["center"].AsObject;
+    /// <summary>
+    /// 保证width 高度 和 围墙数据一致
+    /// </summary>
+    /// <param name="jclass"></param>
+    private void LoadMapGrass(JSONClass jclass)
+    {
+        var width = System.Convert.ToInt32(jclass["width"].AsFloat);
+        var height = Convert.ToInt32(jclass["height"].AsFloat);
+
+        var cenArray = jclass["center"].AsObject;
+        var cx = cenArray["x"].AsFloat;
+        var cy = cenArray["y"].AsFloat;
+        var cz = cenArray["z"].AsFloat;
+        var center = new Vector3(cx, cy, cz);
+        var nodeSize = jclass["nodeSize"].AsFloat;
+
+        var mapData = jclass["mapdata"].AsArray;
+        grassGrids = new List<int>();
+        var i = 0;
+        foreach (SimpleJSON.JSONNode d in mapData)
+        {
+            var v = d.AsInt;
+            if (v == 1)
+            {
+                grassGrids.Add(1);
+            }
+            else
+            {
+                grassGrids.Add(0);
+            }
+            i++;
+        }
+    }
+
+    private void LoadMapJsonDict(JSONClass jclass)
+    {
+        width = System.Convert.ToInt32(jclass["width"].AsFloat);
+        height = Convert.ToInt32(jclass["height"].AsFloat);
+
+        var cenArray = jclass["center"].AsObject;
         var cx = cenArray["x"].AsFloat;
         var cy = cenArray["y"].AsFloat;
         var cz = cenArray["z"].AsFloat;
         center = new Vector3(cx, cy, cz);
-        nodeSize = data[0]["nodeSize"].AsFloat;
+        nodeSize = jclass["nodeSize"].AsFloat;
 
-        var mapData = data[0]["mapdata"].AsArray;
+        var mapData = jclass["mapdata"].AsArray;
         grids = new StaticGrid(width, height);
         var i = 0;
-        foreach(SimpleJSON.JSONNode d in mapData)
+        foreach (SimpleJSON.JSONNode d in mapData)
         {
             var v = d.AsInt;
-            if(v == 0)
+            if (v == 0)
             {
                 var r = i / width;
                 var c = i % width;
@@ -40,12 +73,20 @@ public class GridManager : MonoBehaviour {
             i++;
         }
 
-        var mh = data[0]["mapHeight"].AsArray;
+        var mh = jclass["mapHeight"].AsArray;
         mapHeight = new List<float>(width * height);
-        foreach(JSONNode d in mh)
+        foreach (JSONNode d in mh)
         {
             mapHeight.Add(d.AsFloat);
         }
+    }
+
+    public void LoadMap(string jsonData)
+    {
+        Debug.LogError("LoadMap");
+        var data = SimpleJSON.JSON.Parse(jsonData);
+        LoadMapJsonDict(data[0].AsObject);
+        LoadMapGrass(data[1].AsObject);
     }
 
     /// <summary>
@@ -366,6 +407,20 @@ public class GridManager : MonoBehaviour {
 
 
     /// <summary>
+    /// 每个逻辑帧检测当前所在网格状态
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <returns></returns>
+    public bool CheckInGrass(Vector3 pos)
+    {
+        var gPos = mapPosToGrid(pos);
+        var gid = GetGridId(gPos);
+        var gNode = grassGrids[gid];
+        return gNode == 1;
+    }
+
+
+    /// <summary>
     /// 得到点Pos 最近的可以走的位置 
     /// 所在网格可以行走
     /// 不能行走则临近最近网格接触点
@@ -427,8 +482,17 @@ public class GridManager : MonoBehaviour {
         return pos;
     }
 
+    private int GetGridId(Vector2 grid)
+    {
+        var gx = Mathf.Clamp(grid.x, 0, width - 1);
+        var gy = Mathf.Clamp(grid.y, 0, height - 1);
+        var gid = (int)(gx + gy * width);
+        return gid;
+    }
+
 
     private BaseGrid grids;
+    private List<int> grassGrids;
     private int width, height;
     private Vector3 center;
     private float nodeSize;

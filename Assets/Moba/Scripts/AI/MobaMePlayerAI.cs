@@ -11,6 +11,7 @@ namespace MyLib
     [RequireComponent(typeof(MobaMeSyncToServer))]
     [RequireComponent(typeof(MobaMePhysic))]
     [RequireComponent(typeof(MobaModelLoader))]
+    [RequireComponent(typeof(MobaCheckInGrass))]
     public class MobaMePlayerAI : AIBase 
     {
         private void Awake()

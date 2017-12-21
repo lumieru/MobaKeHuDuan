@@ -7,6 +7,7 @@ namespace MyLib
     [RequireComponent(typeof(MobaOtherSync))]
     [RequireComponent(typeof(MobaMePhysic))]
     [RequireComponent(typeof(MobaModelLoader))]
+    [RequireComponent(typeof(MobaCheckInGrass))]
     public class MobaOtherPlayer : AIBase
     {
         private void Awake()

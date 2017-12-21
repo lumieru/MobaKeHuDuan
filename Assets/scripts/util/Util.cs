@@ -917,6 +917,7 @@ namespace MyLib
         }
 
 
+        public static StatePrinting.Stateprinter printer = new StatePrinting.Stateprinter();
 
         
     }
