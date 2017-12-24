@@ -81,12 +81,23 @@ public class GridManager : MonoBehaviour {
         }
     }
 
+    private void LoadMapHeight(JSONClass jclass)
+    {
+        var mh = jclass["mapHeight"].AsArray;
+        mapHeight = new List<float>(width * height);
+        foreach (JSONNode d in mh)
+        {
+            mapHeight.Add(d.AsFloat);
+        }
+    }
+
     public void LoadMap(string jsonData)
     {
         Debug.LogError("LoadMap");
         var data = SimpleJSON.JSON.Parse(jsonData);
         LoadMapJsonDict(data[0].AsObject);
         LoadMapGrass(data[1].AsObject);
+        LoadMapHeight(data[2].AsObject);
     }
 
     /// <summary>

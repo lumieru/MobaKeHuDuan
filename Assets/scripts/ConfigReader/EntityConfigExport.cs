@@ -60,7 +60,9 @@ namespace MyLib
         {
             spawnId = 0;
             var jobj = ExportGameObject(this.gameObject);
-            var etyPath = Path.Combine(Application.dataPath, "../../tankServer/SocketServer/bin/Debug");
+            //var etyPath = Path.Combine(Application.dataPath, "../../tankServer/SocketServer/bin/Debug");
+            var etyPath = Path.Combine(Application.dataPath, "../../tankServer/SocketServer/ConfigData");
+
             var file = Path.Combine(etyPath, this.gameObject.name + ".json");
             if (File.Exists(file))
             {

@@ -16,5 +16,9 @@ namespace MyLib
             ai.AddState(new TowerAttack());
             ai.AddState(new TowerDead());
         }
+        private void Start()
+        {
+            ai.ChangeState(AIStateEnum.IDLE);
+        }
     }
 }

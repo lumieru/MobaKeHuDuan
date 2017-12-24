@@ -185,7 +185,7 @@ namespace MyLib
             cmd.runFrame = sk.RunFrame;
             cmd.proto = proto;
 
-            Log.GUI("Other Player Attack LogicCommand");
+            Log.GUI("Other Player Attack LogicCommand:"+gameObject+":"+proto);
             gameObject.GetComponent<LogicCommand>().PushCommand(cmd);
         }
 

@@ -203,6 +203,10 @@ namespace MyLib
                                 DoLogicCommand(c);
                                 runningCmd.Add(c);
                             }
+                        }else
+                        {
+                            DoLogicCommand(c);
+                            runningCmd.Add(c);
                         }
                     }
 

@@ -21,5 +21,9 @@ namespace MyLib
             ai.AddState(new MobaMeDead());
         }
 
+        private void Start()
+        {
+            ai.ChangeState(AIStateEnum.IDLE);
+        }
     }
 }

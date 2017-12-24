@@ -1,5 +1,5 @@
 #if UNITY_EDITOR
-#define DEBUG
+//#define DEBUG
 //#undef DEBUG
 #endif
 
@@ -67,39 +67,39 @@ public class Log
 	{
 		Record( category, Level.Normal, message );
 	}
-    [Conditional("DEBUG")]
+    [Conditional("DEBUG_LY")]
 	public static void AI(string messages) {
 		Important (Category.AI, messages);
 	}
-    [Conditional("DEBUG")]
+    [Conditional("DEBUG_LY")]
 	public static void Ani(string message) {
 		Important (Category.Animation, message);
 	}
-    [Conditional("DEBUG")]
+    [Conditional("DEBUG_LY")]
 	public static void Sys(string messages) {
 		Important (Category.System, messages);
 	}
-    [Conditional("DEBUG")]
+    [Conditional("DEBUG_LY")]
 	public static void GUI(string message) {
 		Important (Category.GUI, message);
 	}
-    [Conditional("DEBUG")]
+    [Conditional("DEBUG_LY")]
 	public static void Net(string message) {
 		Important (Category.Network, message);
 	}
 
-    [Conditional("DEBUG")]
+    [Conditional("DEBUG_LY")]
 	public static void Important( string message ) { Important( Category.Console, message ); }
 
-    [Conditional("DEBUG")]
+    [Conditional("DEBUG_LY")]
 	public static void Important( Category category, string message )
 	{
 		Record( category, Level.Important, message );
 	}
 
-    [Conditional("DEBUG")]
+    [Conditional("DEBUG_LY")]
 	public static void Critical( string message ) { Critical( Category.Console, message ); }
-    [Conditional("DEBUG")]
+    [Conditional("DEBUG_LY")]
 	public static void Critical( Category category, string message )
 	{
 		Record( category, Level.Critical, message );
