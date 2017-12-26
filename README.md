@@ -1,3 +1,15 @@
+###FAQ 常见问题
+
+C# http 服务器没有权限启动 ， 关掉防火墙， 开启权限
+
+[输入链接说明](https://stackoverflow.com/questions/4019466/httplistener-access-denied)
+
+Yes you can run HttpListener in non-admin mode. All you need to do is grant permissions to the particular URL. e.g.
+
+netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
+
+
+
 ###游戏视频
 
 https://v.qq.com/x/page/w0523vg401v.html
