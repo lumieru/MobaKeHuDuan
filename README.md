@@ -10,6 +10,9 @@ Yes you can run HttpListener in non-admin mode. All you need to do is grant perm
 
  ** netsh http add urlacl url=http://127.0.0.1:12030/ user=你的windows用户名 **
 
+** netsh http add urlacl url=http://127.0.0.1:12031/ user=你的windows用户名 **
+
+** netsh http add urlacl url=http://127.0.0.1:12032/ user=你的windows用户名 **
 
 
 ###游戏视频
