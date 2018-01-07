@@ -1,5 +1,8 @@
 ###FAQ 常见问题
 
+VS 使用 管理员权限开启 服务器， 这样就可以 解决服务器HTTP服务器开启的问题
+
+
 C# http 服务器没有权限启动 ， 关掉防火墙， 开启权限
 
 [参考回答](https://stackoverflow.com/questions/4019466/httplistener-access-denied)
