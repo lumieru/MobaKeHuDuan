@@ -3,21 +3,6 @@
 VS 使用 管理员权限开启 服务器， 这样就可以 解决服务器HTTP服务器开启的问题
 
 
-C# http 服务器没有权限启动 ， 关掉防火墙， 开启权限
-
-[参考回答](https://stackoverflow.com/questions/4019466/httplistener-access-denied)
-
-Yes you can run HttpListener in non-admin mode. All you need to do is grant permissions to the particular URL. e.g.
-
-管理员权限运行 cmd，接着执行下面命令
-
- ** netsh http add urlacl url=http://127.0.0.1:12030/ user=你的windows用户名 **
-
-** netsh http add urlacl url=http://127.0.0.1:12031/ user=你的windows用户名 **
-
-** netsh http add urlacl url=http://127.0.0.1:12032/ user=你的windows用户名 **
-
-
 ###游戏视频
 
 https://v.qq.com/x/page/w0523vg401v.html
