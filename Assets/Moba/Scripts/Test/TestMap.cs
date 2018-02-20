@@ -4,13 +4,22 @@ using UnityEngine;
 using SimpleJSON;
 
 public class TestMap : MonoBehaviour {
+    private void Awake()
+    {
+        
+    }
+    private void Update()
+    {
+        
+    }
     public TextAsset textFile;
 
     [ButtonCallFunc()]
     public bool Load;
     public void LoadMethod()
     {
-        grid = new GridManager();
+        //grid = new GridManager();
+        grid = gameObject.AddMissingComponent<GridManager>();
         grid.LoadMap(textFile.text);
     }
     private GridManager grid;
@@ -52,8 +61,10 @@ public class TestMap : MonoBehaviour {
     {
         if(nodes != null)
         {
+            Gizmos.color = Color.red;
+            //Gizmos.DrawSphere(transform.position, 5);
             //iTween.DrawPath(nodes.ToArray(), Color.red);
-            for(var i = 0; i < nodes.Count-1; i++)
+            for (var i = 0; i < nodes.Count-1; i++)
             {
                 var p1 = nodes[i];
                 var p2 = nodes[i + 1];
