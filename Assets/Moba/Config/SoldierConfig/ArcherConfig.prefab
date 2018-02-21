@@ -57,15 +57,13 @@ MonoBehaviour:
   - type: 1
     totalTime: 1.042
     hitTime: 0.477
-    aniName: AbilityR
+    aniName: Creep_Shoot
     skillAttackRange: 8
     skillAttackTargetDist: 8
     skillId: 0
     needEnemy: 0
-  normalAttack: monsterSingle
-  eyeSightDistance: 10
-  attackRangeDist: 1.5
-  attackSkill: 19
+  normalAttack: galiAttack
+  eyeSightDistance: 14
+  attackRangeDist: 12
+  attackSkill: 192
   moveSpeed: 5
-  normalAttackAni: Basic
-  attackTargetDist: 6

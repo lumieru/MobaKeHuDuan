@@ -24,22 +24,26 @@ public class MeleeAttack : SkillState
         var physics = aiCharacter.GetAttr().GetComponent<IPhysicCom>();
         physics.TurnToDir(dir);
         holdTime = time;
-        aiCharacter.PlayAniInTime("creep_attack1", time);
+
+        var config = aiCharacter.GetAttr().npcConfig;
+        var atype = config.GetAction(ActionType.Attack);
+        aiCharacter.PlayAniInTime(atype.aniName, time);
 
     }
     public override IEnumerator RunLogic()
     {
-        var passTime = 0.0f;
-        while(!quit && passTime < holdTime)
+        var config = aiCharacter.GetAttr().npcConfig;
+        var atype = config.GetAction(ActionType.Attack);
+        var tempRunNum = runNum;
+        yield return new WaitForSeconds(atype.hitTime);
+        if (!quit && tempRunNum == runNum)
         {
-            passTime += Time.deltaTime;
-            yield return null;
+            skillStateMachine.OnEvent(new MyEvent() { skillEvtType = SkillDataConfig.SkillEvent.EventTrigger });
         }
-        if (!quit)
+        yield return new WaitForSeconds(atype.totalTime - atype.hitTime);
+        if (!quit && tempRunNum == runNum)
         {
             aiCharacter.ChangeState(AIStateEnum.IDLE);
         }
     }
-
-
 }

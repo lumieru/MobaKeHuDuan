@@ -38,8 +38,6 @@ namespace MyLib
         public float attackRangeDist = 10;
         public int attackSkill = 1;
         public float moveSpeed = 5;
-        public string normalAttackAni = "Basic";
-        public float attackTargetDist = 6; //近战攻击的感应敌人范围
 
 
         public ActionConfig GetAction(ActionType tp)
