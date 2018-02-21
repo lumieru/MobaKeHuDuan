@@ -26217,6 +26217,8 @@ MonoBehaviour:
   intervalTime: 30
   soldierId: 59
   teamId: 0
+  archerId: 64
+  offSetZ: 4
 --- !u!114 &114574831439531366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26599,6 +26601,8 @@ MonoBehaviour:
   intervalTime: 30
   soldierId: 60
   teamId: 1
+  archerId: 65
+  offSetZ: 4
 --- !u!114 &114820420650378850
 MonoBehaviour:
   m_ObjectHideFlags: 1

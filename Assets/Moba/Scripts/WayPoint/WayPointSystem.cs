@@ -6,5 +6,7 @@ public class WayPointSystem : MonoBehaviour {
     public float intervalTime = 10;
     public int soldierId = 59;
     public int teamId = 0;
+    public int archerId = 64;
+    public float offSetZ = 4;
 
 }

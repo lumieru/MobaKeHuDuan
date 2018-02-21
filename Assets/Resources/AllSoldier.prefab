@@ -9,64 +9,48 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1775224845435010}
+  m_RootGameObject: {fileID: 1313443372211602}
   m_IsPrefabParent: 1
---- !u!1 &1080699441100210
+--- !u!1 &1062934008235700
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4300511881058768}
-  - component: {fileID: 114986639848315096}
+  - component: {fileID: 4596291582466006}
+  - component: {fileID: 114795718415941494}
   m_Layer: 0
-  m_Name: aliConfig(Clone)
+  m_Name: ArcherConfig2(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1381731470890198
+--- !u!1 &1149828823257734
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4592696644088892}
-  - component: {fileID: 114015325672544986}
+  - component: {fileID: 4413809867097440}
+  - component: {fileID: 114908013159652642}
   m_Layer: 0
-  m_Name: springConfig(Clone)
+  m_Name: ArcherConfig(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1716544209046996
+--- !u!1 &1313443372211602
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4054774560681220}
-  - component: {fileID: 114933571157325710}
-  m_Layer: 0
-  m_Name: towerConfig(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1775224845435010
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4591452166253828}
+  - component: {fileID: 4915625678790098}
   m_Layer: 0
   m_Name: AllSoldier
   m_TagString: Untagged
@@ -74,15 +58,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1815273330143736
+--- !u!1 &1367779677922172
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4819318028243606}
-  - component: {fileID: 114985610065780026}
+  - component: {fileID: 4198952441523090}
+  - component: {fileID: 114931665777204358}
   m_Layer: 0
   m_Name: galileiConfig(Clone)
   m_TagString: Untagged
@@ -90,15 +74,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1829148421949756
+--- !u!1 &1444481673764502
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4547574413160684}
-  - component: {fileID: 114657186656195184}
+  - component: {fileID: 4513398886680920}
+  - component: {fileID: 114797109286580950}
   m_Layer: 0
   m_Name: mainTowerConfig(Clone)
   m_TagString: Untagged
@@ -106,15 +90,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1908410582274400
+--- !u!1 &1559520933889818
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4783268114089456}
-  - component: {fileID: 114384913464741776}
+  - component: {fileID: 4374357004357386}
+  - component: {fileID: 114413842687835222}
   m_Layer: 0
   m_Name: MeleeConfig(Clone)
   m_TagString: Untagged
@@ -122,15 +106,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1926885151460384
+--- !u!1 &1600901153373224
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4310384562125544}
-  - component: {fileID: 114898878866940472}
+  - component: {fileID: 4677224600359136}
+  - component: {fileID: 114686681655766506}
+  m_Layer: 0
+  m_Name: springConfig(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1848709753898222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4134824444003244}
+  - component: {fileID: 114483710109050692}
   m_Layer: 0
   m_Name: MeleeConfig2(Clone)
   m_TagString: Untagged
@@ -138,239 +138,183 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4054774560681220
+--- !u!1 &1868784849263440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4192497460848352}
+  - component: {fileID: 114219811005630526}
+  m_Layer: 0
+  m_Name: towerConfig(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1948792784272194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4975136137754374}
+  - component: {fileID: 114741332595445326}
+  m_Layer: 0
+  m_Name: aliConfig(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4134824444003244
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1716544209046996}
+  m_GameObject: {fileID: 1848709753898222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4591452166253828}
+  m_Father: {fileID: 4915625678790098}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4300511881058768
+--- !u!4 &4192497460848352
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1080699441100210}
+  m_GameObject: {fileID: 1868784849263440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4591452166253828}
-  m_RootOrder: 0
+  m_Father: {fileID: 4915625678790098}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4310384562125544
+--- !u!4 &4198952441523090
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1926885151460384}
+  m_GameObject: {fileID: 1367779677922172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4591452166253828}
+  m_Father: {fileID: 4915625678790098}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4374357004357386
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1559520933889818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4915625678790098}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4413809867097440
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1149828823257734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4915625678790098}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4513398886680920
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444481673764502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4915625678790098}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4547574413160684
+--- !u!4 &4596291582466006
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1829148421949756}
+  m_GameObject: {fileID: 1062934008235700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4591452166253828}
+  m_Father: {fileID: 4915625678790098}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4591452166253828
+--- !u!4 &4677224600359136
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1775224845435010}
+  m_GameObject: {fileID: 1600901153373224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4915625678790098}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4915625678790098
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313443372211602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4300511881058768}
-  - {fileID: 4819318028243606}
-  - {fileID: 4547574413160684}
-  - {fileID: 4783268114089456}
-  - {fileID: 4310384562125544}
-  - {fileID: 4592696644088892}
-  - {fileID: 4054774560681220}
+  - {fileID: 4975136137754374}
+  - {fileID: 4413809867097440}
+  - {fileID: 4596291582466006}
+  - {fileID: 4198952441523090}
+  - {fileID: 4513398886680920}
+  - {fileID: 4374357004357386}
+  - {fileID: 4134824444003244}
+  - {fileID: 4677224600359136}
+  - {fileID: 4192497460848352}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4592696644088892
+--- !u!4 &4975136137754374
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1381731470890198}
+  m_GameObject: {fileID: 1948792784272194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4591452166253828}
-  m_RootOrder: 5
+  m_Father: {fileID: 4915625678790098}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4783268114089456
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1908410582274400}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4591452166253828}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4819318028243606
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1815273330143736}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4591452166253828}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114015325672544986
+--- !u!114 &114219811005630526
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1381731470890198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsPlayer: 0
-  npcTemplateId: 62
-  actionList:
-  - type: 1
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: AbilityR
-    skillAttackRange: 8
-    skillAttackTargetDist: 8
-    skillId: 0
-    needEnemy: 0
-  normalAttack: explosive
-  eyeSightDistance: 15
-  attackRangeDist: 15
-  attackSkill: 1
-  moveSpeed: 5
-  normalAttackAni: 
-  attackTargetDist: 6
---- !u!114 &114384913464741776
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1908410582274400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsPlayer: 0
-  npcTemplateId: 59
-  actionList:
-  - type: 1
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: AbilityR
-    skillAttackRange: 8
-    skillAttackTargetDist: 8
-    skillId: 0
-    needEnemy: 0
-  normalAttack: monsterSingle
-  eyeSightDistance: 10
-  attackRangeDist: 1.5
-  attackSkill: 19
-  moveSpeed: 5
-  normalAttackAni: Basic
-  attackTargetDist: 6
---- !u!114 &114657186656195184
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1829148421949756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsPlayer: 0
-  npcTemplateId: 63
-  actionList:
-  - type: 1
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: AbilityR
-    skillAttackRange: 8
-    skillAttackTargetDist: 8
-    skillId: 0
-    needEnemy: 0
-  normalAttack: explosive
-  eyeSightDistance: 15
-  attackRangeDist: 15
-  attackSkill: 1
-  moveSpeed: 5
-  normalAttackAni: 
-  attackTargetDist: 6
---- !u!114 &114898878866940472
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1926885151460384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsPlayer: 0
-  npcTemplateId: 60
-  actionList:
-  - type: 1
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: AbilityR
-    skillAttackRange: 8
-    skillAttackTargetDist: 8
-    skillId: 0
-    needEnemy: 0
-  normalAttack: monsterSingle
-  eyeSightDistance: 10
-  attackRangeDist: 1.5
-  attackSkill: 19
-  moveSpeed: 5
-  normalAttackAni: Basic
-  attackTargetDist: 6
---- !u!114 &114933571157325710
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1716544209046996}
+  m_GameObject: {fileID: 1868784849263440}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
@@ -394,49 +338,99 @@ MonoBehaviour:
   moveSpeed: 5
   normalAttackAni: Basic
   attackTargetDist: 6
---- !u!114 &114985610065780026
+--- !u!114 &114413842687835222
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1815273330143736}
+  m_GameObject: {fileID: 1559520933889818}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsPlayer: 1
-  npcTemplateId: 1
+  IsPlayer: 0
+  npcTemplateId: 59
   actionList:
   - type: 1
     totalTime: 1.042
     hitTime: 0.477
-    aniName: Basic
-    skillAttackRange: 16
-    skillAttackTargetDist: 16
-    skillId: 190
+    aniName: AbilityR
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
     needEnemy: 0
-  - type: 2
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: AbilityE
-    skillAttackRange: 12
-    skillAttackTargetDist: 12
-    skillId: 191
-    needEnemy: 0
-  normalAttack: aliAttack
+  normalAttack: monsterSingle
   eyeSightDistance: 10
-  attackRangeDist: 2
-  attackSkill: 180
-  moveSpeed: 7
+  attackRangeDist: 1.5
+  attackSkill: 19
+  moveSpeed: 5
   normalAttackAni: Basic
   attackTargetDist: 6
---- !u!114 &114986639848315096
+--- !u!114 &114483710109050692
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1080699441100210}
+  m_GameObject: {fileID: 1848709753898222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
+  npcTemplateId: 60
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: AbilityR
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
+  normalAttack: monsterSingle
+  eyeSightDistance: 10
+  attackRangeDist: 1.5
+  attackSkill: 19
+  moveSpeed: 5
+  normalAttackAni: Basic
+  attackTargetDist: 6
+--- !u!114 &114686681655766506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1600901153373224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
+  npcTemplateId: 62
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: AbilityR
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
+  normalAttack: explosive
+  eyeSightDistance: 15
+  attackRangeDist: 15
+  attackSkill: 1
+  moveSpeed: 5
+  normalAttackAni: 
+  attackTargetDist: 6
+--- !u!114 &114741332595445326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1948792784272194}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
@@ -461,6 +455,130 @@ MonoBehaviour:
     skillAttackTargetDist: 12
     skillId: 181
     needEnemy: 1
+  normalAttack: aliAttack
+  eyeSightDistance: 10
+  attackRangeDist: 2
+  attackSkill: 180
+  moveSpeed: 7
+  normalAttackAni: Basic
+  attackTargetDist: 6
+--- !u!114 &114795718415941494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062934008235700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
+  npcTemplateId: 65
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: AbilityR
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
+  normalAttack: monsterSingle
+  eyeSightDistance: 10
+  attackRangeDist: 1.5
+  attackSkill: 19
+  moveSpeed: 5
+  normalAttackAni: Basic
+  attackTargetDist: 6
+--- !u!114 &114797109286580950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444481673764502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
+  npcTemplateId: 63
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: AbilityR
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
+  normalAttack: explosive
+  eyeSightDistance: 15
+  attackRangeDist: 15
+  attackSkill: 1
+  moveSpeed: 5
+  normalAttackAni: 
+  attackTargetDist: 6
+--- !u!114 &114908013159652642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1149828823257734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
+  npcTemplateId: 64
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: AbilityR
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
+  normalAttack: monsterSingle
+  eyeSightDistance: 10
+  attackRangeDist: 1.5
+  attackSkill: 19
+  moveSpeed: 5
+  normalAttackAni: Basic
+  attackTargetDist: 6
+--- !u!114 &114931665777204358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367779677922172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 1
+  npcTemplateId: 1
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: Basic
+    skillAttackRange: 16
+    skillAttackTargetDist: 16
+    skillId: 190
+    needEnemy: 0
+  - type: 2
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: AbilityE
+    skillAttackRange: 12
+    skillAttackTargetDist: 12
+    skillId: 191
+    needEnemy: 0
   normalAttack: aliAttack
   eyeSightDistance: 10
   attackRangeDist: 2

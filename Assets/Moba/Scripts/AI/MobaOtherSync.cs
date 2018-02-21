@@ -5,6 +5,10 @@ using System;
 
 namespace MyLib
 {
+
+    /// <summary>
+    /// 其它玩家同步接口
+    /// </summary>
     public class MobaOtherSync : ISyncInterface
     {
         private List<AvatarInfo> positions = new List<AvatarInfo>();
@@ -120,8 +124,12 @@ namespace MyLib
             var camForward = CameraController.Instance.camForward;
             var targetDirection = h * camRight + v * camForward;
             var mdir = targetDirection.normalized;
-
         }
+
+        /// <summary>
+        /// 同步网络移动
+        /// </summary>
+        /// <param name="info"></param>
         private void NetworkMove(AvatarInfo info)
         {
             if (info.HasSpeedX)
