@@ -21,7 +21,7 @@ public class ItemName : MonoBehaviour
 
     void LateUpdate()
     {
-        Vector3 sp = CameraController.cameraController.BloodBarPos.GetComponent<Camera>().WorldToScreenPoint(transform.position + new Vector3(0, 1.5f, 0));
+        Vector3 sp = CameraController.cameraController.GetComponent<Camera>().WorldToScreenPoint(transform.position + new Vector3(0, 1.5f, 0));
         var uiWorldPos = UICamera.mainCamera.ScreenToWorldPoint(sp);
         uiWorldPos.z = 0;
         bar.transform.position = uiWorldPos;

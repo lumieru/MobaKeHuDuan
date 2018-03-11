@@ -26,6 +26,7 @@ namespace MyLib
         public int skillId;//技能伤害计算的ID
         public bool needEnemy = false; //锁定目标技能必须有目标才可以释放 
     }
+
     public class NpcConfig : MonoBehaviour
     {
         public bool IsPlayer = false;
@@ -38,7 +39,7 @@ namespace MyLib
         public float attackRangeDist = 10;
         public int attackSkill = 1;
         public float moveSpeed = 5;
-
+        public float damageToTower = 1.0f; 
 
         public ActionConfig GetAction(ActionType tp)
         {

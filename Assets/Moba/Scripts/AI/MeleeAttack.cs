@@ -18,7 +18,9 @@ public class MeleeAttack : SkillState
         base.EnterState();
         cmd = aiCharacter.lastCmd;
         activeSkill = GetAttr().GetComponent<SkillInfoComponent>().GetActiveSkill();
-        skillStateMachine = SkillLogic.CreateSkillStateMachine(GetAttr().gameObject, activeSkill.skillData, GetAttr().transform.position);
+        var target = cmd.skillAction.Target;
+        var targetPlayer = ObjectManager.objectManager.GetPlayer(target);
+        skillStateMachine = SkillLogic.CreateSkillStateMachine(GetAttr().gameObject, activeSkill.skillData, GetAttr().transform.position, targetPlayer);
         var time = Util.FrameToFloat(aiCharacter.lastCmd.skillAction.RunFrame);
         var dir =  cmd.skillAction.Dir;
         var physics = aiCharacter.GetAttr().GetComponent<IPhysicCom>();

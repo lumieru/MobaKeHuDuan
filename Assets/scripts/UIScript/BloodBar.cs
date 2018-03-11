@@ -187,7 +187,7 @@ namespace MyLib
         // Update is called once per frame
         void LateUpdate()
         {
-            if (Camera.main == null)
+            if (CameraController.cameraController == null)
             {
                 return;
             }
@@ -195,7 +195,7 @@ namespace MyLib
             {
                 return;
             }
-            Vector3 sp = CameraController.cameraController.BloodBarPos.GetComponent<Camera>().WorldToScreenPoint(transform.position + new Vector3(0, 2.5f, 0));
+            Vector3 sp = CameraController.cameraController.GetComponent<Camera>().WorldToScreenPoint(transform.position + new Vector3(0, 2.5f, 0));
             var uiWorldPos = UICamera.mainCamera.ScreenToWorldPoint(sp);
             uiWorldPos.z = 0;
             bar.transform.position = uiWorldPos;

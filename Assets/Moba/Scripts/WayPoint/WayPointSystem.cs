@@ -8,5 +8,6 @@ public class WayPointSystem : MonoBehaviour {
     public int teamId = 0;
     public int archerId = 64;
     public float offSetZ = 4;
-
+    public int paoId = 66;
+    public float offSetZ2 = -4;
 }

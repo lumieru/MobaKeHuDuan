@@ -46,8 +46,9 @@ namespace MyLib
 			DontDestroyOnLoad (gameObject);
             BloodBarPos = new GameObject("BloodBarPos");
 		    BloodBarPos.transform.parent = transform;
-		    var ca = BloodBarPos.AddComponent<Camera>();
-            ca.CopyFrom(this.GetComponent<Camera>());
+            Util.InitGameObject(BloodBarPos);
+		    //var ca = BloodBarPos.AddComponent<Camera>();
+            //ca.CopyFrom(this.GetComponent<Camera>());
 
 			
 			regEvt = new System.Collections.Generic.List<MyEvent.EventType> () {

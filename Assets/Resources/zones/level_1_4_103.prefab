@@ -26219,6 +26219,8 @@ MonoBehaviour:
   teamId: 0
   archerId: 64
   offSetZ: 4
+  paoId: 66
+  offSetZ2: -4
 --- !u!114 &114574831439531366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -26603,6 +26605,8 @@ MonoBehaviour:
   teamId: 1
   archerId: 65
   offSetZ: 4
+  paoId: 67
+  offSetZ2: -4
 --- !u!114 &114820420650378850
 MonoBehaviour:
   m_ObjectHideFlags: 1

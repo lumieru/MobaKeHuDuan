@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace MyLib {
 
+    /// <summary>
+    /// 锁定目标子弹
+    /// 飞行到目标位置就停止飞行移除掉
+    /// </summary>
     public class BulletTargetFly : MonoBehaviour
     {
         public Vector3 OffsetPos;
