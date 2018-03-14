@@ -67,5 +67,5 @@ MonoBehaviour:
   attackRangeDist: 1.5
   attackSkill: 19
   moveSpeed: 5
-  normalAttackAni: Basic
-  attackTargetDist: 6
+  damageToTower: 1
+  maxMoveRange2: 5

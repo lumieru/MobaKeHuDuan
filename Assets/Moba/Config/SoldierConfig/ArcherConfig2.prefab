@@ -63,7 +63,9 @@ MonoBehaviour:
     skillId: 0
     needEnemy: 0
   normalAttack: galiAttack
-  eyeSightDistance: 14
-  attackRangeDist: 12
+  eyeSightDistance: 10
+  attackRangeDist: 6
   attackSkill: 192
   moveSpeed: 5
+  damageToTower: 1
+  maxMoveRange2: 5

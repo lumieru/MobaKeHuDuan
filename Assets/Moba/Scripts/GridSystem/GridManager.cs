@@ -6,6 +6,7 @@ using System;
 using SimpleJSON;
 
 public class GridManager : MonoBehaviour {
+    #region LOADMAP
     public static GridManager Instance;
     private void Awake()
     {
@@ -99,6 +100,7 @@ public class GridManager : MonoBehaviour {
         LoadMapGrass(data[1].AsObject);
         LoadMapHeight(data[2].AsObject);
     }
+    #endregion
 
     /// <summary>
     /// Unity坐标转化为Grid 网格坐标
@@ -122,6 +124,34 @@ public class GridManager : MonoBehaviour {
     {
         var grid = mapPosToGridFloat(pos);
         return gridToMapPosFloat(grid);
+    }
+
+    public List<GridPos> FindPath(Vector2 p1, Vector2 p2)
+    {
+        var jpParam = new JumpPointParam(grids, new GridPos(Convert.ToInt32(p1.x), Convert.ToInt32(p1.y)), new GridPos(Convert.ToInt32(p2.x), Convert.ToInt32(p2.y)));
+        var path = JumpPointFinder.FindPath(jpParam);
+        return path;
+    }
+
+    public Vector3 gridToMapPos(Vector2 grid)
+    {
+        var gx = Mathf.Clamp(grid.x, 0, width - 1);
+        var gy = Mathf.Clamp(grid.y, 0, height - 1);
+        var gid = (int)(gx + gy * width);
+        var h = mapHeight[gid];
+        var px = gx * nodeSize - nodeSize * width / 2;
+        var py = gy * nodeSize - nodeSize * height / 2;
+        var pos = new Vector3(px, 0, py) + center;
+        pos.y = h;
+        return pos;
+    }
+
+    private int GetGridId(Vector2 grid)
+    {
+        var gx = Mathf.Clamp(grid.x, 0, width - 1);
+        var gy = Mathf.Clamp(grid.y, 0, height - 1);
+        var gid = (int)(gx + gy * width);
+        return gid;
     }
 
     #region physic
@@ -227,7 +257,7 @@ public class GridManager : MonoBehaviour {
         firstPos = Vector2.zero;
         return false;
     }
-    private const float TEPSILON = 0.01f;
+
     private const float EPSILON = 0.01f;
     private const int iterNum = 1;
     private Vector2 FixPos(Vector2 gPos, Vector2 firstGrid)
@@ -242,8 +272,7 @@ public class GridManager : MonoBehaviour {
         return firstGrid + offPos;
     }
 
-    private static float playerRadius = 0.5f;
-    private static float outGridRadius = 0.5f;
+  
     
     /// <summary>
     /// 射线计算瞬间移动可以停止的点位置
@@ -345,77 +374,6 @@ public class GridManager : MonoBehaviour {
             fixPos = startPos;
         }
     }
-    /// <summary>
-    /// 计算射线 和圆的两个相交点
-    /// 得到较近的那个点
-    /// </summary>
-    /// <param name="gPos"></param>
-    /// <param name="firstCol"></param>
-    /// <param name="gridDir"></param>
-    /// <param name="startPos"></param>
-    /// <returns></returns>
-    private bool FixRaycastPos(Vector2 gPos, Vector2 firstCol, Vector2 gridDir, Vector2 startPos, out Vector2 fixPos)
-    {
-        var totalRadius = playerRadius + outGridRadius;
-
-        var C = firstCol;
-        var P = startPos;
-        var D = gPos - startPos;
-        var R = totalRadius;
-        var Delta = P - C;
-
-        var DD = Vector2.Dot(D, Delta);
-        var DSqr = Vector2.Dot(D, D);
-        var CigMa = DD * DD - DSqr * (Vector2.Dot(Delta, Delta) - R * R);
-
-        fixPos = Vector2.zero;
-        if(CigMa < 0)
-        {
-            fixPos = gPos;
-            return false;
-        }
-
-        var sqrt = Mathf.Sqrt(CigMa);
-        var t1 = (-DD + sqrt) / DSqr;
-        var t2 = (-DD - sqrt) / DSqr;
-
-        var t1Ok = false;
-        var t2Ok = false;
-        //t->[0, 1]
-        if(t1 > 0 && t1 < 1)
-        {
-            t1Ok = true;
-        }
-        if(t2 > 0 && t2 < 1)
-        {
-            t2Ok = true;
-        }
-        if(t1Ok && t2Ok)
-        {
-            var t = Mathf.Min(t1, t2);
-            fixPos = P + (t-TEPSILON) * D; 
-            return true;
-        }
-
-        if (t1Ok)
-        {
-            var t = t1;
-            fixPos = P + (t-TEPSILON) * D; 
-            return true;
-        }
-
-        if (t2Ok)
-        {
-            var t = t2;
-            fixPos = P + (t-TEPSILON) * D; 
-            return true;
-        }
-
-        //留在原地不要动
-        fixPos = P;
-        return false;
-    }
-
 
     /// <summary>
     /// 每个逻辑帧检测当前所在网格状态
@@ -474,33 +432,9 @@ public class GridManager : MonoBehaviour {
     }
     #endregion
 
-    public List<GridPos> FindPath(Vector2 p1, Vector2 p2)
-    {
-        var jpParam = new JumpPointParam(grids, new GridPos(Convert.ToInt32(p1.x), Convert.ToInt32(p1.y)), new GridPos(Convert.ToInt32(p2.x), Convert.ToInt32(p2.y)));
-        var path = JumpPointFinder.FindPath(jpParam);
-        return path;
-    }
 
-    public Vector3 gridToMapPos(Vector2 grid)
-    {
-        var gx = Mathf.Clamp(grid.x, 0, width - 1);
-        var gy = Mathf.Clamp(grid.y, 0, height - 1);
-        var gid = (int)(gx + gy * width);
-        var h = mapHeight[gid];
-        var px = gx*nodeSize -nodeSize * width / 2;
-        var py = gy*nodeSize -nodeSize * height / 2;
-        var pos = new Vector3(px, 0, py) + center;
-        pos.y = h;
-        return pos;
-    }
 
-    private int GetGridId(Vector2 grid)
-    {
-        var gx = Mathf.Clamp(grid.x, 0, width - 1);
-        var gy = Mathf.Clamp(grid.y, 0, height - 1);
-        var gid = (int)(gx + gy * width);
-        return gid;
-    }
+ 
 
 
     private BaseGrid grids;
@@ -509,5 +443,6 @@ public class GridManager : MonoBehaviour {
     private Vector3 center;
     private float nodeSize;
     private List<float> mapHeight;
-	
+    private static float playerRadius = 0.5f;
+    private static float outGridRadius = 0.5f;
 }

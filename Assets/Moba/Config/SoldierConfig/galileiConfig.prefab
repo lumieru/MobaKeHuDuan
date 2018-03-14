@@ -75,5 +75,6 @@ MonoBehaviour:
   attackRangeDist: 2
   attackSkill: 180
   moveSpeed: 7
-  normalAttackAni: Basic
-  attackTargetDist: 6
+  damageToTower: 1
+  maxMoveRange2: 5
+  hpRecover: 0.02

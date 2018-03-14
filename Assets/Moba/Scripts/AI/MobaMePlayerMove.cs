@@ -154,7 +154,7 @@ namespace MyLib
                 //var speed2X = speed * 2;
                 var sp = mdir * oriSpeed;
                 var newPos = GetAttr().transform.position + sp * Time.fixedDeltaTime;
-                physics.MoveToWithPhysic(newPos);
+                physics.MoveToIgnorePhysic(newPos);
             }
             //physics.MoveToIgnorePhysic(newPos);
         }

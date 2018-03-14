@@ -57,9 +57,15 @@ MonoBehaviour:
   - type: 1
     totalTime: 1.042
     hitTime: 0.477
+    aniName: AbilityR
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
   normalAttack: explosive
   eyeSightDistance: 15
   attackRangeDist: 15
   attackSkill: 1
   moveSpeed: 5
-  normalAttackAni: 
+  damageToTower: 1
+  maxMoveRange2: 5

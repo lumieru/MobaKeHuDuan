@@ -51,13 +51,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsPlayer: 0
   npcTemplateId: 61
   actionList:
   - type: 1
     totalTime: 1.042
     hitTime: 0.477
+    aniName: AbilityR
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
   normalAttack: explosive
   eyeSightDistance: 15
   attackRangeDist: 15
   attackSkill: 1
   moveSpeed: 5
+  damageToTower: 1
+  maxMoveRange2: 5
