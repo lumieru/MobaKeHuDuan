@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MyLib;
 
-public class MeleeCharacter : AICharacter
+public class XiaoGuaiCharacter : AICharacter
 {
     private Dictionary<string, float> aniLength;
     private Animator animator;
@@ -21,12 +21,13 @@ public class MeleeCharacter : AICharacter
             {
                 aniLength[c.name] = c.length;
             }
-        }else
+        }
+        else
         {
             animation = GetAttr().GetComponent<Animation>();
-            if(animation != null)
+            if (animation != null)
             {
-                foreach(AnimationClip c in animation)
+                foreach (AnimationState c in animation)
                 {
                     aniLength[c.name] = c.length;
                 }
@@ -37,11 +38,11 @@ public class MeleeCharacter : AICharacter
 
     public override void SetIdle()
     {
-        PlayAni("Idle", 1, WrapMode.Loop);
+        PlayAni("idle", 1, WrapMode.Loop);
     }
     public override void SetRun()
     {
-        PlayAni("Walk", 1, WrapMode.Loop);
+        PlayAni("run", 1, WrapMode.Loop);
     }
 
     public override void PlayAni(string name, float speed, WrapMode wm)
@@ -52,9 +53,10 @@ public class MeleeCharacter : AICharacter
             ani.speed = 1;
             ani.CrossFade(name, 0.1f);
         }
-        else
+        else if(animation != null)
         {
-
+            animation.CrossFade(name);
+            animation[name].speed = speed;
         }
 
     }
@@ -62,9 +64,14 @@ public class MeleeCharacter : AICharacter
     {
         var ani = aniLength[name];
         var rate = ani / time;
-        animator.speed = rate;
-        animator.CrossFade(name, 0.1f);
+        if (animator != null)
+        {
+            animator.speed = rate;
+            animator.CrossFade(name, 0.1f);
+        }else if(animation != null)
+        {
+            animation[name].speed = rate;
+            animation.CrossFade(name);
+        }
     }
-
-
 }

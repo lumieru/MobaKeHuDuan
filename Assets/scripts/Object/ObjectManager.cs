@@ -597,9 +597,9 @@ namespace MyLib
         /// <param name="unitData"></param>
         /// <param name="spawn"></param>
         /// <param name="info"></param>
-        public void CreateSpawnZoneEntity(UnitData unitData, SpawnZone spawn, EntityInfo info)
+        public void CreateSpawnZoneEntity(UnitData unitData, EntityInfo info)
         {
-            Log.Sys("CreateSpawnZoneEntity: "+unitData+spawn+" info "+info);
+            Log.Sys("CreateSpawnZoneEntity: "+unitData+" info "+info);
             //TODO: 这里可能有BUG
             if (info != null)
             {
@@ -652,6 +652,7 @@ namespace MyLib
             npc.SetObjUnitData(unitData);
             AddObject(netView.GetServerID(), netView);
 
+            /*
             //不算怪物允许不去打
             if (info != null)
             {
@@ -660,6 +661,7 @@ namespace MyLib
             {
                 //npc.transform.position = spawn.transform.position;
             }
+            */
 
             //BattleManager.battleManager.AddEnemy(npc.gameObject);
             //npc.SetDeadDelegate = BattleManager.battleManager.EnemyDead;
@@ -667,6 +669,7 @@ namespace MyLib
             var sync = npc.GetComponent<MonsterSync>();
             if (sync != null)
             {
+                sync.InitSetPos(NetworkUtil.FloatPos(info.X, info.Y, info.Z));
                 sync.SyncAttribute(info);
             }
 

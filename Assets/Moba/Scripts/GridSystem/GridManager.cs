@@ -139,8 +139,8 @@ public class GridManager : MonoBehaviour {
         var gy = Mathf.Clamp(grid.y, 0, height - 1);
         var gid = (int)(gx + gy * width);
         var h = mapHeight[gid];
-        var px = gx * nodeSize - nodeSize * width / 2;
-        var py = gy * nodeSize - nodeSize * height / 2;
+        var px = gx * nodeSize - nodeSize * width / 2.0f+0.5f;
+        var py = gy * nodeSize - nodeSize * height / 2.0f+0.5f;
         var pos = new Vector3(px, 0, py) + center;
         pos.y = h;
         return pos;
@@ -194,8 +194,8 @@ public class GridManager : MonoBehaviour {
         var pos = new Vector3(px, 0, py) + center;
         pos.y = h;
         return pos;
-
     }
+
 
     public bool GetWalkable(Vector2 p)
     {

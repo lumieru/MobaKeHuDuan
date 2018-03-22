@@ -422,10 +422,8 @@ namespace MyLib
 
         void WaitZoneInit(EntityInfo ety)
         {
-            var zone = BattleManager.battleManager.GetZone().GetComponent<ZoneEntityManager>();
             var unitData = Util.GetUnitData(false, ety.UnitId, 0);
-            var spawnZone = zone.GetSpawnZone(ety.SpawnId);
-            ObjectManager.objectManager.CreateSpawnZoneEntity(unitData, spawnZone, ety);
+            ObjectManager.objectManager.CreateSpawnZoneEntity(unitData, ety);
         }
 
         private RemoteUDPClient udpClient = null; 

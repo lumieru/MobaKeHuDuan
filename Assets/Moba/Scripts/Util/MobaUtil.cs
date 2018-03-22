@@ -207,5 +207,14 @@ namespace MyLib
         {
             return printer.PrintObject(obj);
         }
+
+        public static void SetPosWithHeight(GameObject go, Vector3 newPos)
+        {
+            var gm = GridManager.Instance;
+            if (gm != null)
+            {
+                go.transform.position = gm.mapPosFixHeight(newPos);
+            }
+        }
     }
 }

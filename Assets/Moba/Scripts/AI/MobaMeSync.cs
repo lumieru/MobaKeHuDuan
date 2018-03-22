@@ -10,6 +10,10 @@ using System;
 public class MobaMeSync : ISyncInterface {
     private List<AvatarInfo> positions = new List<AvatarInfo>();
 
+    public override void InitSetPos(Vector3 pos)
+    {
+        throw new NotImplementedException();
+    }
 
     public override Vector3 GetCurInfoPos()
     {

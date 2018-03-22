@@ -24,7 +24,12 @@ public class MeleePhysicCom : IPhysicCom
     public override void MoveTo(Vector3 newPos)
     {
         //rigid.MovePosition(newPos);
-        transform.position = newPos;
+        //transform.position = newPos;
+        var gm = GridManager.Instance;
+        if (gm != null)
+        {
+            transform.position = gm.mapPosFixHeight(newPos);
+        }
     }
 
     public override void MoveToIgnorePhysic(Vector3 newPos)

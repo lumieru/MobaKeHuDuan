@@ -9,6 +9,7 @@ namespace MyLib
     /// </summary>
     public abstract class ISyncInterface : MonoBehaviour
     {
+        public abstract void InitSetPos(Vector3 pos);
         /// <summary>
         /// 初始化同步信息
         /// </summary>

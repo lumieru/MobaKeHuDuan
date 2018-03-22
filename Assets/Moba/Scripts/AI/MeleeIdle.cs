@@ -9,6 +9,7 @@ public class MeleeIdle : IdleState
     {
         base.EnterState();
         aiCharacter.SetIdle();
+        MobaUtil.SetPosWithHeight(GetAttr().gameObject, GetAttr().gameObject.transform.position);
     }
     public override IEnumerator RunLogic()
     {

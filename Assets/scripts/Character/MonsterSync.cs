@@ -100,6 +100,11 @@ namespace MyLib
             }
             */
         }
+        public override void InitSetPos(Vector3 pos)
+        {
+            //MobaUtil.SetPosWithHeight(gameObject, pos);
+            transform.position = pos;
+        }
 
         private void Start()
         {

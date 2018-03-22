@@ -20,7 +20,7 @@ namespace MyLib
         }
         private List<string> ips = new List<string>()
         {
-            "127.0.0.1",
+            "192.168.3.118",
             "127.0.0.1",
             "127.0.0.1",
             "127.0.0.1",
