@@ -104,6 +104,7 @@ namespace MyLib
         void Awake()
         {
             Instance = this;
+            InitDataMgr();
             StartCoroutine(InitGameData());
 
             ml = gameObject.AddComponent<MainThreadLoop>();
@@ -116,6 +117,10 @@ namespace MyLib
 
             state = WorldState.Connecting;
             //StartCoroutine(InitConnect());
+        }
+        private void InitDataMgr()
+        {
+            MobaDataMgr.Init();
         }
 
         /// <summary>

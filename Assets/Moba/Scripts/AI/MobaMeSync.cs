@@ -81,7 +81,7 @@ public class MobaMeSync : ISyncInterface {
     }
 
 
-    private AvatarInfo curInfo
+    public AvatarInfo curInfo
     {
         get;
         set;
@@ -262,7 +262,22 @@ public class MobaMeSync : ISyncInterface {
         {
             curInfo.State = info.State;
         }
-    }
+
+        if(info.HasGold)
+        {
+            curInfo.Gold = info.Gold;
+
+            var evt = new MyEvent(MyEvent.EventType.UpdateItem);
+            MyEventSystem.myEventSystem.PushEvent(evt);
+        }
+
+        if (info.HasItemInfoDirty)
+        {
+            curInfo.ItemInfoList = info.ItemInfoList;
+            var evt = new MyEvent(MyEvent.EventType.UpdateItem);
+            MyEventSystem.myEventSystem.PushEvent(evt);
+        }
+   }
 
     public override void NetworkAttack(GCPlayerCmd proto)
     {

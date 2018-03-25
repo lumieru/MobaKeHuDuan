@@ -187,6 +187,8 @@ namespace MyLib
 
             BuffChange,
             UpdateModel,
+
+            UpdateItem,
 		}
 
 

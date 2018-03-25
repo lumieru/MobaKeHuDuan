@@ -113,35 +113,8 @@ public class MobaMeSyncToServer : MeSyncToServer {
             var cg = CGPlayerCmd.CreateBuilder();
             cg.Cmd = "UpdateData";
 
-            /*
-            var nf = frameId++;
-            var find = false;
-            if (low && nf > 127)
-            {
-                find = true;
-                low = false;
-            }
-            else if (nf == 0)
-            {
-                find = true;
-                low = true;
-            }
-            //ainfo.FrameID = nf;
-            */
-
             cg.AvatarInfo = ainfo.Build();
-            //cg.FrameId = NetworkScene.Instance.GetPredictServerTimeForNet();
             NetworkUtil.Broadcast(cg);
-            /*
-            //报文区间变化 TCP稳定通知
-            if (find)
-            {
-            }
-            else
-            {
-                NetworkUtil.BroadcastUDP(cg);
-            }
-            */
         }
     }
     public override void SyncAttribute()

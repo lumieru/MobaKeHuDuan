@@ -25,6 +25,10 @@ namespace MyLib
 
         }
 		public GameObject GetName(string name) {
+            if(name == "_Main")
+            {
+                return gameObject;
+            }
 			var t = Util.FindChildRecursive (transform, name);
 			if(t == null) {
 				Debug.LogError("GetName Error :: "+name+" "+gameObject);	
@@ -47,6 +51,11 @@ namespace MyLib
 			var g = GetName (name);
 			return g.GetComponent<UILabel> ();
 		}
+        public T Get<T>(string name) where T : UIWidget
+        {
+            var g = GetName(name);
+            return g.GetComponent<T>();
+        }
 		public UISlider GetSlider(string name) {
 			var g = GetName (name);
 			return g.GetComponent<UISlider> ();

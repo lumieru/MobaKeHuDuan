@@ -43,8 +43,12 @@ namespace MyLib
 
             GetName("LeftBottom").AddComponent<LeftControllerProxy>();
             //GetName("RightBottom").AddComponent<RightControllerProxy>();
+            SetCallback("ShopUI", OnShopUI);
         }
-
+        void OnShopUI(GameObject g)
+        {
+            WindowMng.windowMng.PushView("UI/ShopUI");
+        }
         void OnQuit(GameObject g){
             WindowMng.windowMng.ShowDialog(delegate(bool ret){
                 if(ret){

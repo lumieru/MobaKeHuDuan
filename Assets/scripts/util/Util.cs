@@ -920,7 +920,9 @@ namespace MyLib
         public static StatePrinting.Stateprinter printer = new StatePrinting.Stateprinter();
 
         
+        public static bool CheckInGame()
+        {
+            return SaveGame.saveGame != null;
+        }
     }
-
-
 }
