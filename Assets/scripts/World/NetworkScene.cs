@@ -243,7 +243,7 @@ namespace MyLib
                         sync.NetworkAttack(proto);
                     }
                 }
-            } else if (cmds [0] == "Buff")
+            } else if (cmds [0] == "AddBuff")
             {
                 var target = proto.BuffInfo.Target;
                 var player = ObjectManager.objectManager.GetPlayer(target);

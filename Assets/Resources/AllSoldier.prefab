@@ -9,112 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1636710027047158}
+  m_RootGameObject: {fileID: 1114048639105334}
   m_IsPrefabParent: 1
---- !u!1 &1110665469046454
+--- !u!1 &1014410454883190
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4875246003663382}
-  - component: {fileID: 114780287386432518}
-  m_Layer: 0
-  m_Name: ArcherConfig2(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1153931331465490
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4790998655428886}
-  - component: {fileID: 114594130501877164}
-  m_Layer: 0
-  m_Name: MeleeConfig(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1305140414525214
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4799574098028328}
-  - component: {fileID: 114159265493979424}
-  m_Layer: 0
-  m_Name: MeleeConfig2(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1373239266435758
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4240891351578904}
-  - component: {fileID: 114766463200995258}
-  m_Layer: 0
-  m_Name: PaoConfig2(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1375936646800822
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4861752110705840}
-  - component: {fileID: 114440400994822030}
-  m_Layer: 0
-  m_Name: towerConfig(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1636710027047158
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4469134627868712}
-  m_Layer: 0
-  m_Name: AllSoldier
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1638807708760664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4993232948769700}
-  - component: {fileID: 114505585594191058}
+  - component: {fileID: 4280551436695838}
+  - component: {fileID: 114802851233358504}
   m_Layer: 0
   m_Name: springConfig(Clone)
   m_TagString: Untagged
@@ -122,47 +27,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1652378032224414
+--- !u!1 &1085202497764314
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4613659726153830}
-  - component: {fileID: 114778060642392180}
-  m_Layer: 0
-  m_Name: PaoConfig(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1674891063211088
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4719574762301290}
-  - component: {fileID: 114262088187020658}
-  m_Layer: 0
-  m_Name: galileiConfig(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1851887838930088
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4491025685153112}
-  - component: {fileID: 114091888547464512}
+  - component: {fileID: 4545169479147460}
+  - component: {fileID: 114460658303154590}
   m_Layer: 0
   m_Name: aliConfig(Clone)
   m_TagString: Untagged
@@ -170,31 +43,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1951609248404854
+--- !u!1 &1090398005413426
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4025136291541158}
-  - component: {fileID: 114192845675853562}
+  - component: {fileID: 4450165507206516}
+  - component: {fileID: 114768115989484820}
   m_Layer: 0
-  m_Name: ArcherConfig(Clone)
+  m_Name: MeleeConfig2(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1963320075142770
+--- !u!1 &1103723804339618
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4817297102554998}
-  - component: {fileID: 114789593034423072}
+  - component: {fileID: 4612359812962398}
+  - component: {fileID: 114514049184126718}
   m_Layer: 0
   m_Name: XiaoGuaiConfig(Clone)
   m_TagString: Untagged
@@ -202,15 +75,94 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1963958668965642
+--- !u!1 &1114048639105334
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4751139564697972}
-  - component: {fileID: 114363373493048724}
+  - component: {fileID: 4187670252951534}
+  m_Layer: 0
+  m_Name: AllSoldier
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1207875053493212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4472223513138932}
+  - component: {fileID: 114952697765811990}
+  m_Layer: 0
+  m_Name: PaoConfig2(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1410979675057358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4188691585598258}
+  - component: {fileID: 114769750025622420}
+  m_Layer: 0
+  m_Name: ArcherConfig(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1421277370517582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4019582411731184}
+  - component: {fileID: 114212637027131846}
+  m_Layer: 0
+  m_Name: towerConfig(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1480827727792510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4202976365563402}
+  - component: {fileID: 114252807348201062}
+  m_Layer: 0
+  m_Name: ArcherConfig2(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1518525996744498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4346047160289074}
+  - component: {fileID: 114607512965523308}
   m_Layer: 0
   m_Name: mainTowerConfig(Clone)
   m_TagString: Untagged
@@ -218,291 +170,271 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4025136291541158
+--- !u!1 &1661047778989650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4039246565208380}
+  - component: {fileID: 114766413346739588}
+  m_Layer: 0
+  m_Name: jieKeConfig(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1744561141972278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4774716159943728}
+  - component: {fileID: 114021590693240526}
+  m_Layer: 0
+  m_Name: galileiConfig(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1868124324671728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4096914345290058}
+  - component: {fileID: 114278672186393540}
+  m_Layer: 0
+  m_Name: PaoConfig(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1882739584980714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4820501925710370}
+  - component: {fileID: 114582641113856056}
+  m_Layer: 0
+  m_Name: MeleeConfig(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4019582411731184
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1951609248404854}
+  m_GameObject: {fileID: 1421277370517582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4469134627868712}
-  m_RootOrder: 1
+  m_Father: {fileID: 4187670252951534}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4240891351578904
+--- !u!4 &4039246565208380
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1373239266435758}
+  m_GameObject: {fileID: 1661047778989650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4469134627868712}
+  m_Father: {fileID: 4187670252951534}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4096914345290058
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1868124324671728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4187670252951534}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4469134627868712
+--- !u!4 &4187670252951534
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1636710027047158}
+  m_GameObject: {fileID: 1114048639105334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4491025685153112}
-  - {fileID: 4025136291541158}
-  - {fileID: 4875246003663382}
-  - {fileID: 4719574762301290}
-  - {fileID: 4751139564697972}
-  - {fileID: 4790998655428886}
-  - {fileID: 4799574098028328}
-  - {fileID: 4613659726153830}
-  - {fileID: 4240891351578904}
-  - {fileID: 4993232948769700}
-  - {fileID: 4861752110705840}
-  - {fileID: 4817297102554998}
+  - {fileID: 4545169479147460}
+  - {fileID: 4188691585598258}
+  - {fileID: 4202976365563402}
+  - {fileID: 4774716159943728}
+  - {fileID: 4039246565208380}
+  - {fileID: 4346047160289074}
+  - {fileID: 4820501925710370}
+  - {fileID: 4450165507206516}
+  - {fileID: 4096914345290058}
+  - {fileID: 4472223513138932}
+  - {fileID: 4280551436695838}
+  - {fileID: 4019582411731184}
+  - {fileID: 4612359812962398}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4491025685153112
+--- !u!4 &4188691585598258
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1851887838930088}
+  m_GameObject: {fileID: 1410979675057358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4469134627868712}
-  m_RootOrder: 0
+  m_Father: {fileID: 4187670252951534}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4613659726153830
+--- !u!4 &4202976365563402
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1652378032224414}
+  m_GameObject: {fileID: 1480827727792510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4469134627868712}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4719574762301290
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1674891063211088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4469134627868712}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4751139564697972
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1963958668965642}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4469134627868712}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4790998655428886
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153931331465490}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4469134627868712}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4799574098028328
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1305140414525214}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4469134627868712}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4817297102554998
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1963320075142770}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4469134627868712}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4861752110705840
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1375936646800822}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4469134627868712}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4875246003663382
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1110665469046454}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4469134627868712}
+  m_Father: {fileID: 4187670252951534}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4993232948769700
+--- !u!4 &4280551436695838
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1638807708760664}
+  m_GameObject: {fileID: 1014410454883190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4469134627868712}
+  m_Father: {fileID: 4187670252951534}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4346047160289074
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1518525996744498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4187670252951534}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4450165507206516
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090398005413426}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4187670252951534}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4472223513138932
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1207875053493212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4187670252951534}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114091888547464512
+--- !u!4 &4545169479147460
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1085202497764314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4187670252951534}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4612359812962398
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1103723804339618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4187670252951534}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4774716159943728
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1744561141972278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4187670252951534}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4820501925710370
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1882739584980714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4187670252951534}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114021590693240526
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1851887838930088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsPlayer: 1
-  npcTemplateId: 4
-  actionList:
-  - type: 1
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: Basic
-    skillAttackRange: 2
-    skillAttackTargetDist: 6
-    skillId: 180
-    needEnemy: 0
-  - type: 2
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: AbilityR
-    skillAttackRange: 12
-    skillAttackTargetDist: 12
-    skillId: 181
-    needEnemy: 1
-  normalAttack: aliAttack
-  eyeSightDistance: 10
-  attackRangeDist: 2
-  attackSkill: 180
-  moveSpeed: 7
-  damageToTower: 1
-  maxMoveRange2: 5
-  hpRecover: 0.02
---- !u!114 &114159265493979424
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1305140414525214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsPlayer: 0
-  npcTemplateId: 60
-  actionList:
-  - type: 1
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: creep_attack1
-    skillAttackRange: 8
-    skillAttackTargetDist: 8
-    skillId: 0
-    needEnemy: 0
-  normalAttack: monsterSingle
-  eyeSightDistance: 10
-  attackRangeDist: 1.5
-  attackSkill: 19
-  moveSpeed: 5
-  damageToTower: 1
-  maxMoveRange2: 5
-  hpRecover: 0
---- !u!114 &114192845675853562
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1951609248404854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsPlayer: 0
-  npcTemplateId: 64
-  actionList:
-  - type: 1
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: Creep_Shoot
-    skillAttackRange: 8
-    skillAttackTargetDist: 8
-    skillId: 0
-    needEnemy: 0
-  normalAttack: galiAttack
-  eyeSightDistance: 10
-  attackRangeDist: 6
-  attackSkill: 192
-  moveSpeed: 5
-  damageToTower: 1
-  maxMoveRange2: 5
-  hpRecover: 0
---- !u!114 &114262088187020658
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1674891063211088}
+  m_GameObject: {fileID: 1744561141972278}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
@@ -531,46 +463,17 @@ MonoBehaviour:
   eyeSightDistance: 10
   attackRangeDist: 2
   attackSkill: 180
+  dropGold: 10
+  maxMoveRange2: 5
   moveSpeed: 7
-  damageToTower: 1
-  maxMoveRange2: 5
   hpRecover: 0.02
---- !u!114 &114363373493048724
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1963958668965642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsPlayer: 0
-  npcTemplateId: 63
-  actionList:
-  - type: 1
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: AbilityR
-    skillAttackRange: 8
-    skillAttackTargetDist: 8
-    skillId: 0
-    needEnemy: 0
-  normalAttack: explosive
-  eyeSightDistance: 15
-  attackRangeDist: 15
-  attackSkill: 1
-  moveSpeed: 5
   damageToTower: 1
-  maxMoveRange2: 5
-  hpRecover: 0
---- !u!114 &114440400994822030
+--- !u!114 &114212637027131846
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1375936646800822}
+  m_GameObject: {fileID: 1421277370517582}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
@@ -591,136 +494,17 @@ MonoBehaviour:
   eyeSightDistance: 15
   attackRangeDist: 15
   attackSkill: 1
+  dropGold: 10
+  maxMoveRange2: 5
   moveSpeed: 5
+  hpRecover: 0
   damageToTower: 1
-  maxMoveRange2: 5
-  hpRecover: 0
---- !u!114 &114505585594191058
+--- !u!114 &114252807348201062
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1638807708760664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsPlayer: 0
-  npcTemplateId: 62
-  actionList:
-  - type: 1
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: AbilityR
-    skillAttackRange: 8
-    skillAttackTargetDist: 8
-    skillId: 0
-    needEnemy: 0
-  normalAttack: explosive
-  eyeSightDistance: 15
-  attackRangeDist: 15
-  attackSkill: 1
-  moveSpeed: 5
-  damageToTower: 1
-  maxMoveRange2: 5
-  hpRecover: 0
---- !u!114 &114594130501877164
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153931331465490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsPlayer: 0
-  npcTemplateId: 59
-  actionList:
-  - type: 1
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: creep_attack1
-    skillAttackRange: 8
-    skillAttackTargetDist: 8
-    skillId: 0
-    needEnemy: 0
-  normalAttack: monsterSingle
-  eyeSightDistance: 10
-  attackRangeDist: 1.5
-  attackSkill: 19
-  moveSpeed: 5
-  damageToTower: 1
-  maxMoveRange2: 5
-  hpRecover: 0
---- !u!114 &114766463200995258
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1373239266435758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsPlayer: 0
-  npcTemplateId: 67
-  actionList:
-  - type: 1
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: SiegeCreep_Attack
-    skillAttackRange: 8
-    skillAttackTargetDist: 8
-    skillId: 0
-    needEnemy: 0
-  normalAttack: galiAttack
-  eyeSightDistance: 10
-  attackRangeDist: 6
-  attackSkill: 193
-  moveSpeed: 5
-  damageToTower: 2
-  maxMoveRange2: 5
-  hpRecover: 0
---- !u!114 &114778060642392180
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1652378032224414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsPlayer: 0
-  npcTemplateId: 66
-  actionList:
-  - type: 1
-    totalTime: 1.042
-    hitTime: 0.477
-    aniName: SiegeCreep_Attack
-    skillAttackRange: 8
-    skillAttackTargetDist: 8
-    skillId: 0
-    needEnemy: 0
-  normalAttack: galiAttack
-  eyeSightDistance: 10
-  attackRangeDist: 6
-  attackSkill: 193
-  moveSpeed: 5
-  damageToTower: 2
-  maxMoveRange2: 5
-  hpRecover: 0
---- !u!114 &114780287386432518
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1110665469046454}
+  m_GameObject: {fileID: 1480827727792510}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
@@ -741,16 +525,87 @@ MonoBehaviour:
   eyeSightDistance: 10
   attackRangeDist: 6
   attackSkill: 192
-  moveSpeed: 5
-  damageToTower: 1
+  dropGold: 10
   maxMoveRange2: 5
+  moveSpeed: 5
   hpRecover: 0
---- !u!114 &114789593034423072
+  damageToTower: 1
+--- !u!114 &114278672186393540
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1963320075142770}
+  m_GameObject: {fileID: 1868124324671728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
+  npcTemplateId: 66
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: SiegeCreep_Attack
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
+  normalAttack: galiAttack
+  eyeSightDistance: 10
+  attackRangeDist: 6
+  attackSkill: 193
+  dropGold: 10
+  maxMoveRange2: 5
+  moveSpeed: 5
+  hpRecover: 0
+  damageToTower: 2
+--- !u!114 &114460658303154590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1085202497764314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 1
+  npcTemplateId: 4
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: Basic
+    skillAttackRange: 2
+    skillAttackTargetDist: 6
+    skillId: 180
+    needEnemy: 0
+  - type: 2
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: AbilityR
+    skillAttackRange: 12
+    skillAttackTargetDist: 12
+    skillId: 181
+    needEnemy: 1
+  normalAttack: aliAttack
+  eyeSightDistance: 10
+  attackRangeDist: 2
+  attackSkill: 180
+  dropGold: 10
+  maxMoveRange2: 5
+  moveSpeed: 7
+  hpRecover: 0.02
+  damageToTower: 1
+--- !u!114 &114514049184126718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1103723804339618}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
@@ -771,7 +626,233 @@ MonoBehaviour:
   eyeSightDistance: 10
   attackRangeDist: 1.5
   attackSkill: 19
-  moveSpeed: 5
-  damageToTower: 1
+  dropGold: 10
   maxMoveRange2: 5
+  moveSpeed: 5
   hpRecover: 0
+  damageToTower: 1
+--- !u!114 &114582641113856056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1882739584980714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
+  npcTemplateId: 59
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: creep_attack1
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
+  normalAttack: monsterSingle
+  eyeSightDistance: 10
+  attackRangeDist: 1.5
+  attackSkill: 19
+  dropGold: 10
+  maxMoveRange2: 5
+  moveSpeed: 5
+  hpRecover: 0
+  damageToTower: 1
+--- !u!114 &114607512965523308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1518525996744498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
+  npcTemplateId: 63
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: AbilityR
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
+  normalAttack: explosive
+  eyeSightDistance: 15
+  attackRangeDist: 15
+  attackSkill: 1
+  dropGold: 10
+  maxMoveRange2: 5
+  moveSpeed: 5
+  hpRecover: 0
+  damageToTower: 1
+--- !u!114 &114766413346739588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1661047778989650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 1
+  npcTemplateId: 2
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: Basic
+    skillAttackRange: 2
+    skillAttackTargetDist: 6
+    skillId: 180
+    needEnemy: 0
+  - type: 2
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: AbilityE
+    skillAttackRange: 12
+    skillAttackTargetDist: 12
+    skillId: 194
+    needEnemy: 0
+  normalAttack: 
+  eyeSightDistance: 0
+  attackRangeDist: 0
+  attackSkill: 0
+  dropGold: 0
+  maxMoveRange2: 0
+  moveSpeed: 7
+  hpRecover: 0.02
+  damageToTower: 1
+--- !u!114 &114768115989484820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090398005413426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
+  npcTemplateId: 60
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: creep_attack1
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
+  normalAttack: monsterSingle
+  eyeSightDistance: 10
+  attackRangeDist: 1.5
+  attackSkill: 19
+  dropGold: 10
+  maxMoveRange2: 5
+  moveSpeed: 5
+  hpRecover: 0
+  damageToTower: 1
+--- !u!114 &114769750025622420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1410979675057358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
+  npcTemplateId: 64
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: Creep_Shoot
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
+  normalAttack: galiAttack
+  eyeSightDistance: 10
+  attackRangeDist: 6
+  attackSkill: 192
+  dropGold: 10
+  maxMoveRange2: 5
+  moveSpeed: 5
+  hpRecover: 0
+  damageToTower: 1
+--- !u!114 &114802851233358504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1014410454883190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
+  npcTemplateId: 62
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: AbilityR
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
+  normalAttack: explosive
+  eyeSightDistance: 15
+  attackRangeDist: 15
+  attackSkill: 1
+  dropGold: 10
+  maxMoveRange2: 5
+  moveSpeed: 5
+  hpRecover: 0
+  damageToTower: 1
+--- !u!114 &114952697765811990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1207875053493212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayer: 0
+  npcTemplateId: 67
+  actionList:
+  - type: 1
+    totalTime: 1.042
+    hitTime: 0.477
+    aniName: SiegeCreep_Attack
+    skillAttackRange: 8
+    skillAttackTargetDist: 8
+    skillId: 0
+    needEnemy: 0
+  normalAttack: galiAttack
+  eyeSightDistance: 10
+  attackRangeDist: 6
+  attackSkill: 193
+  dropGold: 10
+  maxMoveRange2: 5
+  moveSpeed: 5
+  hpRecover: 0
+  damageToTower: 2

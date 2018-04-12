@@ -20,6 +20,7 @@ namespace MyLib
     [RequireComponent(typeof(LogicCommand))]
     [RequireComponent(typeof(MoveController))]
     [RequireComponent(typeof(NpcEquipment))]
+    [RequireComponent(typeof(ModifyComponent))]
     public class AIBase : MonoBehaviour
     {
         public bool ignoreFallCheck = false;

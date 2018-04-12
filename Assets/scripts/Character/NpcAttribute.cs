@@ -819,30 +819,6 @@ namespace MyLib
 
         void OnFirst(MyEvent evt)
         {
-            /*
-            SaveMaterial();
-            var serverId = GetNetView().GetServerID();
-            if (NormalMat.ContainsKey("body") && MVPMat.ContainsKey("body"))
-            {
-                if (evt.intArg == serverId)
-                {
-                    liveMat["body"] = MVPMat["body"];
-                    liveMat["tower2"] = MVPMat["tower2"];
-                }
-                else
-                {
-                    liveMat["body"] = NormalMat["body"];
-                    liveMat["tower2"] = NormalMat["tower2"];
-                }
-            }
-            //SetJob(this.job);
-            StartCoroutine(WaitSetColor());
-            if (!IsDead)
-            {
-                RestoreMat();
-            }
-            */
-
         }
 
 

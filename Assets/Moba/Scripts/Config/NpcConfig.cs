@@ -29,19 +29,42 @@ namespace MyLib
 
     public class NpcConfig : MonoBehaviour
     {
+        /// <summary>
+        /// NPC还是玩家配置
+        /// </summary>
         public bool IsPlayer = false;
+        /// <summary>
+        /// 职业ID 或者 NPCID
+        /// </summary>
         public int npcTemplateId;
         public List<ActionConfig> actionList;
+
+        #region NPC
         //普通攻击
         //4个技能的配置
+        //小怪和NPC的普通攻击配置
         public string normalAttack = "monsterSingle";
+        //npc的视觉范围
         public float eyeSightDistance = 9.5f;
+        //对NPC攻击范围小兵
         public float attackRangeDist = 10;
+        //NPC 普通技能ID
         public int attackSkill = 1;
-        public float moveSpeed = 5;
-        public float damageToTower = 1.0f;
+        public int dropGold = 10;
+        /// <summary>
+        /// NPC 回归原点最大距离
+        /// </summary>
         public float maxMoveRange2 = 11;
+        #endregion
+
+        #region PlayerAndNPC
+        //玩家和NPC均有影响
+        public float moveSpeed = 5;
+        //玩家回血速度
         public float hpRecover = 0;
+        public float damageToTower = 1.0f;
+        #endregion
+
 
         public ActionConfig GetAction(ActionType tp)
         {

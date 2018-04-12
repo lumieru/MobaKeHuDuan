@@ -179,7 +179,7 @@ namespace MyLib
             jobj.Add("Descriptor", "Class");
             jobj.Add("Type", behaviour.GetType().Name);
 
-            var pro = behaviour.GetType().GetFields(BindingFlags.Public | BindingFlags.DeclaredOnly | BindingFlags.Instance);
+            var pro = behaviour.GetType().GetFields(BindingFlags.Public | BindingFlags.Instance);
             foreach (var p in pro)
             {
                 if (p.Name == "SpawnId")

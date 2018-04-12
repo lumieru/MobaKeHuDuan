@@ -96,5 +96,17 @@ namespace MyLib
                 return null;
             }
         }
+        public AffixSpawn GetAffix(string affixName)
+        {
+            var affix = gameObject.GetComponentsInChildren<AffixSpawn>(true);
+            foreach(var a in affix)
+            {
+                if(a.AffixName == affixName)
+                {
+                    return a;
+                }
+            }
+            return null;
+        }
 	}
 }
