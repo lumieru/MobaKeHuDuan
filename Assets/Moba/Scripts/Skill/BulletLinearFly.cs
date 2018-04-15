@@ -18,9 +18,12 @@ public class BulletLinearFly : MonoBehaviour
     private Vector3 dieTargetPos;
     private float passTime = 0;
 
+    private int TeamColor;
     void Start()
     {
         attacker = runner.stateMachine.attacker;
+        TeamColor = attacker.GetComponent<NpcAttribute>().TeamColor;
+
         target = runner.stateMachine.target;
         skillData = runner.stateMachine.skillFullData.skillData;
 
@@ -52,6 +55,24 @@ public class BulletLinearFly : MonoBehaviour
         flyTime = Mathf.Max(flyTime, 0.5f);
     }
 
+    private HashSet<int> dictHurted = new HashSet<int>();
+    private void UpdateLogic()
+    {
+        var allEnemy = MobaUtil.FindNearEnemy(transform.position, missileData.Radius, TeamColor);
+        var allEne = new HashSet<int>();
+        foreach(var e in allEnemy)
+        {
+            allEne.Add(e.gameObject.GetComponent<NpcAttribute>().GetNetView().GetServerID());
+        }
+        allEne.ExceptWith(dictHurted);
+        foreach(var e in allEne)
+        {
+            CreateHitParticle();
+            dictHurted.Add(e);
+        }
+    }
+
+
     private void FixedUpdate()
     {
         passTime += Time.fixedDeltaTime;
@@ -60,12 +81,12 @@ public class BulletLinearFly : MonoBehaviour
         newPos.y = initPos.y;
         transform.position = newPos;
 
+        UpdateLogic();
         if (passTime >= flyTime)
         {
             HitSomething();
         }
     }
-
 
     private void HitSomething()
     {

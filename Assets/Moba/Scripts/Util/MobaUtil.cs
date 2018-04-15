@@ -216,5 +216,21 @@ namespace MyLib
                 go.transform.position = gm.mapPosFixHeight(newPos);
             }
         }
+        public static List<GameObject> FindNearEnemy(Vector3 pos, float radius, int TeamColor)
+        {
+            var col = Physics.OverlapSphere(pos, radius,
+            SkillDamageCaculate.GetDamageLayer());
+            var realEnemey = new List<GameObject>();
+            foreach(var c in col)
+            {
+                var attri = c.gameObject.GetComponent<NpcAttribute>();
+                var tc = attri.TeamColor;
+                if(TeamColor != tc && !attri.IsDead)
+                {
+                    realEnemey.Add(c.gameObject);
+                }
+            }
+            return realEnemey;
+        }
     }
 }

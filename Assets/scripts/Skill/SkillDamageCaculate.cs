@@ -103,7 +103,8 @@ namespace MyLib
         /// <returns>The damage layer.</returns>
         public static int GetDamageLayer()
         {
-            return 1 << (int)GameLayer.Npc | 1 << (int)GameLayer.IgnoreCollision2 | 1 << (int)GameLayer.Block | 1 << (int)GameLayer.TankPass;
+            var msk = LayerMask.NameToLayer("Npc");
+            return 1 << msk;
         }
 
         public static int GetBlockerLayer() {

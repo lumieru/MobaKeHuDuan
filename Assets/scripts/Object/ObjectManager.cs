@@ -187,8 +187,6 @@ namespace MyLib
 
         public string GetMyName()
         {
-            //return SaveGame.saveGame.selectChar.Name;
-            //return ServerData.Instance.playerInfo.Roles.Name;
             return UserInfo.UserName;
         }
 
@@ -197,7 +195,6 @@ namespace MyLib
 
         public int GetMyJob()
         {
-            //return (int)SaveGame.saveGame.selectChar.Job;
             Log.Sys("GetMyJob: " + ServerData.Instance.playerInfo.Roles.Job);
             return (int)ServerData.Instance.playerInfo.Roles.Job;
         }
@@ -441,35 +438,6 @@ namespace MyLib
             }
         }
 
-        /*
-        List<MonsterInit> cacheMonster = new List<MonsterInit>();
-        List<MonsterInit> cacheNpc = new List<MonsterInit>();
-
-        public void InitCache()
-        {
-            InitCacheMonster();
-            InitCacheNpc();
-        }
-        */
-        /*
-        void InitCacheMonster()
-        {
-            foreach (MonsterInit m in cacheMonster)
-            {
-                //CreateMonster(m.unitData, m.spawn);
-            }
-            cacheMonster.Clear();
-        }
-        void InitCacheNpc()
-        {
-            foreach (MonsterInit m in cacheNpc)
-            {
-                CreateNpc(m.unitData, m.spawnObj);
-            }
-            cacheNpc.Clear();
-        }
-        */
-
         /// <summary>
         /// 创建其它玩家
         /// 玩家所在场景
@@ -542,54 +510,6 @@ namespace MyLib
             }
         }
 
-
-        /*
-        public void CreateNpc(UnitData unitData, GameObject spawn)
-        {
-            if (WorldManager.worldManager.station == WorldManager.WorldStation.Enter)
-            {
-                var Resource = Resources.Load<GameObject>(unitData.ModelName);
-                GameObject g = Instantiate(Resource) as GameObject;
-                if (g.GetComponent<CharacterController>() == null)
-                {
-                    var c = g.AddComponent<CharacterController>();
-                    c.center = new Vector3(0, 0.7f, 0);
-                    c.height = 1.6f;
-                }
-
-                NpcAttribute npc = NGUITools.AddMissingComponent<NpcAttribute>(g);
-
-                var type = Type.GetType("MyLib." + unitData.AITemplate);
-                var t = typeof(NGUITools);
-                var m = t.GetMethod("AddMissingComponent");
-                Log.AI("Monster Create Certain AI  " + unitData.AITemplate + " " + type);
-                var geMethod = m.MakeGenericMethod(type);
-                geMethod.Invoke(null, new object[]{ g });// as AIBase;
-
-                g.transform.parent = transform;
-                g.tag = GameTag.Npc; //Player Or Npc 
-                g.layer = (int)GameLayer.IgnoreCollision;
-
-                //Register Unique Id To Npc 
-                var netView = g.GetComponent<KBEngine.KBNetworkView>();
-                netView.SetServerID(Util.NotInitServerID);
-                netView.IsPlayer = false;
-
-                npc.SetObjUnitData(unitData);
-                AddObject(netView.GetServerID(), netView);
-
-                npc.transform.position = spawn.transform.position;
-                var rotY = spawn.transform.localRotation.eulerAngles.y;
-                npc.transform.localRotation = Quaternion.Euler(new Vector3(0, rotY, 0)); 
-
-                NpcManager.Instance.RegNpc(unitData.name, g);
-            } else
-            {
-                cacheNpc.Add(new MonsterInit(unitData, spawn));
-            }
-        }
-        */
-
         /// <summary>
         /// 伤害区域
         /// Moba中的移动小兵
@@ -617,7 +537,6 @@ namespace MyLib
             var Resource = Resources.Load<GameObject>(unitData.ModelName);
             GameObject g = Instantiate(Resource) as GameObject;
             NpcAttribute npc = NGUITools.AddMissingComponent<NpcAttribute>(g);
-            //npc.spawnTrigger = spawn.gameObject;
 
             g.transform.parent = transform;
             g.tag = GameTag.Enemy;
@@ -652,20 +571,6 @@ namespace MyLib
             npc.SetObjUnitData(unitData);
             AddObject(netView.GetServerID(), netView);
 
-            /*
-            //不算怪物允许不去打
-            if (info != null)
-            {
-                npc.transform.position = NetworkUtil.FloatPos(info.X, info.Y, info.Z);
-            } else
-            {
-                //npc.transform.position = spawn.transform.position;
-            }
-            */
-
-            //BattleManager.battleManager.AddEnemy(npc.gameObject);
-            //npc.SetDeadDelegate = BattleManager.battleManager.EnemyDead;
-
             var sync = npc.GetComponent<MonsterSync>();
             if (sync != null)
             {
@@ -674,219 +579,6 @@ namespace MyLib
             }
 
         }
-
-        /*
-        public void CreateChestFromNetwork(UnitData unitData, SpawnChest spawn, EntityInfo info = null)
-        {
-            Log.Sys("Create Chest Unit " + unitData.name);
-            var Resource = Resources.Load<GameObject>(unitData.ModelName);
-            GameObject g = Instantiate(Resource) as GameObject;
-            NpcAttribute npc = NGUITools.AddMissingComponent<NpcAttribute>(g);
-            //npc.spawnTrigger = spawn.gameObject;
-
-            g.transform.parent = transform;
-            g.tag = GameTag.Enemy;
-            g.layer = (int)GameLayer.Npc;
-
-            var type = Type.GetType("MyLib." + unitData.AITemplate);
-            var t = typeof(NGUITools);
-            var m = t.GetMethod("AddMissingComponent");
-            Log.AI("Monster Create Certain AI  " + unitData.AITemplate + " " + type);
-            var geMethod = m.MakeGenericMethod(type);
-            geMethod.Invoke(null, new object[]{ g });// as AIBase;
-
-
-            var netView = g.GetComponent<KBEngine.KBNetworkView>();
-
-            //服务器返回的ViewId
-            //Owner 客户端怪物 服务器怪物
-            //Id ViewId
-            if (info != null)
-            {
-                netView.SetServerID(info.Id);
-            } else
-            {
-                netView.SetServerID(Util.NotInitServerID);
-            }
-
-            netView.IsPlayer = false;
-
-            npc.SetObjUnitData(unitData);
-            AddObject(netView.GetServerID(), netView);
-
-            //不算怪物允许不去打
-            if (info != null)
-            {
-                npc.transform.position = NetworkUtil.FloatPos(info.X, info.Y, info.Z);
-            } else
-            {
-                npc.transform.position = spawn.transform.position;
-            }
-
-
-            BattleManager.battleManager.AddEnemy(npc.gameObject);
-            npc.SetDeadDelegate = BattleManager.battleManager.EnemyDead;
-
-
-            var sync = npc.GetComponent<MonsterSync>();
-            if (sync != null)
-            {
-                sync.SyncAttribute(info);
-            }
-        }
-
-        public GameObject GetNetworkMonster(int viewId)
-        {
-            foreach (var p in photonViewList)
-            {
-                if (p.GetServerID() == viewId)
-                {
-                    return p.gameObject;
-                }
-            }
-            return null;
-        }
-        */
-     
-        ///<summary>
-        /// 副本内怪物构建流程
-        /// 单人副本通过Scene配置来产生怪物
-        /// 多人副本通过服务器推送消息产生怪物
-        /// </summary>
-        /*
-        public void CreateMonster(UnitData unitData, SpawnTrigger spawn)
-        {
-            if (WorldManager.worldManager.station == WorldManager.WorldStation.Enter)
-            {
-                Log.Sys("UnityDataIs " + unitData.ID);
-                if (unitData.Config == null)
-                {
-                    Debug.LogError("NotFoundMonster " + unitData.ID);
-                    return;
-                }
-
-                Log.Sys("Create Monster Unit " + unitData.name);
-                var Resource = Resources.Load<GameObject>(unitData.ModelName);
-                //本地怪兽不需要Player信息
-                GameObject g = Instantiate(Resource) as GameObject;
-                NpcAttribute npc = NGUITools.AddMissingComponent<NpcAttribute>(g);
-                //npc.spawnTrigger = spawn.gameObject;
-
-                var type = Type.GetType("MyLib." + unitData.AITemplate);
-                var t = typeof(NGUITools);
-                var m = t.GetMethod("AddMissingComponent");
-                Log.AI("Monster Create Certain AI  " + unitData.AITemplate + " " + type);
-                var geMethod = m.MakeGenericMethod(type);
-                //var petAI = 
-                geMethod.Invoke(null, new object[]{ g });// as AIBase;
-
-
-                g.transform.parent = transform;
-                g.tag = GameTag.Enemy;
-                g.layer = (int)GameLayer.Npc;
-                spawn.FirstMonster = g;
-
-                var netView = g.GetComponent<KBEngine.KBNetworkView>();
-                netView.SetServerID(Util.NotInitServerID);
-                netView.IsPlayer = false;
-
-                npc.SetObjUnitData(unitData);
-                AddObject(netView.GetServerID(), netView);
-
-			
-                float angle = UnityEngine.Random.Range(0, 360);
-                Vector3 v = Vector3.forward;
-                v = Quaternion.Euler(new Vector3(0, angle, 0)) * v;
-                float rg = UnityEngine.Random.Range(0, spawn.Radius);
-
-                npc.transform.position = spawn.transform.position + v * rg;
-                if (unitData.IsElite)
-                {
-                    npc.transform.localScale = new Vector3(2, 2, 2);
-                }
-
-                BattleManager.battleManager.AddEnemy(npc.gameObject);
-                npc.SetDeadDelegate = BattleManager.battleManager.EnemyDead;
-                //npc.Level = spawn.Level;
-            } else
-            {
-                cacheMonster.Add(new MonsterInit(unitData, spawn));
-            }
-        }
-        
-        public void CreatePet(int monsterId, GameObject owner, Affix affix, Vector3 pos)
-        {
-            Log.Sys("Create Pet " + monsterId + " " + owner + " " + pos);
-            if (owner == null)
-            {
-                Debug.LogError("Own NotExist Pet Not Born");
-                return;
-            }
-            var unitData = Util.GetUnitData(false, monsterId, 1);
-
-            var Resource = Resources.Load<GameObject>(unitData.ModelName);
-
-            GameObject g = Instantiate(Resource) as GameObject;
-            NpcAttribute npc = NGUITools.AddMissingComponent<NpcAttribute>(g);
-            var type = Type.GetType("MyLib." + unitData.AITemplate);
-            var t = typeof(NGUITools);
-            var m = t.GetMethod("AddMissingComponent");
-            Log.AI("Create Certain AI  " + unitData.AITemplate + " " + type);
-            var geMethod = m.MakeGenericMethod(type);
-            //var petAI = 
-            geMethod.Invoke(null, new object[]{ g });// as AIBase;
-            //var petAI = 
-            //NGUITools.AddMissingComponent<type> (g);
-
-            g.transform.parent = transform;
-            g.tag = owner.tag;
-            g.layer = (int)GameLayer.Npc;
-
-
-            npc.SetOwnerId(owner.GetComponent<KBEngine.KBNetworkView>().GetLocalId());
-            npc.spawnTrigger = owner.GetComponent<NpcAttribute>().spawnTrigger;
-
-            //不可移动Buff
-            //持续时间Buff
-            //无敌不可被攻击Buff
-            //火焰陷阱的特点 特点组合
-            g.GetComponent<BuffComponent>().AddBuff(affix);
-
-            var netView = NGUITools.AddMissingComponent<KBEngine.KBNetworkView>(g);
-            netView.SetServerID(Util.NotInitServerID);
-            netView.IsPlayer = false;
-            //owner.GetComponent<NpcAttribute>().AddSummon(netView.gameObject);
-			
-            npc.SetObjUnitData(unitData);
-            AddObject(netView.GetServerID(), netView);
-
-            npc.transform.position = pos;	
-
-            if (unitData.IsElite)
-            {
-                npc.transform.localScale = new Vector3(2, 2, 2);
-            }
-
-            if (npc.tag == GameTag.Enemy)
-            {
-                BattleManager.battleManager.AddEnemy(npc.gameObject);
-                npc.SetDeadDelegate = BattleManager.battleManager.EnemyDead;
-            }
-        }
-
-        public List<GameObject> GetSummons(int localId)
-        {
-            var ret = new List<GameObject>();
-            foreach (var g in photonViewList)
-            {
-                if (g.GetComponent<NpcAttribute>().OwnerId == localId)
-                {
-                    ret.Add(g.gameObject);
-                }
-            }
-            return ret;
-        }
-        */
+      
     }
-
 }

@@ -38,6 +38,13 @@ namespace MyLib
     {
         public CharacterState _characterState = CharacterState.Idle;
         public int OwnerId = -1;
+        private void Awake()
+        {
+            var cap = gameObject.AddMissingComponent<CapsuleCollider>();
+            cap.center = new Vector3(0, 2f, 0);
+            cap.radius = 1f;
+            cap.height = 4;
+        }
 
         public string userName;
         /// <summary>

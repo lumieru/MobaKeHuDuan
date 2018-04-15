@@ -143,6 +143,7 @@ namespace MyLib
             if (info.HasTeamColor)
             {
                 curInfo.TeamColor = info.TeamColor;
+                attr.SetTeamColorNet(info.TeamColor);
             }
             NetworkMove(info);
             if (info.HasHP)
