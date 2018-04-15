@@ -113,6 +113,18 @@ namespace MyLib
                     bullet.transform.localRotation = bulletForward;
                 }
             }
+            else if(msData.missileType == MissileData.MissileType.Linear)
+            {
+                var bullet = b.AddComponent<BulletLinearFly>();
+                bullet.OffsetPos = Position;
+                bullet.runner = runner;
+                bullet.missileData = msData;
+                var attacker = runner.stateMachine.attacker;
+                var playerForward = Quaternion.Euler(new Vector3(0, 0 + attacker.transform.rotation.eulerAngles.y, 0));
+                var bulletForward = Quaternion.Euler(new Vector3(0, deg + attacker.transform.eulerAngles.y, 0));
+                bullet.transform.localPosition = attacker.transform.localPosition + playerForward * Position;
+                bullet.transform.localRotation = bulletForward;
+            } 
             else
             {
                 var bullet = b.AddComponent<Bullet>();

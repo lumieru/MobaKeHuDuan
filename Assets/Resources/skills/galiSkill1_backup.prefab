@@ -350,15 +350,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90da964842485494d8d733605aa0cad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missileType: 2
+  missileType: 0
   lifeTime: 5
   ActiveParticle: {fileID: 1754120741634424, guid: a46356de953411648a0f466563b4e067,
     type: 2}
   DieParticle: {fileID: 131276, guid: 4e38aeee9dafa73498c41085f8837352, type: 2}
   HitParticle: {fileID: 131276, guid: 4e38aeee9dafa73498c41085f8837352, type: 2}
   ReleaseParticle: {fileID: 0}
-  Velocity: 1
-  Radius: 3
+  Velocity: 10
+  Radius: 0.8
   MaxDistance: 12
   NumRicochets: 0
   RandomAngle: 45

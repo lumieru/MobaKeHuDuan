@@ -27,6 +27,7 @@ namespace MyLib
         {
             Target,
             Pos,
+            Linear,
         }
         public MissileType missileType = MissileType.Target;
         //public float flyTime = 3;//固定时间飞行 计算时间飞行
