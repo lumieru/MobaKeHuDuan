@@ -26,7 +26,7 @@ public class MeleeCharacter : AICharacter
             animation = GetAttr().GetComponent<Animation>();
             if(animation != null)
             {
-                foreach(AnimationClip c in animation)
+                foreach(AnimationState c in animation)
                 {
                     aniLength[c.name] = c.length;
                 }
@@ -54,16 +54,24 @@ public class MeleeCharacter : AICharacter
         }
         else
         {
-
+            animation.CrossFade(name);
         }
-
     }
     public override void PlayAniInTime(string name, float time)
     {
-        var ani = aniLength[name];
-        var rate = ani / time;
-        animator.speed = rate;
-        animator.CrossFade(name, 0.1f);
+        if (animator != null)
+        {
+            var ani = aniLength[name];
+            var rate = ani / time;
+            animator.speed = rate;
+            animator.CrossFade(name, 0.1f);
+        }else
+        {
+            var ani = aniLength[name];
+            var rate = ani / time;
+            animation[name].speed = rate;
+            animation.CrossFade(name);
+        }
     }
 
 

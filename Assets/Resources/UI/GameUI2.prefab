@@ -1526,7 +1526,7 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 0.56078434}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mWidth: 203
   mHeight: 18
@@ -1546,7 +1546,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 11400000, guid: 7fb477c7ecf7041569e94db5403bc423, type: 2}
-  mSpriteName: BarXP
+  mSpriteName: PlayerXPBar
   mFillCenter: 1
 --- !u!114 &11400018
 MonoBehaviour:

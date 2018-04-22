@@ -253,6 +253,11 @@ public class MobaMeSync : ISyncInterface {
             curInfo.HP = info.HP;
             attr.SetHPNet(info.HP);
         }
+        if(info.HasExp)
+        {
+            curInfo.Exp = info.Exp;
+            attr.ChangeExp(curInfo.Exp);
+        }
         if (info.HasLevel)
         {
             curInfo.Level = info.Level;

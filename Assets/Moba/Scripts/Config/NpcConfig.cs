@@ -55,6 +55,7 @@ namespace MyLib
         /// NPC 回归原点最大距离
         /// </summary>
         public float maxMoveRange2 = 11;
+        public int XPGain = 50;
         #endregion
 
         #region PlayerAndNPC

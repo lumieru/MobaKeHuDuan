@@ -71,8 +71,10 @@ namespace MyLib
             hp.value = me.GetProp(CharAttribute.CharAttributeEnum.HP)*1.0f/me.GetProp(CharAttribute.CharAttributeEnum.HP_MAX);
             mp.value = me.GetProp(CharAttribute.CharAttributeEnum.MP)*1.0f/me.GetProp(CharAttribute.CharAttributeEnum.MP_MAX);
 
-            var ep = me.GetProp(CharAttribute.CharAttributeEnum.EXP);
-            var ma = me.GetProp(CharAttribute.CharAttributeEnum.EXP_MAX);
+            var ep = me.GetComponent<NpcAttribute>().Exp;
+            var ma = me.GetComponent<NpcAttribute>().MaxExp;
+            //var ep = me.GetProp(CharAttribute.CharAttributeEnum.EXP);
+            //var ma = me.GetProp(CharAttribute.CharAttributeEnum.EXP_MAX);
             exp.value = ep*1.0f/ma;
             expLabel.text = ep+"/"+ma;
 

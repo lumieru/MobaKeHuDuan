@@ -26,7 +26,7 @@ namespace MyLib
         public int leftTime = 300;
         public Dictionary<int, ScoreData> score = new Dictionary<int, ScoreData>();
         private LeftTimeUI ltui;
-        private ScoreUI scoreUI;
+        //private ScoreUI scoreUI;
 
 
         public static ScoreManager Instance;
@@ -92,7 +92,7 @@ namespace MyLib
             score[id].killCount = killCount;
             score[id].deadCount = deadCount;
             score[id].assistCount = assistCount;
-            scoreUI.SetData(score);
+            //scoreUI.SetData(score);
 
             MyEventSystem.PushEventStatic(MyEvent.EventType.UpdateScoreDetail);
         }
@@ -112,7 +112,7 @@ namespace MyLib
             }
             score[enemy].beKilled++;
 
-            scoreUI.SetData(score);
+            //scoreUI.SetData(score);
         }
 
 
@@ -187,13 +187,17 @@ namespace MyLib
                 uiRoot = WindowMng.windowMng.GetMainUI();
                 yield return null;
             }
+
             var lt = WindowMng.windowMng.AddChild(uiRoot, Resources.Load<GameObject>("UI/LeftTimeUI"));
             ltui = lt.GetComponent<LeftTimeUI>();
+            
+            /*
             var sui = WindowMng.windowMng.AddChild(uiRoot, Resources.Load<GameObject>("UI/ScoreUI"));
             scoreUI = sui.GetComponent<ScoreUI>();
 
             var rtp = Util.FindChildRecursive(uiRoot.transform, "RightTop");
             rtp.gameObject.SetActive(false);
+            */
 
             Color32 white = new Color32(255, 255, 255, 255);
             Color32 red = new Color32(255, 0, 0, 255);

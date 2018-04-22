@@ -430,6 +430,13 @@ namespace MyLib
             }
 
         }
+        public int MaxExp
+        {
+            get
+            {
+                return (int)_ObjUnitData.MaxExp;
+            }
+        }
 
         //TODO: 技能点应该属于Skill系统
         //public int AttributePoint = 0;
@@ -985,6 +992,8 @@ namespace MyLib
         //TODO: 单人副本中需要判断是否升级以及升级相关处理
         public void ChangeExp(int e)
         {
+            Exp = e;
+            /*
             Exp += e;
             var maxExp = _ObjUnitData.MaxExp;
 
@@ -993,16 +1002,8 @@ namespace MyLib
                 LevelUp();
             } else
             {
-                /*
-                if (IsMine())
-                {
-                    var sync = CGAddProp.CreateBuilder();
-                    sync.Key = (int)CharAttribute.CharAttributeEnum.EXP;
-                    sync.Value = e;
-                    KBEngine.Bundle.sendImmediate(sync);
-                }
-                */
             }
+            */
 
             var evt = new MyEvent(MyEvent.EventType.UpdatePlayerData);
             evt.localID = GetLocalId();
