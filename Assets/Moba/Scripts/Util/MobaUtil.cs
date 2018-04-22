@@ -232,5 +232,15 @@ namespace MyLib
             }
             return realEnemey;
         }
+        public static void NetworkBuff(GameObject go, GCPlayerCmd gc)
+        {
+            var bufInfo = gc.BuffInfo;
+            var sk = Util.GetSkillData(bufInfo.SkillId, 1);
+            var skConfig = SkillLogic.GetSkillInfo(sk);
+            var affix = skConfig.GetAffix(bufInfo.BuffName);
+            var inst = GameObject.Instantiate<GameObject>(affix.gameObject);
+            var modify = go.GetComponent<ModifyComponent>();
+            modify.AddBuff(inst.GetComponent<AffixSpawn>());
+        }
     }
 }

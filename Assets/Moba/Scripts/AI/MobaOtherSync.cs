@@ -281,6 +281,7 @@ namespace MyLib
         }
         public override void NetworkBuff(GCPlayerCmd gc)
         {
+            MobaUtil.NetworkBuff(gameObject, gc);
         }
         public override void NetworkRemoveBuff(GCPlayerCmd cmd)
         {

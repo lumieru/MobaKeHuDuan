@@ -290,13 +290,7 @@ public class MobaMeSync : ISyncInterface {
     }
     public override void NetworkBuff(GCPlayerCmd gc)
     {
-        var bufInfo = gc.BuffInfo;
-        var sk = Util.GetSkillData(bufInfo.SkillId, 1);
-        var skConfig = SkillLogic.GetSkillInfo(sk);
-        var affix = skConfig.GetAffix(bufInfo.BuffName);
-        var inst = GameObject.Instantiate<GameObject>(affix.gameObject);
-        var modify = GetComponent<ModifyComponent>();
-        modify.AddBuff(inst.GetComponent<AffixSpawn>());
+        MobaUtil.NetworkBuff(gameObject, gc);
     }
 
     public override void NetworkRemoveBuff(GCPlayerCmd cmd)

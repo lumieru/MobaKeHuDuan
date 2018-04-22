@@ -123,17 +123,7 @@ namespace MyLib
         /// <param name="cmd"></param>
         public override void NetworkBuff(GCPlayerCmd cmd)
         {
-            var sk = Util.GetSkillData(cmd.BuffInfo.SkillId, 1);
-            var skConfig = SkillLogic.GetSkillInfo(sk);
-            var evt = skConfig.GetEvent(cmd.BuffInfo.EventId);
-            if (evt != null)
-            {
-                var pos = cmd.BuffInfo.AttackerPosList;
-                var px = pos [0] / 100.0f;
-                var py = pos [1] / 100.0f;
-                var pz = pos [2] / 100.0f;
-                gameObject.GetComponent<BuffComponent>().AddBuff(evt.affix, new Vector3(px, py, pz), 0, cmd.BuffInfo.BuffId);
-            }
+            MobaUtil.NetworkBuff(gameObject, cmd); 
         }
 
         public void SyncAttribute(EntityInfo info) {
