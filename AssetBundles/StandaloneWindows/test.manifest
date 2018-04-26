@@ -1,0 +1,53 @@
+ManifestFileVersion: 0
+CRC: 2223922218
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: baaa7f040ae99822d774067da4a9abc0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: daaf95a6e94260ff27e8170d985addb0
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ec7544a77807a164e8d8ddeb2c57348c, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/models/Siege_Creep_Blue.prefab
+- Assets/Resources/player/Entity_Allycra.prefab
+- Assets/Resources/player/Entity_GalileiClient.prefab
+- Assets/Resources/AllSoldier.prefab
+- Assets/Resources/player/Entity_Jakei.prefab
+Dependencies:
+- E:/UnityProj/smallGameClient/AssetBundles/StandaloneWindows/base

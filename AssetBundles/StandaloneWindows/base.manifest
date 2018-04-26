@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 2672864300
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3cc77094704f8fb5082cebc3aabb7771
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1d2e4f398c471a4e0a0ce9f98e04125b
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Moba/MOBA Heroes/Creeps/Moba Creeps/Siege/Animations/Siege_Creep_Move.fbx
+- Assets/Moba/MOBA Heroes/Creeps/Moba Creeps/Siege/Animations/Siege_Creep_attack.fbx
+- Assets/Moba/MOBA Heroes/Creeps/Moba Creeps/Siege/Mesh/Siege_Creep.fbx
+- Assets/Moba/MOBA Heroes/Creeps/Moba Creeps/Melee/Meshes/Creep_Melee_Rig.fbx
+- Assets/Moba/MOBA Heroes/Creeps/Moba Creeps/Animations/Creep_death.fbx
+Dependencies: []
