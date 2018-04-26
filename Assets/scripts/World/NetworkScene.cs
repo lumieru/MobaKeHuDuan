@@ -255,32 +255,6 @@ namespace MyLib
                         sync.NetworkBuff(proto);
                     }
                 }
-                
-                /*
-                var target = proto.BuffInfo.Target;
-                var sync = NetDateInterface.GetPlayer(target);
-                var player = ObjectManager.objectManager.GetPlayer(target);
-                if (sync != null)
-                {
-                    sync.NetworkBuff(proto);
-                }
-                else if(player != null)
-                {
-                    var sync2 = player.GetComponent<MySelfAttributeSync>();
-                    if (sync2 != null)
-                    {
-                        sync2.NetworkBuff(proto);
-                    }
-                }
-                if (player != null && !NetworkUtil.IsNetMaster())
-                {
-                    var monSync = player.GetComponent<MonsterSync>();
-                    if (monSync != null)
-                    {
-                        monSync.NetworkBuff(proto);
-                    }
-                }
-                */
             }
             else if (cmds[0] == "RemoveBuff")
             {

@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: bf60cc8ea22a8a846950e728ef5df74d
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 19
   fileIDToRecycleName:
     100000: ArmLower_L
     100002: ArmLower_R
@@ -76,17 +76,10 @@ ModelImporter:
     7400000: CreepDeath
     9500000: //RootNode
     13700000: mesh
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: 22173944d26e85b4ca97b0feb4c9cfde, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -99,14 +92,12 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: CreepDeath
@@ -208,10 +199,7 @@ ModelImporter:
     globalScale: 0.01
     meshCompression: 0
     addColliders: 0
-    importVisibility: 0
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -227,7 +215,6 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 4
-    normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 1
   humanDescription:
@@ -596,5 +583,5 @@ ModelImporter:
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: base
   assetBundleVariant: 

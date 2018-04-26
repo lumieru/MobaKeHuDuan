@@ -253,11 +253,9 @@ namespace MyLib
             if (info.HasPlayerModelInGame && curInfo.PlayerModelInGame != info.PlayerModelInGame)
             {
                 curInfo.PlayerModelInGame = info.PlayerModelInGame;
-                GetComponent<MobaModelLoader>().LoadModel(curInfo.PlayerModelInGame);
+                StartCoroutine(GetComponent<MobaModelLoader>().LoadModel(curInfo.PlayerModelInGame));
                 var unitData = Util.GetUnitData(true, curInfo.PlayerModelInGame, 0);
                 attr.SetObjUnitData(unitData);
-
-                //SkillDataController.skillDataController.InitSkillShotAfterSelectSkill(curInfo.PlayerModelInGame);
             }
             if (info.HasHP)
             {

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using MyLib;
 
+/// <summary>
+/// 加载玩家职业对应的模型
+/// </summary>
 public class MobaModelLoader : MonoBehaviour {
     private GameObject model;
     private NpcAttribute attr;
@@ -14,10 +17,13 @@ public class MobaModelLoader : MonoBehaviour {
         attr = GetComponent<NpcAttribute>();
     }
 
-    public void LoadModel(int modelId)
+    public IEnumerator LoadModel(int modelId)
     {
         var udata = Util.GetUnitData(true, modelId, 0);
-        model = Object.Instantiate<GameObject>(Resources.Load<GameObject>(udata.ModelName));
+        GameObject[] ret = new GameObject[1];
+        yield return ABLoader.Instance.LoadPrefab(udata.ModelName, ret);
+        var md = ret[0];
+        model = GameObject.Instantiate<GameObject>(md);
         var scale = model.transform.localScale;
         model.transform.parent = transform;
         Util.InitGameObject(model);
