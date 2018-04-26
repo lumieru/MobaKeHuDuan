@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 705516818
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 862279a26168021b0ce74817642f3676
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: aedd0111607216716759782b00e4d385
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: ec7544a77807a164e8d8ddeb2c57348c, type: 3}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/player/Entity_GalileiClient.prefab
+Dependencies: []

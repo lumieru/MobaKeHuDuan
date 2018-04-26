@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2223922218
+CRC: 714359954
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: baaa7f040ae99822d774067da4a9abc0
+    Hash: 27626c3fbdad60837fb19f43d59d031c
   TypeTreeHash:
     serializedVersion: 2
-    Hash: daaf95a6e94260ff27e8170d985addb0
+    Hash: 99fd3976f5203b2fd426b331e96cb87b
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -37,8 +37,6 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 328241ddf9f953b488a6e0adb5b448a7, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: ec7544a77807a164e8d8ddeb2c57348c, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 137
@@ -46,7 +44,6 @@ ClassTypes:
 Assets:
 - Assets/Resources/models/Siege_Creep_Blue.prefab
 - Assets/Resources/player/Entity_Allycra.prefab
-- Assets/Resources/player/Entity_GalileiClient.prefab
 - Assets/Resources/AllSoldier.prefab
 - Assets/Resources/player/Entity_Jakei.prefab
 Dependencies:
