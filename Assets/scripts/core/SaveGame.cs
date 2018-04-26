@@ -304,7 +304,7 @@ namespace MyLib
 			CScene.InitStatic();
             var g = gameObject;
             g.AddComponent<ChatData>();
-            g.AddMissingComponent<ABLoader>();
+            //g.AddMissingComponent<ABLoader>();
             if (NotifyUIManager.Instance == null)
             {
                 g.AddComponent<NotifyUIManager>();

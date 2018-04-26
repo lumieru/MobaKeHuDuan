@@ -542,7 +542,7 @@ namespace MyLib
                 }
                 if(_npcconfig == null)
                 {
-                    _npcconfig = NpcConfig.defaultConfig;
+                    _npcconfig = NpcConfig.defaultConfig();
                 }
                 return _npcconfig;
             }

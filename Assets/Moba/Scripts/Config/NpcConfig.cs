@@ -92,13 +92,19 @@ namespace MyLib
         }
 
 
-        public static readonly NpcConfig defaultConfig = new NpcConfig()
+        public static  NpcConfig defaultConfig()
         {
-            npcTemplateId = -1,
-        };
-
+            if(_default == null)
+            {
+                var go = new GameObject();
+                var nc = go.AddMissingComponent<NpcConfig>();
+                nc.npcTemplateId = -1;
+                _default = nc;
+                GameObject.DontDestroyOnLoad(go);
+            }
+            return _default;
+        }
+        private static NpcConfig _default;
     }
-
-
    
 }
