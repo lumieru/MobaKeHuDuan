@@ -627,7 +627,7 @@ namespace AssetBundleBrowser
             SelectionChanged(selection);
         }
 
-        private void ReloadAndSelect(int hashCode, bool rename)
+        public void ReloadAndSelect(int hashCode, bool rename)
         {
             var selection = new List<int>();
             selection.Add(hashCode);

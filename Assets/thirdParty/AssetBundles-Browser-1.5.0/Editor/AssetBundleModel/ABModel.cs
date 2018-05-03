@@ -25,7 +25,7 @@ namespace AssetBundleBrowser.AssetBundleModel
         internal static /*const*/ Color k_LightGrey = Color.grey * 1.5f;
 
         private static ABDataSource s_DataSource;
-        private static BundleFolderConcreteInfo s_RootLevelBundles = new BundleFolderConcreteInfo("", null);
+        internal static BundleFolderConcreteInfo s_RootLevelBundles = new BundleFolderConcreteInfo("", null);
         private static List<ABMoveData> s_MoveData = new List<ABMoveData>();
         private static List<BundleInfo> s_BundlesToUpdate = new List<BundleInfo>();
         private static Dictionary<string, AssetInfo> s_GlobalAssetList = new Dictionary<string, AssetInfo>();

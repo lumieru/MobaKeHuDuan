@@ -20,7 +20,7 @@ namespace AssetBundleBrowser
 
         Rect m_Position;
 
-        AssetBundleTree m_BundleTree;
+        public AssetBundleTree m_BundleTree;
         AssetListTree m_AssetList;
         MessageList m_MessageList;
         BundleDetailList m_DetailsList;

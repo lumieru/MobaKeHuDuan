@@ -46,7 +46,14 @@ public class ABLoader : SerializedMonoBehaviour
                 }else
                 {
                     var resName = l.Substring(2).ToLower();
-                    resToAB.Add(resName, bundleName);
+                    if (resToAB.ContainsKey(resName))
+                    {
+                        Debug.LogError("Duplicate:" + resName);
+                    }
+                    else
+                    {
+                        resToAB.Add(resName, bundleName);
+                    }
                 }
             }else if(state == 2)
             {
