@@ -63,7 +63,7 @@ public class ABLoader : SerializedMonoBehaviour
     }
 
     public static ABLoader Instance;
-    private AssetBundleManager abm;
+    public AssetBundleManager abm;
     private bool initYet = false;
 
     private void Awake()
@@ -91,7 +91,9 @@ public class ABLoader : SerializedMonoBehaviour
         var async = abm.GetBundleAsync(abName);
         yield return async;
         var ab = async.AssetBundle;
-        //var ab = AssetBundle.LoadFromFile(Path.Combine(Application.dataPath, "../AssetBundles/StandaloneWindows/test"));
+        var container = abm.GetContainer(ab.name);
+        AssetBundleMemoryManager.Instance.AddAB(container);
+
         var go = ab.LoadAsset<GameObject>(path);
         ret[0] = go;
     }

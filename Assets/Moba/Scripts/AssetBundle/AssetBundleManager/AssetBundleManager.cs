@@ -42,6 +42,14 @@ namespace AssetBundles
         private IDictionary<string, AssetBundleContainer> activeBundles = new Dictionary<string, AssetBundleContainer>(StringComparer.OrdinalIgnoreCase);
         private IDictionary<string, DownloadInProgressContainer> downloadsInProgress = new Dictionary<string, DownloadInProgressContainer>(StringComparer.OrdinalIgnoreCase);
 
+        public AssetBundleContainer GetContainer(string nm)
+        {
+            return activeBundles[nm];
+        }
+        public int GetLoadedABCount()
+        {
+            return activeBundles.Count;
+        }
         /// <summary>
         ///     Sets the base uri used for AssetBundle calls.
         /// </summary>
@@ -235,7 +243,7 @@ namespace AssetBundles
             AssetBundleContainer active;
 
             if (activeBundles.TryGetValue(bundleName, out active)) {
-                active.References++;
+                //active.References++;
                 onComplete(active.AssetBundle);
                 return;
             }
@@ -261,7 +269,7 @@ namespace AssetBundles
 
             for (int i = 0; i < dependencies.Length; i++) {
                 if (activeBundles.TryGetValue(dependencies[i], out active)) {
-                    active.References++;
+                    //active.References++;
                 } else {
                     dependenciesToDownload.Add(dependencies[i]);
                 }
@@ -346,18 +354,23 @@ namespace AssetBundles
 
             if (!activeBundles.TryGetValue(bundleName, out cache)) return;
 
-            if (force || --cache.References <= 0) {
-                if (cache.AssetBundle != null) {
-                    cache.AssetBundle.Unload(unloadAllLoadedObjects);
-                }
-
-                activeBundles.Remove(bundleName);
-
-                for (int i = 0; i < cache.Dependencies.Length; i++) {
-                    UnloadBundle(cache.Dependencies[i], unloadAllLoadedObjects, force);
-                }
+            //if (force || --cache.References <= 0) {
+            if (cache.AssetBundle != null)
+            {
+                cache.AssetBundle.Unload(unloadAllLoadedObjects);
             }
+
+            activeBundles.Remove(bundleName);
+
+            /*
+            for (int i = 0; i < cache.Dependencies.Length; i++)
+            {
+                UnloadBundle(cache.Dependencies[i], unloadAllLoadedObjects, force);
+            }
+            */
+            //}
         }
+
 
         /// <summary>
         ///     Caches the downloaded bundle and pushes it to the onComplete callback.
@@ -369,18 +382,21 @@ namespace AssetBundles
 
             activeBundles.Add(bundleName, new AssetBundleContainer {
                 AssetBundle = bundle,
-                References = inProgress.References,
+                //References = inProgress.References,
+                References = 1,
                 Dependencies = manifest.GetDirectDependencies(bundleName)
             });
 
             inProgress.OnComplete(bundle);
         }
 
-        internal class AssetBundleContainer
+        public class AssetBundleContainer
         {
             public AssetBundle AssetBundle;
             public int References = 1;
             public string[] Dependencies;
+            public float lastUsedTime;
+            public C5.IPriorityQueueHandle<AssetBundleContainer> handler;
         }
 
         internal class DownloadInProgressContainer
