@@ -1,5 +1,5 @@
 #if UNITY_EDITOR
-//#define DEBUG
+#define DEBUG_LY
 //#undef DEBUG
 #endif
 

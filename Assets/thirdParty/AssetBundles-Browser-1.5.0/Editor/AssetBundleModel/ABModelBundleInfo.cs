@@ -256,9 +256,9 @@ namespace AssetBundleBrowser.AssetBundleModel
 
     internal class BundleDataInfo : BundleInfo
     {
-        protected List<AssetInfo> m_ConcreteAssets;
-        protected List<AssetInfo> m_DependentAssets;
-        protected HashSet<string> m_BundleDependencies;
+        public List<AssetInfo> m_ConcreteAssets;
+        public List<AssetInfo> m_DependentAssets;
+        public HashSet<string> m_BundleDependencies;
         protected int m_ConcreteCounter;
         protected int m_DependentCounter;
         protected bool m_IsSceneBundle;
@@ -426,6 +426,8 @@ namespace AssetBundleBrowser.AssetBundleModel
             return m_BundleDependencies;
         }
 
+        private bool needRefresh = true;
+
         internal override void Update()
         {
             int dependents = m_DependentAssets.Count;
@@ -447,8 +449,30 @@ namespace AssetBundleBrowser.AssetBundleModel
                 m_DoneUpdating = true;
             }
             m_Dirty = (dependents != m_DependentAssets.Count) || (bundleDep != m_BundleDependencies.Count);
-            if (m_Dirty || m_DoneUpdating)
-                RefreshMessages();
+            if (needRefresh)
+            {
+                if (m_Dirty || m_DoneUpdating)
+                    RefreshMessages();
+            }
+        }
+
+        internal void GatherAllDep()
+        {
+            needRefresh = false;
+            while (true)
+            {
+                Update();
+                if(m_ConcreteCounter >= m_ConcreteAssets.Count && m_DependentCounter >= m_DependentAssets.Count)
+                {
+                    break;
+                }
+                if (m_DoneUpdating)
+                {
+                    break;
+                }
+            }
+            RefreshMessages();
+            needRefresh = true;
         }
 
         private void GatherDependencies(AssetInfo asset, string parentBundle = "")
@@ -691,7 +715,7 @@ namespace AssetBundleBrowser.AssetBundleModel
 
     internal abstract class BundleFolderInfo : BundleInfo
     {
-        protected Dictionary<string, BundleInfo> m_Children;
+        internal Dictionary<string, BundleInfo> m_Children;
 
         internal BundleFolderInfo(string name, BundleFolderInfo parent) : base(name, parent)
         {

@@ -211,7 +211,7 @@ namespace AssetBundleBrowser.AssetBundleModel
             return EditorUtility.FormatBytes(fileSize);
         }
 
-        List<AssetInfo> m_dependencies = null;
+        internal List<AssetInfo> m_dependencies = null;
         internal List<AssetInfo> GetDependencies()
         {
             //TODO - not sure this refreshes enough. need to build tests around that.
@@ -239,6 +239,33 @@ namespace AssetBundleBrowser.AssetBundleModel
             return m_dependencies;
         }
 
+        public int depCount = 0;
+        internal HashSet<AssetInfo> depAssets;
+        public List<AssetInfo> m_ReverseDep = new List<AssetInfo>();
+        public void InitReverseDep()
+        {
+            var deps = GetDependencies();
+            foreach (var d in deps)
+            {
+                d.m_ReverseDep.Add(this);
+            }
+
+            depCount = m_dependencies.Count;
+            depAssets = new HashSet<AssetInfo>();
+            foreach(var d in m_dependencies)
+            {
+                depAssets.Add(d);
+            }
+        }
+
+        public void RemoveDep()
+        {
+            foreach(var r in m_ReverseDep)
+            {
+                r.depCount--;
+                r.depAssets.Remove(this);
+            }
+        }
     }
 
 }

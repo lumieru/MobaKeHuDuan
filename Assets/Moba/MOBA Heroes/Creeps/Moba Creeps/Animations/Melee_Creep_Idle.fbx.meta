@@ -77,7 +77,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: No Name
-    second: {fileID: 2100000, guid: 22173944d26e85b4ca97b0feb4c9cfde, type: 2}
+    second: {fileID: 2100000, guid: 2ab1aa0d16c02384581671d6c373fc41, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -212,6 +212,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -589,5 +591,5 @@ ModelImporter:
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: ab_2
   assetBundleVariant: 

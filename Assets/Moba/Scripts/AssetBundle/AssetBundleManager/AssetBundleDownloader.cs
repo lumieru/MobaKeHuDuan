@@ -75,6 +75,7 @@ namespace AssetBundles
         private IEnumerator Download(AssetBundleDownloadCommand cmd, int retryCount)
         {
             var uri = baseUri + cmd.BundleName;
+            Log.Net("DownloadStart:"+cmd.BundleName);
             UnityWebRequest req;
             if (cachingDisabled || (cmd.Version <= 0 && cmd.Hash == DEFAULT_HASH)) {
                 Debug.Log(string.Format("GetAssetBundle [{0}].", uri));
@@ -128,6 +129,7 @@ namespace AssetBundles
                 InternalHandle(Download(cmd, retryCount + 1));
                 yield break;
             }
+            Log.Net("DownloadFinish:"+bundle.name);
 
             try {
                 cmd.OnComplete(bundle);

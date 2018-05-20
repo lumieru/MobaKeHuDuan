@@ -969,8 +969,7 @@ public partial class Util {
 	public static IMessageLite GetMsg(int moduleId, int messageId, ByteString buf) {
 		//var module = SaveGame.saveGame.getModuleName(moduleId);
 		var msg = SaveGame.saveGame.getMethodName(moduleId, messageId);
-		Debug.LogWarning ("modulename "+moduleId+" "+messageId+" msg "+msg);
-
+		//Debug.LogWarning ("modulename "+moduleId+" "+messageId+" msg "+msg);
 		return msgMap[msg](buf);
 	}
 }

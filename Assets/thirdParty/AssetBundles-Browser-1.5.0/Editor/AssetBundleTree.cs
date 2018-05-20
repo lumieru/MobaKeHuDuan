@@ -637,7 +637,7 @@ namespace AssetBundleBrowser
                 BeginRename(FindItem(hashCode, rootItem), 0.25f);
             }
         }
-        private void ReloadAndSelect(IList<int> hashCodes)
+        internal void ReloadAndSelect(IList<int> hashCodes)
         {
             Reload();
             SetSelection(hashCodes, TreeViewSelectionOptions.RevealAndFrame);

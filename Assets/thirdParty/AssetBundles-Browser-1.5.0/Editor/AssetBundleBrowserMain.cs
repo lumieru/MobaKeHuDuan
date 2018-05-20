@@ -188,6 +188,7 @@ namespace AssetBundleBrowser
             var cl = GUILayout.Button("ABBuild");
             if (cl)
             {
+                /*
                 var nb = ABBuilder.GenBundleMethod();
                 //m_ManageTab.ForceReloadData();
                 m_ManageTab.m_BundleTree.ReloadAndSelect(nb.nameHashCode, false);
@@ -195,6 +196,8 @@ namespace AssetBundleBrowser
                 var lsNb = new List<AssetBundleModel.BundleInfo>();
                 lsNb.Add(nb);
                 m_ManageTab.UpdateSelectedBundles(lsNb);
+                */
+                ABBuilder.SplitAB(m_ManageTab);
             }
             float toolbarWidth = position.width - k_ToolbarPadding * 4 - m_RefreshTexture.width;
             //string[] labels = new string[2] { "Configure", "Build"};

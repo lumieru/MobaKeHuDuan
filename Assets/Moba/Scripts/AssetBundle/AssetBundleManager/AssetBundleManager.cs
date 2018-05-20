@@ -241,6 +241,7 @@ namespace AssetBundles
         public void GetBundle(string bundleName, Action<AssetBundle> onComplete, DownloadSettings downloadSettings)
         {
             AssetBundleContainer active;
+            Log.Normal("GetBundle:"+bundleName);
 
             if (activeBundles.TryGetValue(bundleName, out active)) {
                 //active.References++;
@@ -269,17 +270,25 @@ namespace AssetBundles
 
             for (int i = 0; i < dependencies.Length; i++) {
                 if (activeBundles.TryGetValue(dependencies[i], out active)) {
-                    //active.References++;
+                    active.References++;
                 } else {
                     dependenciesToDownload.Add(dependencies[i]);
                 }
             }
+            Log.Net("DepCount:"+dependencies.Length);
+            Debug.LogError(ObjectDumper.Dump("Dependency:"+dependencies));
 
             if (dependenciesToDownload.Count > 0) {
                 var dependencyCount = dependenciesToDownload.Count;
                 Action<AssetBundle> onDependenciesComplete = dependency => {
                     if (--dependencyCount == 0)
+                    {
+                        Log.Net("DownloadDepFinish:"+bundleName);
                         handler.Handle(mainBundle);
+                    }else
+                    {
+                        Debug.LogError("DownloadDepExtra:"+dependencyCount);
+                    }
                 };
 
                 for (int i = 0; i < dependenciesToDownload.Count; i++) {
@@ -315,6 +324,23 @@ namespace AssetBundles
             }
 
             activeBundles.Clear();
+        }
+
+        /// <summary>
+        /// 没有人依赖我才可以释放
+        /// 释放我同时减少我依赖对象的反向依赖关系
+        /// </summary>
+        /// <param name="con"></param>
+        public void UnloadContainer(AssetBundleContainer con)
+        {
+            if(con.reverseDep.Count == 0)
+            {
+                foreach(var dep in con.Dependencies)
+                {
+                    var d = GetContainer(dep);
+                    d.RemoveReverse(con);
+                }
+            }
         }
 
         /// <summary>
@@ -354,6 +380,7 @@ namespace AssetBundles
 
             if (!activeBundles.TryGetValue(bundleName, out cache)) return;
 
+            --cache.References;
             //if (force || --cache.References <= 0) {
             if (cache.AssetBundle != null)
             {
@@ -377,13 +404,15 @@ namespace AssetBundles
         /// </summary>
         private void OnDownloadComplete(string bundleName, AssetBundle bundle)
         {
+            Log.Normal("OnDownloadComplete:"+bundleName);
+
             var inProgress = downloadsInProgress[bundleName];
             downloadsInProgress.Remove(bundleName);
 
             activeBundles.Add(bundleName, new AssetBundleContainer {
                 AssetBundle = bundle,
-                //References = inProgress.References,
-                References = 1,
+                References = inProgress.References,
+                //References = 1,
                 Dependencies = manifest.GetDirectDependencies(bundleName)
             });
 
@@ -397,6 +426,35 @@ namespace AssetBundles
             public string[] Dependencies;
             public float lastUsedTime;
             public C5.IPriorityQueueHandle<AssetBundleContainer> handler;
+            //逆向依赖
+            public HashSet<AssetBundleContainer> reverseDep;
+            public void InitReverse()
+            {
+                if(reverseDep == null)
+                {
+                    var abm = ABLoader.Instance.abm;
+                    reverseDep = new HashSet<AssetBundleContainer>();
+                    foreach(var d in Dependencies)
+                    {
+                        var con = abm.GetContainer(d);
+                        con.InitReverse();
+                        con.AddReverse(this);
+                    }
+                }
+            }
+
+            private void AddReverse(AssetBundleContainer con)
+            {
+                reverseDep.Add(con);
+            }
+            /// <summary>
+            /// 卸载内存移除掉一个逆向依赖
+            /// </summary>
+            /// <param name="c"></param>
+            public void RemoveReverse(AssetBundleContainer c)
+            {
+                reverseDep.Remove(c);
+            }
         }
 
         internal class DownloadInProgressContainer

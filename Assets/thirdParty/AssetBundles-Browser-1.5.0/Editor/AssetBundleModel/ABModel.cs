@@ -28,7 +28,7 @@ namespace AssetBundleBrowser.AssetBundleModel
         internal static BundleFolderConcreteInfo s_RootLevelBundles = new BundleFolderConcreteInfo("", null);
         private static List<ABMoveData> s_MoveData = new List<ABMoveData>();
         private static List<BundleInfo> s_BundlesToUpdate = new List<BundleInfo>();
-        private static Dictionary<string, AssetInfo> s_GlobalAssetList = new Dictionary<string, AssetInfo>();
+        internal static Dictionary<string, AssetInfo> s_GlobalAssetList = new Dictionary<string, AssetInfo>();
         private static Dictionary<string, HashSet<string>> s_DependencyTracker = new Dictionary<string, HashSet<string>>();
 
         private static bool s_InErrorState = false;
@@ -633,6 +633,12 @@ namespace AssetBundleBrowser.AssetBundleModel
         }
         
         //this version of CreateAsset is only used for dependent assets. 
+        /// <summary>
+        /// 用于依赖获取
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="parent"></param>
+        /// <returns></returns>
         internal static AssetInfo CreateAsset(string name, AssetInfo parent)
         {
             if (ValidateAsset(name))
@@ -643,6 +649,12 @@ namespace AssetBundleBrowser.AssetBundleModel
             return null;
         }
 
+        /// <summary>
+        /// 用于Bundle中设置
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="bundleName"></param>
+        /// <returns></returns>
         internal static AssetInfo CreateAsset(string name, string bundleName)
         {
             if(ValidateAsset(name))
@@ -652,9 +664,20 @@ namespace AssetBundleBrowser.AssetBundleModel
             return null;
         }
 
+        public static bool ForceShare = false;
+
+        /// <summary>
+        /// BundleName 不是空 则创建一个新的Asset
+        /// 否则使用旧的Asset
+        /// 防止创建新的Asset统一使用旧的Asset资源
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="bundleName"></param>
+        /// <param name="parent"></param>
+        /// <returns></returns>
         private static AssetInfo CreateAsset(string name, string bundleName, AssetInfo parent)
         {
-            if(!System.String.IsNullOrEmpty(bundleName))
+            if(!System.String.IsNullOrEmpty(bundleName) && !ForceShare)
             {
                 return new AssetInfo(name, bundleName);
             }
@@ -666,7 +689,10 @@ namespace AssetBundleBrowser.AssetBundleModel
                     info = new AssetInfo(name, string.Empty);
                     s_GlobalAssetList.Add(name, info);
                 }
-                info.AddParent(parent.displayName);
+                if (parent != null)
+                {
+                    info.AddParent(parent.displayName);
+                }
                 return info;
             }
 

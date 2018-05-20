@@ -46,6 +46,7 @@ public class AssetBundleMemoryManager : MonoBehaviour
     private void UpdateDenpencyTime(AssetBundleManager.AssetBundleContainer container)
     {
         tranversed.Add(container);
+        container.InitReverse();
         leastRU.Add(ref container.handler, container);
 
         var abm = ABLoader.Instance.abm;
@@ -75,8 +76,12 @@ public class AssetBundleMemoryManager : MonoBehaviour
     private void ReleaseMemory()
     {
         var minEle = leastRU.FindMin();
-        leastRU.DeleteMin();
-        ABLoader.Instance.abm.UnloadBundle(minEle.AssetBundle);
+        //没有反向依赖才可以释放
+        if (minEle.reverseDep.Count == 0)
+        {
+            leastRU.DeleteMin();
+            ABLoader.Instance.abm.UnloadContainer(minEle);
+        }
     }
 
     private C5.IntervalHeap<AssetBundleManager.AssetBundleContainer> leastRU;

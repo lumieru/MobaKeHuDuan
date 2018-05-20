@@ -8,23 +8,38 @@ using Sirenix.OdinInspector;
 
 public class ABLoader : SerializedMonoBehaviour
 {
-    [SerializeField]
-    public Dictionary<string, string> resToAB;
-    [ButtonCallFunc()]
-    public bool GenResToAB;
+    //[ButtonCallFunc()]
+    //public bool GenResToAB;
+    [Button]
     public void GenResToABMethod()
     {
         var abDir = Path.Combine(Application.dataPath, "../AssetBundles/" +AssetBundles.Utility.GetPlatformName());
         var dirInfo = new DirectoryInfo(abDir);
         var manifest = dirInfo.GetFiles("*.manifest");
-        resToAB = new Dictionary<string, string>();
+        var resToAB2 = new Dictionary<string, string>();
         foreach(var m in manifest)
         {
-            HandleManifest(m);
+            HandleManifest(m, resToAB2);
         }
 
+        resToAB.Clear();
+        foreach(var r in resToAB2)
+        {
+            resToAB.Add(new ResPair() {key= r.Key, value=r.Value });
+        }
     }
-    private void HandleManifest(FileInfo file)
+
+    //[SerializeField]
+    //public Dictionary<string, string> resToAB;
+    [System.Serializable]
+    public class ResPair {
+        public string key;
+        public string value;
+    }
+    public List<ResPair> resToAB;
+    private Dictionary<string, string> kvPair;
+
+    private void HandleManifest(FileInfo file, Dictionary<string, string> res)
     {
         var bundleName = Path.GetFileNameWithoutExtension(file.Name);
         var lines = File.ReadAllLines(file.FullName);
@@ -46,13 +61,13 @@ public class ABLoader : SerializedMonoBehaviour
                 }else
                 {
                     var resName = l.Substring(2).ToLower();
-                    if (resToAB.ContainsKey(resName))
+                    if (res.ContainsKey(resName))
                     {
                         Debug.LogError("Duplicate:" + resName);
                     }
                     else
                     {
-                        resToAB.Add(resName, bundleName);
+                        res.Add(resName, bundleName);
                     }
                 }
             }else if(state == 2)
@@ -72,6 +87,11 @@ public class ABLoader : SerializedMonoBehaviour
         GameObject.DontDestroyOnLoad(gameObject);
         abm = new AssetBundleManager();
         abm.UseSimulatedUri();
+        kvPair = new Dictionary<string, string>();
+        foreach(var k in resToAB)
+        {
+            kvPair.Add(k.key, k.value);
+        }
     }
     private IEnumerator Start()
     {
@@ -87,10 +107,12 @@ public class ABLoader : SerializedMonoBehaviour
     public IEnumerator LoadPrefab(string path, GameObject[] ret)
     {
         path = ResPathToAbPath(path);
-        var abName = resToAB[path];
+        var abName = kvPair[path];
+        Log.Net("LoadPrefab:"+path);
         var async = abm.GetBundleAsync(abName);
         yield return async;
         var ab = async.AssetBundle;
+        Log.Net("FinishLoadAB:" + abName+":"+ab);
         var container = abm.GetContainer(ab.name);
         AssetBundleMemoryManager.Instance.AddAB(container);
 
