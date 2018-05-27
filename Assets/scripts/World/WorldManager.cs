@@ -113,8 +113,18 @@ namespace MyLib
 			//Init Camera
 			Log.Sys("Load Scene Name is "+sdata.SceneName);
 
-			//等待加载静态场景资源
-			AsyncOperation async = Application.LoadLevelAsync (sdata.SceneName);
+            //等待加载静态场景资源
+            //AsyncOperation async = Application.LoadLevelAsync (sdata.SceneName);
+            AsyncOperation async = null;
+            var has = ABLoader.Instance.hasScene(sdata.SceneName);
+            if (has)
+            {
+                yield return StartCoroutine(ABLoader.Instance.LoadScene(sdata.SceneName));
+                async = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sdata.SceneName);
+            }else
+            {
+                async = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sdata.SceneName);
+            }
 			loadUI.async = async;
 			loadUI.ShowLoad ("等待");
 			while (!async.isDone) {

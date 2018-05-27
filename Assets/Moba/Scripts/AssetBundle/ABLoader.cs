@@ -114,11 +114,51 @@ public class ABLoader : SerializedMonoBehaviour
         var ab = async.AssetBundle;
         Log.Net("FinishLoadAB:" + abName+":"+ab);
         var container = abm.GetContainer(ab.name);
-        AssetBundleMemoryManager.Instance.AddAB(container);
-
         var go = ab.LoadAsset<GameObject>(path);
         ret[0] = go;
+        AssetBundleMemoryManager.Instance.AddAB(container);
     }
+
+    public bool hasScene(string sceneName)
+    {
+        var sceneFile = sceneName + ".unity";
+        var scenePath = string.Empty;
+        foreach(var n in kvPair)
+        {
+            var isScene = n.Key.EndsWith(sceneFile);
+            if (isScene)
+            {
+                scenePath = n.Key;
+                break;
+            }
+        }
+        Log.Normal("HasScene:"+scenePath);
+        return !string.IsNullOrEmpty(scenePath);
+    }
+
+    public IEnumerator LoadScene(string sceneName)
+    {
+        var sceneFile = sceneName + ".unity";
+        var scenePath = "";
+        foreach(var n in kvPair)
+        {
+            var isScene = n.Key.EndsWith(sceneFile);
+            if (isScene)
+            {
+                scenePath = n.Key;
+                break;
+            }
+        }
+        var abName = kvPair[scenePath];
+        var async = abm.GetBundleAsync(abName);
+        yield return async;
+        var ab = async.AssetBundle;
+        Log.Net("FinishLoadAB:" + abName + ":" + ab);
+        var container = abm.GetContainer(ab.name);
+        AssetBundleMemoryManager.Instance.AddAB(container);
+    }
+
+
 
     public string ResPathToAbPath(string resPath)
     {

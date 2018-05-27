@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using SimpleJSON;
 using System;
+using UnityEngine.SceneManagement;
 namespace MyLib
 {
 	public class GameInterface_Login
@@ -17,7 +18,8 @@ namespace MyLib
 
 		public void LoginGame ()
 		{
-            Application.LoadLevel("MainLogin");
+            //Application.LoadLevel("MainLogin");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainLogin");
 		}
 
 		public void SelectAccounAndLogin (int currentSelect)

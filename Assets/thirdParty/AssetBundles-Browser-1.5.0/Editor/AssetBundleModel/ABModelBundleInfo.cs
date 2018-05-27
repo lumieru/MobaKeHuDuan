@@ -504,6 +504,7 @@ namespace AssetBundleBrowser.AssetBundleModel
                 }
                 else if(bundleName != m_Name.fullNativeName)
                 {
+                    //Debug.LogError("AddDepBundle:"+bundleName+":"+m_Name.fullNativeName+":"+ai.fullAssetName);
                     m_BundleDependencies.Add(bundleName);
                 }
             }

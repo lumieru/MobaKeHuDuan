@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4874699331206680}
   - component: {fileID: 114858260539340356}
+  - component: {fileID: 114525580511545394}
   m_Layer: 0
   m_Name: ABLoader
   m_TagString: Untagged
@@ -40,6 +41,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114525580511545394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1073391233854048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8227ba427632e14ab66af1ebd781a07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxMemory: 10
 --- !u!114 &114858260539340356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -64,125 +77,123 @@ MonoBehaviour:
       Entry: 6
       Data: 
   resToAB:
-  - key: assets/resources/levelpublic/maincamera_old.prefab
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/tower_a_pz.fbx
     value: ab_0
-  - key: assets/resources/oldskill/supershootbuff.prefab
+  - key: assets/moba/scene/pb_mesh-887076_2.asset
     value: ab_0
-  - key: assets/resources/server.json
+  - key: assets/thirdparty/particle ingredient pack/standard assets/effects/toonshading/textures/utiltoongradient.png
     value: ab_0
-  - key: assets/resources/oldskill/nuclearbuff.prefab
-    value: ab_0
-  - key: assets/resources/sound/4ultrakill.wav
-    value: ab_0
-  - key: assets/resources/sound/sheet_opencenter.wav
-    value: ab_0
-  - key: assets/resources/room/tank/entrance_city.prefab
-    value: ab_0
-  - key: assets/resources/sound/sheet_close.wav
-    value: ab_0
-  - key: assets/resources/localconfig.bytes
-    value: ab_0
-  - key: assets/resources/sound/7whickedsick.wav
-    value: ab_0
-  - key: assets/resources/sound/run.wav
-    value: ab_0
-  - key: assets/resources/sound/5rampage.wav
-    value: ab_0
-  - key: assets/resources/gameconst.prefab
-    value: ab_0
-  - key: assets/resources/oldskill/laserbuff.prefab
-    value: ab_0
-  - key: assets/resources/camerashake/rotanim.prefab
-    value: ab_0
-  - key: assets/resources/oldskill/hidebuff.prefab
-    value: ab_0
-  - key: assets/resources/sound/skill/lasershoot.wav
-    value: ab_0
-  - key: assets/resources/sound/levelup.wav
-    value: ab_0
-  - key: assets/resources/readonlyconfig.bytes
-    value: ab_0
-  - key: assets/resources/sound/1firstblood.wav
-    value: ab_0
-  - key: assets/resources/oldskill/damagehp.prefab
-    value: ab_0
-  - key: assets/resources/sound/6unstoppable.wav
-    value: ab_0
-  - key: assets/resources/skills/monstersingle.prefab
-    value: ab_0
-  - key: assets/resources/namemap.json
-    value: ab_0
-  - key: assets/resources/sound/pickup.wav
-    value: ab_0
-  - key: assets/resources/sound/kongzhi.wav
-    value: ab_0
-  - key: assets/resources/sound/9godlike.wav
-    value: ab_0
-  - key: assets/resources/skills/aliattack.prefab
-    value: ab_0
-  - key: assets/resources/oldskill/gousuobuff.prefab
-    value: ab_0
-  - key: assets/resources/camerashake/shootanim.prefab
-    value: ab_0
-  - key: assets/resources/sound/bgm.mp3
-    value: ab_0
-  - key: assets/resources/oldskill/daodanbuff.prefab
-    value: ab_0
-  - key: assets/resources/oldskill/slowdown2.prefab
-    value: ab_0
-  - key: assets/resources/sound/3triplekill.wav
-    value: ab_0
-  - key: assets/resources/oldskill/laserdamagehp.prefab
-    value: ab_0
-  - key: assets/resources/sound/8monsterkill.wav
-    value: ab_0
-  - key: assets/resources/allsoldier.prefab
-    value: ab_0
-  - key: assets/resources/serverconfig.json
-    value: ab_0
-  - key: assets/resources/sound/skill/paodan3.wav
-    value: ab_0
-  - key: assets/resources/oldskill/stopmovebuff.prefab
-    value: ab_0
-  - key: assets/resources/sound/10holyshit.wav
-    value: ab_0
-  - key: assets/resources/config/mapsourceconfig.json
-    value: ab_0
-  - key: assets/resources/levelpublic/_light.prefab
-    value: ab_0
-  - key: assets/resources/oldskill/addstaticshootbuff.prefab
-    value: ab_0
-  - key: assets/resources/oldskill/addhpbuff.prefab
-    value: ab_0
-  - key: assets/resources/oldskill/knockback.prefab
-    value: ab_0
-  - key: assets/resources/models/emptyobject.prefab
-    value: ab_0
-  - key: assets/resources/config.json
-    value: ab_0
-  - key: assets/resources/sound/2doublekill.wav
-    value: ab_0
-  - key: assets/resources/oldskill/nucleardamagehp.prefab
-    value: ab_0
-  - key: assets/resources/textures/shadowmap.rendertexture
-    value: ab_1
-  - key: assets/resources/ui/justblock.prefab
-    value: ab_1
-  - key: assets/junk/shader/normalimg.shader
-    value: ab_1
   - key: assets/thirdparty/particle ingredient pack/standard assets/effects/shaders/colorcorrectioncurves.shader
-    value: ab_1
-  - key: assets/resources/ui/playermainwindow.prefab
-    value: ab_1
+    value: ab_0
   - key: assets/thirdparty/particle ingredient pack/standard assets/effects/shaders/screenspaceambientobscurance.shader
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/tower.tif
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/standard assets/environment/water/water4/textures/simplefoam.png
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/standard assets/environment/water/water4/textures/smallwaves.png
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/tree_d_1.fbx
+    value: ab_0
+  - key: '"assets/moba/art/\u56fe\u72471.png"'
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/tower_e.fbx
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/magiccircle_a/blacksphere.psd
+    value: ab_0
+  - key: assets/thirdparty/particle ingredient pack/standard assets/effects/shaders/_bloomandflares/mobilebloom.shader
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/standard assets/environment/water/water4/materials/oceanplanematerial.mat
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/magiccircle_a/wakka.png
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/tree_c_1.fbx
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/grass_c_1.fbx
+    value: ab_0
+  - key: assets/thirdparty/procore2/mat/ground_01.tif
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/standard assets/environment/water/water4/shaders/fxwater4simple.shader
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/rock_2_nmp.tif
+    value: ab_0
+  - key: assets/thirdparty/procore2/mat/ground_02 _nmp.tif
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/magiccircle_a/wakka_a.mat
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/tree_e_1.fbx
+    value: ab_0
+  - key: assets/thirdparty/procore2/mat/ground_02.tif
+    value: ab_0
+  - key: assets/thirdparty/procore2/mat/ground_03.tif
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/tower_b_2.fbx
+    value: ab_0
+  - key: assets/thirdparty/procore2/mat/ground_04_nmp.tif
+    value: ab_0
+  - key: assets/graphcaches/graphcache2.bytes
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/crystal.tif
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/crystal_b.fbx
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/stone&cliff_l.fbx
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/tower_a.fbx
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/grass_b_1.fbx
+    value: ab_0
+  - key: assets/procore/probuilder/shader/pb_standardvertexcolor.shader
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/tree_a_1.fbx
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/crystal_nmp.tif
+    value: ab_0
+  - key: assets/procore/polybrush/shader/z_textureblendbmp.shader
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/tree_d_trunk.fbx
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/tree_a_trunk.fbx
+    value: ab_0
+  - key: assets/thirdparty/procore2/mat/ground_01_nmp.tif
+    value: ab_0
+  - key: assets/thirdparty/particle ingredient pack/standard assets/effects/shaders/colorcorrectioncurvessimple.shader
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/rock_b1_pz.fbx
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/vines_c.fbx
+    value: ab_0
+  - key: assets/thirdparty/procore2/mat/ground_04.tif
+    value: ab_0
+  - key: assets/thirdparty/particle ingredient pack/standard assets/effects/shaders/chromaticaberrationshader.shader
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/stone&cliff.tif
+    value: ab_0
+  - key: assets/thirdparty/procore2/mat/ground_03_nrm.png
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/plants_nmp.tif
+    value: ab_0
+  - key: assets/thirdparty/particle ingredient pack/standard assets/effects/shaders/colorcorrectionselective.shader
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/crystal_c.fbx
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/rock_b2_pz.fbx
+    value: ab_0
+  - key: assets/moba/scene/moba/lightmap-0_comp_light.exr
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/grass_d_3.fbx
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/vines.tif
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/tree_a_2.fbx
+    value: ab_0
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/rock_2.tif
+    value: ab_0
+  - key: assets/junk/shader/normalimg.shader
     value: ab_1
   - key: assets/junk/shaders/otherteamhideshader.shader
     value: ab_1
   - key: assets/junk/shader/shadowblend.shader
-    value: ab_1
-  - key: assets/resources/textures/heathaze.png
-    value: ab_1
-  - key: assets/thirdparty/particle ingredient pack/standard assets/effects/shaders/_bloomandflares/mobilebloom.shader
     value: ab_1
   - key: assets/junk/shader/skilllight.shader
     value: ab_1
@@ -190,79 +201,105 @@ MonoBehaviour:
     value: ab_1
   - key: assets/junk/shader/heathaze.shader
     value: ab_1
-  - key: assets/resources/ui/popupdamage.prefab
+  - key: assets/junk/particles/textures/flash/flash03yellow.png
     value: ab_1
   - key: assets/junk/shaders/newburnshader.shader
     value: ab_1
-  - key: assets/resources/textures/motioncamera.rendertexture
-    value: ab_1
   - key: assets/junk/shaders/playerhideshader.shader
-    value: ab_1
-  - key: assets/resources/versionconfig.bytes
-    value: ab_1
-  - key: assets/resources/sound/skill/quake3.wav
-    value: ab_1
-  - key: assets/resources/textures/lightmap.rendertexture
-    value: ab_1
-  - key: assets/resources/sound/skill/quake1.wav
-    value: ab_1
-  - key: assets/resources/sound/wind.wav
     value: ab_1
   - key: assets/alluis/easytouch/plugins/resources/radialjoy_area.png
     value: ab_1
-  - key: assets/thirdparty/particle ingredient pack/standard assets/effects/shaders/colorcorrectioncurvessimple.shader
+  - key: assets/junk/shader2/tankdeadshader.shader
     value: ab_1
   - key: assets/junk/particles/textures/multiparticle/sparklestreak2.png
     value: ab_1
-  - key: assets/resources/strdictionary.json
-    value: ab_1
-  - key: assets/thirdparty/particle ingredient pack/standard assets/effects/shaders/chromaticaberrationshader.shader
-    value: ab_1
-  - key: assets/resources/sound/skill/shockhit.wav
-    value: ab_1
   - key: assets/junk/lights/materials/no name.mat
-    value: ab_1
-  - key: assets/thirdparty/particle ingredient pack/standard assets/effects/shaders/colorcorrectionselective.shader
-    value: ab_1
-  - key: assets/resources/textfont.prefab
     value: ab_1
   - key: assets/junk/shader/skillblendshader.shader
     value: ab_1
   - key: assets/junk/shader/gammacorrect.shader
     value: ab_1
-  - key: assets/resources/ui/popupdamagepurple.prefab
+  - key: assets/junk/lights/playerlight.fbx
+    value: ab_1
+  - key: assets/junk/particles/textures/glow/candleglow.png
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/tower_d.fbx
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/stone&cliff_d.fbx
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/grass_e_1.fbx
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/tower_c.fbx
     value: ab_1
   - key: assets/junk/shader/motionblur.shader
     value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/tower_b_1.fbx
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/rock_b1.fbx
+    value: ab_1
   - key: assets/thirdparty/particle ingredient pack/standard assets/effects/shaders/_depthoffield/separableblur.shader
     value: ab_1
-  - key: assets/resources/textures/motionblur.rendertexture
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/element/element.png
     value: ab_1
-  - key: assets/resources/ui/playerwindow.prefab
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/plants.tif
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/vines_f.fbx
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/timber.tif
+    value: ab_1
+  - key: assets/thirdparty/procore2/mat/testter.mat
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/tree_c_trunk.fbx
     value: ab_1
   - key: assets/thirdparty/particle ingredient pack/standard assets/effects/shaders/vignettingshader.shader
     value: ab_1
-  - key: assets/resources/textures/playermap.rendertexture
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/grass_b_2.fbx
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/vines_nmp.tif
     value: ab_1
   - key: assets/junk/shaders/ghostshader.shader
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/rock_b2.fbx
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/stone&cliff_nmp.tif
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/timber_nmp.tif
     value: ab_1
   - key: assets/thirdparty/particle ingredient pack/standard assets/effects/shaders/edgedetectnormals.shader
     value: ab_1
   - key: assets/alluis/easytouch/plugins/resources/radialjoy_touch.png
     value: ab_1
+  - key: assets/junk/shader/light.shader
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/magiccircle_a/circle.png
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/tower_nmp.tif
+    value: ab_1
   - key: assets/thirdparty/particle ingredient pack/standard assets/effects/textures/randomvectors.png
     value: ab_1
   - key: assets/junk/shader/shadowmap2.shader
     value: ab_1
-  - key: assets/resources/textures/skilllight.rendertexture
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/magiccircle_a/blacksphere.mat
     value: ab_1
   - key: assets/thirdparty/skyboxes/lava/cloud.png
     value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/standard assets/environment/water/water4/models/oceanplane.fbx
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/tree_b_trunk.fbx
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/stone&cliff_d_pz.fbx
+    value: ab_1
   - key: assets/junk/shaders/myteamhideshader.shader
+    value: ab_1
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/tower_b_3.fbx
     value: ab_1
   - key: assets/junk/shaders/playershader.shader
     value: ab_1
+  - key: assets/procore/probuilder/resources/textures/gridbox_default.png
+    value: ab_1
   - key: assets/thirdparty/sharedtextures/sector.jpg
+    value: ab_1
+  - key: assets/moba/scene/moba/reflectionprobe-0.exr
     value: ab_1
   - key: assets/resources/zones/level_1_4_101.prefab
     value: ab_10
@@ -272,11 +309,15 @@ MonoBehaviour:
     value: ab_10
   - key: assets/moba/moba heroes/creeps/moba creeps/siege/mesh/siegecreep_anims.controller
     value: ab_10
+  - key: assets/resources/ui/selecthero.prefab
+    value: ab_10
   - key: assets/junk/lightprefab/stemple_gradient_03.prefab
     value: ab_10
   - key: assets/junk/missiles/explosiveshotstaticshoot.prefab
     value: ab_10
   - key: assets/moba/skills/usedruglayout.prefab
+    value: ab_10
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/tower_b_2.prefab
     value: ab_10
   - key: assets/resources/oldskill/usedrug.prefab
     value: ab_10
@@ -284,7 +325,11 @@ MonoBehaviour:
     value: ab_10
   - key: assets/resources/skills/jiekeskill1.prefab
     value: ab_10
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/tree_a_1.prefab
+    value: ab_10
   - key: assets/moba/skills/explosive/laser.prefab
+    value: ab_10
+  - key: assets/resources/ui/shopui.prefab
     value: ab_10
   - key: assets/resources/zones/level_1_4_79.prefab
     value: ab_10
@@ -296,9 +341,19 @@ MonoBehaviour:
     value: ab_10
   - key: assets/junk/missiles/lasershot.prefab
     value: ab_10
+  - key: assets/resources/zones/level_1_4_77.prefab
+    value: ab_10
+  - key: assets/resources/ui/tanknum.prefab
+    value: ab_10
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/tower_e.prefab
+    value: ab_10
   - key: assets/junk/missiles/explosiveshot.prefab
     value: ab_10
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/rock_b1.prefab
+    value: ab_10
   - key: assets/resources/oldskill/fantanshield.prefab
+    value: ab_10
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/grass_e_1.prefab
     value: ab_10
   - key: assets/resources/models/sj001.prefab
     value: ab_10
@@ -308,17 +363,27 @@ MonoBehaviour:
     value: ab_10
   - key: assets/resources/oldskill/explosive 1.prefab
     value: ab_10
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/tree_c_1.prefab
+    value: ab_10
   - key: assets/moba/skills/explosive/daodan.prefab
     value: ab_10
   - key: assets/resources/oldskill/daodan.prefab
+    value: ab_10
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/tree_d_1.prefab
+    value: ab_10
+  - key: assets/moba/scene/ground.prefab
     value: ab_10
   - key: assets/thirdparty/kriptofx/effect18.prefab
     value: ab_10
   - key: assets/moba/skills/explosive/explosive.prefab
     value: ab_10
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/tree_a_2.prefab
+    value: ab_10
   - key: assets/resources/models/siege_creep_red.prefab
     value: ab_10
   - key: assets/junk/models/gousuoline.prefab
+    value: ab_10
+  - key: assets/resources/zones/level_1_4_78.prefab
     value: ab_10
   - key: assets/resources/zones/level_1_4_102.prefab
     value: ab_10
@@ -336,6 +401,8 @@ MonoBehaviour:
     value: ab_10
   - key: assets/resources/oldskill/supershoot.prefab
     value: ab_10
+  - key: assets/resources/zones/level_1_4_76.prefab
+    value: ab_10
   - key: assets/resources/zones/level_1_4_80.prefab
     value: ab_10
   - key: assets/moba/skills/explosive/gousuo.prefab
@@ -344,17 +411,13 @@ MonoBehaviour:
     value: ab_10
   - key: assets/thirdparty/fantasy enemy pack 01/crawling bug/animations/crawlingbug@attack01.fbx
     value: ab_2
-  - key: assets/thirdparty/particle ingredient pack/standard assets/effects/toonshading/textures/utiltoongradient.png
-    value: ab_2
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/tower.tif
+  - key: assets/moba/moba heroes/creeps/moba creeps/siege/textures/siegecreep_diffuse_red.tga
     value: ab_2
   - key: assets/junk/art/fixbow3.mat
     value: ab_2
   - key: assets/thirdparty/warlor_bruce/textures/warlord_spear_complete.tif
     value: ab_2
   - key: assets/moba/moba heroes/creeps/moba creeps/melee/meshes/sword.fbx
-    value: ab_2
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/magiccircle_a/blacksphere.psd
     value: ab_2
   - key: assets/junk/art/fixbow.mat
     value: ab_2
@@ -364,9 +427,9 @@ MonoBehaviour:
     value: ab_2
   - key: assets/moba/moba heroes/creeps/moba creeps/animations/melee_creep_attack.fbx
     value: ab_2
-  - key: assets/junk/particles/textures/flash/flash03yellow.png
-    value: ab_2
   - key: assets/junk/art/fixbow5.mat
+    value: ab_2
+  - key: assets/moba/moba heroes/creeps/moba creeps/siege/textures/siegecreep_diffuse_blue.tga
     value: ab_2
   - key: assets/junk/art/supershoot.mat
     value: ab_2
@@ -380,7 +443,11 @@ MonoBehaviour:
     value: ab_2
   - key: assets/thirdparty/warlor_bruce/materials/warlord_spear_complete.mat
     value: ab_2
-  - key: assets/junk/shader2/tankdeadshader.shader
+  - key: assets/junk/shader2/laserglare.shader
+    value: ab_2
+  - key: assets/junk/lights/lights_palace.png
+    value: ab_2
+  - key: assets/junk/art/materials/no name.mat
     value: ab_2
   - key: assets/moba/moba heroes/creeps/moba creeps/ranged/materials/ragnedcreep_normal.png
     value: ab_2
@@ -388,17 +455,17 @@ MonoBehaviour:
     value: ab_2
   - key: assets/moba/moba heroes/creeps/moba creeps/ranged/meshes/bow_attack.fbx
     value: ab_2
+  - key: assets/moba/moba heroes/creeps/moba creeps/siege/mesh/materials/no name.mat
+    value: ab_2
   - key: assets/moba/moba heroes/creeps/moba creeps/melee/meshes/textures/creep_glow.tga
     value: ab_2
   - key: assets/junk/art/nuclear.mat
-    value: ab_2
-  - key: assets/junk/lights/playerlight.fbx
     value: ab_2
   - key: assets/junk/models/tank/tank01-wireframe.png
     value: ab_2
   - key: assets/junk/shader2/simpledropshader.shader
     value: ab_2
-  - key: assets/junk/particles/textures/glow/candleglow.png
+  - key: assets/moba/moba heroes/creeps/moba creeps/siege/textures/siegecreep_normal.png
     value: ab_2
   - key: assets/thirdparty/fantasy enemy pack 01/crawling bug/animations/crawlingbug@idle.fbx
     value: ab_2
@@ -406,11 +473,21 @@ MonoBehaviour:
     value: ab_2
   - key: assets/thirdparty/warlor_bruce/textures/warlord_complete_map.tif
     value: ab_2
+  - key: assets/moba/moba heroes/creeps/moba creeps/siege/mesh/siege_creep.fbx
+    value: ab_2
   - key: assets/junk/art/knock.mat
+    value: ab_2
+  - key: assets/junk/lights/materials/lights_palace.mat
     value: ab_2
   - key: assets/junk/art/fixbox.psd
     value: ab_2
   - key: assets/moba/moba heroes/creeps/moba creeps/melee/meshes/creep_melee_rig.fbx
+    value: ab_2
+  - key: assets/moba/moba heroes/creeps/moba creeps/siege/textures/siege_glow.png
+    value: ab_2
+  - key: assets/junk/art/pixel/simpleplane.fbx
+    value: ab_2
+  - key: assets/thirdparty/sharedtextures/circlehard-add.png
     value: ab_2
   - key: assets/junk/art/laser.mat
     value: ab_2
@@ -426,11 +503,14 @@ MonoBehaviour:
     value: ab_2
   - key: assets/moba/moba heroes/creeps/moba creeps/ranged/materials/rangedcreep_diffuse.tga
     value: ab_2
-  - key: assets/junk/shader/light.shader
+  - key: assets/junk/lights/palace_circle_04.fbx
     value: ab_2
   - key: assets/moba/moba heroes/creeps/moba creeps/melee/meshes/textures/meleecreep_normal.png
     value: ab_2
   - key: assets/junk/art/wudipotion.mat
+    value: ab_2
+  - key: assets/moba/moba heroes/creeps/moba creeps/siege/animations/materials/no
+      name.mat
     value: ab_2
   - key: assets/moba/moba heroes/creeps/moba creeps/animations/creep_death.fbx
     value: ab_2
@@ -442,419 +522,472 @@ MonoBehaviour:
     value: ab_2
   - key: assets/thirdparty/fantasy enemy pack 01/crawling bug/animations/crawlingbug@run.fbx
     value: ab_2
+  - key: assets/junk/art/wudi.mat
+    value: ab_3
+  - key: assets/junk/particles/textures/glow/candleglow.mat
+    value: ab_3
   - key: assets/junk/art/tankbullet/trail803_zhong.png
+    value: ab_3
+  - key: assets/moba/skills/frostshield/frostshieldlayout.prefab
     value: ab_3
   - key: assets/junk/camerashake/critical.prefab
     value: ab_3
-  - key: assets/moba/moba heroes/creeps/moba creeps/siege/textures/siegecreep_diffuse_red.tga
+  - key: assets/junk/particles/textures/particle/flare5_additive.png
+    value: ab_3
+  - key: assets/thirdparty/mobastorm/models/characters/alycra/dead.anim
     value: ab_3
   - key: assets/junk/art/tankbullet/dust07_add03.mat
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/tower_e.fbx
-    value: ab_3
   - key: assets/thirdparty/c_xiao_huo_long1/c_xiao_huo_long/animation/creepdeath.anim
+    value: ab_3
+  - key: assets/junk/art/materials/gousuoend.mat
     value: ab_3
   - key: assets/thirdparty/c_xiao_huo_long1/c_xiao_huo_long/animation/sj001_hurt.anim
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/magiccircle_a/wakka.png
-    value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/grass_c_1.fbx
+  - key: assets/thirdparty/mobastorm/models/characters/alycra/recall.anim
     value: ab_3
   - key: assets/thirdparty/c_xiao_huo_long1/c_xiao_huo_long/animation/sj001_skill2.anim
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/magiccircle_a/wakka_a.mat
+  - key: assets/junk/art/tankbullet/trail816_zhong.png
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/crystal.tif
+  - key: assets/thirdparty/mobastorm/models/characters/alycra/materials/woman low
+      poly readytpose.mat
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/crystal_b.fbx
+  - key: assets/junk/art/tankbullet/shield.png
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/grass_b_1.fbx
+  - key: assets/thirdparty/mobastorm/models/characters/alycra/basic.anim
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/crystal_nmp.tif
+  - key: assets/junk/particles/textures/particle/flare5_additive.mat
     value: ab_3
-  - key: assets/moba/moba heroes/creeps/moba creeps/siege/textures/siegecreep_diffuse_blue.tga
-    value: ab_3
-  - key: assets/junk/shader2/laserglare.shader
-    value: ab_3
-  - key: assets/junk/lights/lights_palace.png
-    value: ab_3
-  - key: assets/junk/art/materials/no name.mat
+  - key: assets/junk/particles/textures/glow/glowred.png
     value: ab_3
   - key: assets/thirdparty/c_xiao_huo_long1/c_xiao_huo_long/animation/walk.anim
     value: ab_3
   - key: assets/junk/art/tankbullet/dust07_add02.mat
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/vines_c.fbx
+  - key: assets/junk/art/tankbullet/xulie_huan18_4x4.png
     value: ab_3
   - key: assets/thirdparty/c_xiao_huo_long1/c_xiao_huo_long/animation/idle.anim
     value: ab_3
-  - key: assets/moba/moba heroes/creeps/moba creeps/siege/mesh/materials/no name.mat
+  - key: assets/junk/art/shield.fbx
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/plants_nmp.tif
+  - key: assets/moba/skills/fantanlayout.prefab
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/crystal_c.fbx
+  - key: assets/junk/art/materials/gousuoline.mat
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/grass_d_3.fbx
+  - key: assets/moba/skills/wenzirush/emptylayout.prefab
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/vines.tif
+  - key: assets/thirdparty/mobastorm/models/characters/alycra/abilityr.anim
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/tower_d.fbx
+  - key: assets/junk/particles/textures/trail/trail17.png
     value: ab_3
-  - key: assets/moba/moba heroes/creeps/moba creeps/siege/textures/siegecreep_normal.png
+  - key: assets/junk/particles/textures/particle/redparticle.png
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/tower_c.fbx
+  - key: assets/junk/art/tankbullet/xulie_fire34_4x4.tga
     value: ab_3
-  - key: assets/moba/moba heroes/creeps/moba creeps/siege/mesh/siege_creep.fbx
+  - key: assets/moba/skills/animation/singleattack.anim
     value: ab_3
   - key: assets/moba/skills/animation/bowarrow.anim
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/element/element.png
+  - key: assets/junk/art/cj-03/scenes/model/materials/boom-02.mat
     value: ab_3
-  - key: assets/junk/lights/materials/lights_palace.mat
+  - key: assets/junk/art/tankbullet/glow47.png
     value: ab_3
-  - key: assets/moba/moba heroes/creeps/moba creeps/siege/textures/siege_glow.png
+  - key: assets/junk/art/tankbullet/trail815.tga
     value: ab_3
-  - key: assets/junk/art/pixel/simpleplane.fbx
+  - key: assets/junk/art/tankbullet/huan592.png
     value: ab_3
-  - key: assets/thirdparty/sharedtextures/circlehard-add.png
+  - key: assets/junk/art/tankbullet/trail567.png
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/plants.tif
+  - key: assets/junk/particles/textures/sequence/flamelicks3x2.png
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/vines_f.fbx
+  - key: assets/junk/particles/textures/glow/glowyellowintense.png
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/models/plants/grass_b_2.fbx
-    value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/vines_nmp.tif
+  - key: assets/junk/particles/textures/multiparticle/multi-sparkle clear.png
     value: ab_3
   - key: assets/thirdparty/c_xiao_huo_long1/c_xiao_huo_long/materials/sj001.psd
     value: ab_3
   - key: assets/thirdparty/c_xiao_huo_long1/c_xiao_huo_long/animation/sj001_skill1.anim
     value: ab_3
-  - key: assets/junk/lights/palace_circle_04.fbx
+  - key: assets/junk/art/tankbullet/01.anim
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/magiccircle_a/circle.png
+  - key: assets/junk/art/tankbullet/xulie_fire34_4x4_add.mat
     value: ab_3
-  - key: assets/moba/moba heroes/creeps/moba creeps/siege/animations/materials/no
-      name.mat
+  - key: assets/junk/shader2/additiveupground.shader
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/textures/tower_nmp.tif
+  - key: assets/junk/particles/textures/particle/star3.png
     value: ab_3
-  - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/magiccircle_a/blacksphere.mat
+  - key: assets/junk/particles/textures/flash/flash04.png
+    value: ab_3
+  - key: assets/junk/art/tankbullet/trail816_zhong_add.mat
+    value: ab_3
+  - key: assets/junk/art/tankbullet/glow150.png
+    value: ab_3
+  - key: assets/junk/shader2/shieldadditive.shader
+    value: ab_3
+  - key: assets/junk/art/tankbullet/glow150_add.mat
+    value: ab_3
+  - key: assets/junk/shader2/flowlight.shader
     value: ab_3
   - key: assets/moba/moba heroes/creeps/moba creeps/siege/mesh/creep_siege_red.mat
     value: ab_3
-  - key: assets/junk/art/wudi.mat
+  - key: assets/junk/art/tankbullet/xulie_shandian32_4x4.tga
+    value: ab_3
+  - key: assets/moba/skills/explosive/nuclear.prefab
+    value: ab_3
+  - key: assets/thirdparty/mobastorm/models/characters/jakei/materials/firechar_diffuse.mat
     value: ab_4
-  - key: assets/junk/particles/textures/glow/candleglow.mat
+  - key: assets/thirdparty/mobastorm2/textures/galilei_diffuse.png
     value: ab_4
-  - key: assets/moba/skills/frostshield/frostshieldlayout.prefab
+  - key: assets/junk/particles/textures/multiparticle/bigbloodspray2.png
     value: ab_4
-  - key: assets/junk/particles/textures/particle/flare5_additive.png
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/audio/loopfire8.ogg
     value: ab_4
-  - key: assets/thirdparty/mobastorm/models/characters/alycra/dead.anim
+  - key: assets/thirdparty/particle ingredient pack/particle-texture/texture-battlegearbundle/texture-kunaibundle/texture-kunai.png
     value: ab_4
-  - key: assets/junk/art/materials/gousuoend.mat
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/shaders/decal/rfx1_decalmask.shader
     value: ab_4
-  - key: assets/thirdparty/mobastorm/models/characters/alycra/recall.anim
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/shaders/rfx1_fringe.shader
     value: ab_4
-  - key: assets/junk/art/tankbullet/trail816_zhong.png
+  - key: assets/thirdparty/particle ingredient pack/particle-texture/texture-flashbundle/texture-flash1.png
     value: ab_4
-  - key: assets/thirdparty/mobastorm/models/characters/alycra/materials/woman low
-      poly readytpose.mat
+  - key: assets/thirdparty/mobastorm2/models/characters/galilei/recall.anim
     value: ab_4
-  - key: assets/junk/art/tankbullet/shield.png
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/mask1.png
     value: ab_4
-  - key: assets/thirdparty/mobastorm/models/characters/alycra/basic.anim
+  - key: assets/thirdparty/particle ingredient pack/particle-material/material-flashbundle/material-flash.mat
     value: ab_4
-  - key: assets/junk/particles/textures/particle/flare5_additive.mat
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/smoketile5.png
     value: ab_4
-  - key: assets/junk/particles/textures/glow/glowred.png
+  - key: assets/ui/buttons/uibuttons.png
     value: ab_4
-  - key: assets/junk/art/tankbullet/xulie_huan18_4x4.png
+  - key: assets/thirdparty/mobastorm2/textures/materials/galilei_color.mat
     value: ab_4
-  - key: assets/junk/art/shield.fbx
+  - key: assets/thirdparty/mobastorm/models/characters/jakei/materials/sword_d.mat
     value: ab_4
-  - key: assets/moba/skills/fantanlayout.prefab
+  - key: assets/junk/lights/lights_stemple.png
     value: ab_4
-  - key: assets/junk/art/materials/gousuoline.mat
+  - key: assets/thirdparty/particle ingredient pack/particle-texture/texture-lightbundle/texture-light.png
     value: ab_4
-  - key: assets/moba/skills/wenzirush/emptylayout.prefab
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/perlinnoisealpha.png
     value: ab_4
-  - key: assets/thirdparty/mobastorm/models/characters/alycra/abilityr.anim
+  - key: assets/junk/particles/textures/multiparticle/bloodspray4x4_2.png
     value: ab_4
-  - key: assets/junk/particles/textures/trail/trail17.png
+  - key: assets/thirdparty/particle ingredient pack/particle-material/material-battlegearbundle/material-kunaibundle/material-kunai.mat
     value: ab_4
-  - key: assets/junk/particles/textures/particle/redparticle.png
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/shaders/rfx1_particle.shader
+    value: ab_4
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/loopsmoke1height(8x8).png
+    value: ab_4
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/tilednormal3.png
+    value: ab_4
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/models/spherelowpoly.fbx
+    value: ab_4
+  - key: assets/thirdparty/mobastorm2/models/characters/galilei/dead.anim
+    value: ab_4
+  - key: assets/alluis/ngui/resources/shaders/unlit - transparent colored.shader
+    value: ab_4
+  - key: assets/thirdparty/mobastorm2/models/characters/galilei/materials/galilei_color.mat
+    value: ab_4
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/models/spherehalflowpoly.fbx
     value: ab_4
   - key: assets/thirdparty/mobastorm/models/characters/alycra/abilityq.anim
     value: ab_4
-  - key: assets/junk/art/tankbullet/xulie_fire34_4x4.tga
-    value: ab_4
-  - key: assets/moba/skills/animation/singleattack.anim
+  - key: assets/ui/chatui/chatui.png
     value: ab_4
   - key: assets/thirdparty/mobastorm/models/characters/alycra/abilityw.anim
     value: ab_4
-  - key: assets/junk/art/cj-03/scenes/model/materials/boom-02.mat
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/audio/loopfire1.ogg
     value: ab_4
-  - key: assets/junk/art/tankbullet/glow47.png
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/shaders/uberdistortstandard.shader
     value: ab_4
-  - key: assets/junk/art/tankbullet/trail815.tga
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/fire1.png
     value: ab_4
   - key: assets/thirdparty/mobastorm/textures/allycra_diffuse.png
     value: ab_4
-  - key: assets/junk/art/tankbullet/huan592.png
-    value: ab_4
   - key: assets/thirdparty/mobastorm/textures/shaders/outlinedifusse.shader
     value: ab_4
-  - key: assets/junk/art/tankbullet/trail567.png
+  - key: assets/thirdparty/mobastorm2/textures/galilei_weapon_color.png
     value: ab_4
-  - key: assets/junk/particles/textures/sequence/flamelicks3x2.png
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/tilednormal2.png
     value: ab_4
-  - key: assets/junk/particles/textures/glow/glowyellowintense.png
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/loopsmoke2_nm(8x8).png
+    value: ab_4
+  - key: assets/thirdparty/mobastorm/textures/materials/sword_d.mat
     value: ab_4
   - key: assets/thirdparty/mobastorm/models/characters/alycra/allycra - idle.fbx
     value: ab_4
-  - key: assets/junk/particles/textures/multiparticle/multi-sparkle clear.png
+  - key: assets/thirdparty/mobastorm2/models/characters/galilei/materials/galilei_weapon_color.mat
+    value: ab_4
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/models/hemisphere.fbx
+    value: ab_4
+  - key: assets/thirdparty/mobastorm/textures/jackei_diffuse.png
+    value: ab_4
+  - key: assets/ui/buttons/uibuttons.mat
     value: ab_4
   - key: assets/thirdparty/mobastorm/models/characters/alycra/castinge.anim
     value: ab_4
-  - key: assets/junk/art/tankbullet/01.anim
-    value: ab_4
   - key: assets/thirdparty/mobastorm/models/characters/alycra/run.anim
     value: ab_4
-  - key: assets/junk/art/tankbullet/xulie_fire34_4x4_add.mat
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/distortionsplashblend.png
     value: ab_4
-  - key: assets/junk/shader2/additiveupground.shader
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/tilednormal4.png
     value: ab_4
-  - key: assets/junk/particles/textures/particle/star3.png
+  - key: assets/ui/backgrounds/uibg.png
     value: ab_4
-  - key: assets/junk/particles/textures/flash/flash04.png
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/distortion2.png
     value: ab_4
-  - key: assets/junk/art/tankbullet/trail816_zhong_add.mat
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/shaders/decal/rfx1_decalworldmask.shader
     value: ab_4
-  - key: assets/junk/art/tankbullet/glow150.png
+  - key: assets/alluis/fonts/msyh.ttf
     value: ab_4
-  - key: assets/junk/shader2/shieldadditive.shader
+  - key: assets/thirdparty/mobastorm/models/characters/alycra/abilitye.anim
     value: ab_4
-  - key: assets/junk/art/tankbullet/glow150_add.mat
+  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/loopsmoke1_nm(8x8).png
     value: ab_4
-  - key: assets/junk/shader2/flowlight.shader
+  - key: assets/thirdparty/mobastorm/models/characters/jakei/jakei model.fbx
     value: ab_4
-  - key: assets/junk/art/tankbullet/xulie_shandian32_4x4.tga
-    value: ab_4
-  - key: assets/moba/skills/explosive/nuclear.prefab
-    value: ab_4
-  - key: assets/thirdparty/mobastorm/models/characters/jakei/materials/firechar_diffuse.mat
+  - key: assets/resources/levelpublic/maincamera_old.prefab
     value: ab_5
-  - key: assets/thirdparty/mobastorm2/textures/galilei_diffuse.png
+  - key: assets/ui/fightui/fightui.png
     value: ab_5
-  - key: assets/junk/particles/textures/multiparticle/bigbloodspray2.png
+  - key: assets/ui/loginui2/login_bg.png
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/audio/loopfire8.ogg
+  - key: assets/ui/loginui2/logo_xztk.png
     value: ab_5
-  - key: assets/thirdparty/particle ingredient pack/particle-texture/texture-battlegearbundle/texture-kunaibundle/texture-kunai.png
+  - key: assets/resources/models/items/supershootpotion.prefab
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/shaders/decal/rfx1_decalmask.shader
+  - key: assets/resources/models/items/nuclearpotion.prefab
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/shaders/rfx1_fringe.shader
+  - key: assets/resources/models/items/potion_old.prefab
     value: ab_5
-  - key: assets/thirdparty/particle ingredient pack/particle-texture/texture-flashbundle/texture-flash1.png
+  - key: assets/junk/lights/lights_lava.png
     value: ab_5
-  - key: assets/thirdparty/mobastorm2/models/characters/galilei/recall.anim
+  - key: assets/ui/newbee/newbee.png
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/mask1.png
+  - key: assets/junk/shader2/additiveonui.shader
     value: ab_5
-  - key: assets/thirdparty/particle ingredient pack/particle-material/material-flashbundle/material-flash.mat
+  - key: assets/resources/models/items/potion.prefab
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/smoketile5.png
+  - key: assets/resources/levelpublic/shaderresource.prefab
     value: ab_5
-  - key: assets/ui/buttons/uibuttons.png
+  - key: assets/testscripts/damagezone.mat
     value: ab_5
-  - key: assets/thirdparty/mobastorm2/textures/materials/galilei_color.mat
+  - key: assets/resources/localconfig.bytes
     value: ab_5
-  - key: assets/thirdparty/mobastorm/models/characters/jakei/materials/sword_d.mat
+  - key: assets/resources/levelpublic/rightcontroller.prefab
     value: ab_5
-  - key: assets/junk/lights/lights_stemple.png
+  - key: assets/alluis/ngui/resources/shaders/unlit - transparent coloredmask.shader
     value: ab_5
-  - key: assets/thirdparty/particle ingredient pack/particle-texture/texture-lightbundle/texture-light.png
+  - key: assets/resources/gameconst.prefab
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/perlinnoisealpha.png
+  - key: assets/alluis/ngui/examples/animations/checkmark.anim
     value: ab_5
-  - key: assets/junk/particles/textures/multiparticle/bloodspray4x4_2.png
+  - key: assets/resources/camerashake/rotanim.prefab
     value: ab_5
-  - key: assets/thirdparty/particle ingredient pack/particle-material/material-battlegearbundle/material-kunaibundle/material-kunai.mat
+  - key: assets/junk/lights/materials/lights_lava.mat
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/shaders/rfx1_particle.shader
+  - key: assets/ui/newbee/newbee.mat
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/loopsmoke1height(8x8).png
+  - key: assets/resources/models/items/knockpotion.prefab
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/tilednormal3.png
+  - key: assets/testscripts/foodmat.mat
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/models/spherelowpoly.fbx
+  - key: assets/testscripts/jobmat.mat
     value: ab_5
-  - key: assets/thirdparty/mobastorm2/models/characters/galilei/dead.anim
+  - key: assets/ui/fightui/fightui.mat
     value: ab_5
-  - key: assets/alluis/ngui/resources/shaders/unlit - transparent colored.shader
+  - key: assets/resources/namemap.json
     value: ab_5
-  - key: assets/thirdparty/mobastorm2/models/characters/galilei/materials/galilei_color.mat
+  - key: assets/resources/models/items/hidepotion.prefab
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/models/spherehalflowpoly.fbx
+  - key: assets/resources/models/items/laser.prefab
     value: ab_5
-  - key: assets/ui/chatui/chatui.png
+  - key: assets/resources/levelpublic/maincamera.prefab
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/audio/loopfire1.ogg
+  - key: assets/ui/createchar/createchar.png
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/shaders/uberdistortstandard.shader
+  - key: assets/resources/camerashake/shootanim.prefab
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/fire1.png
+  - key: assets/testscripts/wudi.mat
     value: ab_5
-  - key: assets/thirdparty/mobastorm2/textures/galilei_weapon_color.png
+  - key: assets/ui/createchar/createchar.mat
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/tilednormal2.png
+  - key: assets/resources/materials/wireframereborn.mat
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/loopsmoke2_nm(8x8).png
+  - key: assets/resources/materials/tankdead.mat
     value: ab_5
-  - key: assets/thirdparty/mobastorm/textures/materials/sword_d.mat
+  - key: assets/resources/models/items/gousuo.prefab
     value: ab_5
-  - key: assets/thirdparty/mobastorm2/models/characters/galilei/materials/galilei_weapon_color.mat
+  - key: assets/junk/particles/textures/eye_lwy_t_sun_29_single.png
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/models/hemisphere.fbx
+  - key: assets/resources/models/items/potion_armourer.prefab
     value: ab_5
-  - key: assets/thirdparty/mobastorm/textures/jackei_diffuse.png
+  - key: assets/resources/allsoldier.prefab
     value: ab_5
-  - key: assets/ui/buttons/uibuttons.mat
+  - key: assets/ui/createchar/createchar.prefab
     value: ab_5
   - key: assets/ui/mainui/mainuialtas.png
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/distortionsplashblend.png
+  - key: assets/resources/config/mapsourceconfig.json
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/tilednormal4.png
+  - key: assets/resources/levelpublic/_light.prefab
     value: ab_5
-  - key: assets/ui/backgrounds/uibg.png
+  - key: assets/alluis/ngui/examples/atlases/wooden/wooden atlas.png
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/distortion2.png
+  - key: assets/junk/particles/sparklestreak.png
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/shaders/decal/rfx1_decalworldmask.shader
+  - key: assets/resources/models/items/wudipotion.prefab
     value: ab_5
-  - key: assets/alluis/fonts/msyh.ttf
+  - key: assets/alluis/ngui/examples/atlases/wooden/wooden atlas.mat
     value: ab_5
-  - key: assets/thirdparty/mobastorm/models/characters/alycra/abilitye.anim
+  - key: assets/resources/oldskill/addstaticshootbuff.prefab
     value: ab_5
-  - key: assets/thirdparty/kriptofx/realistic effects pack v1/textures/loopsmoke1_nm(8x8).png
+  - key: assets/ui/chatui/chatui.mat
     value: ab_5
-  - key: assets/thirdparty/mobastorm/models/characters/jakei/jakei model.fbx
+  - key: assets/resources/oldskill/addhpbuff.prefab
     value: ab_5
-  - key: assets/ui/fightui/fightui.png
+  - key: assets/resources/models/nuclearlight.prefab
+    value: ab_5
+  - key: assets/resources/models/emptyobject.prefab
+    value: ab_5
+  - key: assets/resources/config.json
+    value: ab_5
+  - key: assets/resources/levelpublic/leftcontroller.prefab
+    value: ab_5
+  - key: assets/junk/particles/textures/glow/yellowfuzz.png
+    value: ab_5
+  - key: assets/ui/itemicons/itemicons14.png
+    value: ab_5
+  - key: assets/resources/oldskill/supershootbuff.prefab
     value: ab_6
-  - key: assets/ui/loginui2/login_bg.png
+  - key: assets/resources/textures/shadowmap.rendertexture
+    value: ab_6
+  - key: assets/resources/server.json
     value: ab_6
   - key: assets/resources/particles/deadsmoke.prefab
     value: ab_6
-  - key: assets/ui/loginui2/logo_xztk.png
-    value: ab_6
-  - key: assets/resources/models/items/supershootpotion.prefab
-    value: ab_6
-  - key: assets/resources/models/items/nuclearpotion.prefab
-    value: ab_6
-  - key: assets/resources/models/items/potion_old.prefab
-    value: ab_6
-  - key: assets/resources/levelpublic/shadowcamera.prefab
-    value: ab_6
   - key: assets/resources/ui/cancelshot.prefab
     value: ab_6
-  - key: assets/junk/lights/lights_lava.png
+  - key: assets/resources/oldskill/nuclearbuff.prefab
     value: ab_6
-  - key: assets/ui/newbee/newbee.png
+  - key: assets/resources/sound/4ultrakill.wav
     value: ab_6
-  - key: assets/junk/shader2/additiveonui.shader
+  - key: assets/resources/sound/sheet_opencenter.wav
     value: ab_6
-  - key: assets/resources/models/items/potion.prefab
+  - key: assets/resources/room/tank/entrance_city.prefab
     value: ab_6
-  - key: assets/resources/materials/playermap.mat
+  - key: assets/resources/sound/sheet_close.wav
     value: ab_6
-  - key: assets/resources/levelpublic/shaderresource.prefab
+  - key: assets/resources/sound/7whickedsick.wav
     value: ab_6
-  - key: assets/testscripts/damagezone.mat
+  - key: assets/resources/sound/run.wav
     value: ab_6
-  - key: assets/resources/levelpublic/rightcontroller.prefab
+  - key: assets/resources/sound/5rampage.wav
     value: ab_6
-  - key: assets/alluis/ngui/resources/shaders/unlit - transparent coloredmask.shader
+  - key: assets/resources/textures/heathaze.png
     value: ab_6
-  - key: assets/resources/lightcamera.prefab
-    value: ab_6
-  - key: assets/alluis/ngui/examples/animations/checkmark.anim
-    value: ab_6
-  - key: assets/junk/lights/materials/lights_lava.mat
+  - key: assets/resources/oldskill/laserbuff.prefab
     value: ab_6
   - key: assets/resources/ui/background.prefab
     value: ab_6
-  - key: assets/ui/newbee/newbee.mat
+  - key: assets/resources/oldskill/hidebuff.prefab
     value: ab_6
-  - key: assets/resources/models/items/knockpotion.prefab
+  - key: assets/resources/sound/skill/lasershoot.wav
     value: ab_6
-  - key: assets/testscripts/foodmat.mat
+  - key: assets/resources/sound/levelup.wav
     value: ab_6
-  - key: assets/testscripts/jobmat.mat
+  - key: assets/resources/readonlyconfig.bytes
     value: ab_6
-  - key: assets/ui/fightui/fightui.mat
+  - key: assets/resources/sound/1firstblood.wav
     value: ab_6
-  - key: assets/resources/models/items/hidepotion.prefab
+  - key: assets/resources/textures/motioncamera.rendertexture
     value: ab_6
-  - key: assets/resources/models/items/laser.prefab
+  - key: assets/resources/oldskill/damagehp.prefab
+    value: ab_6
+  - key: assets/resources/sound/6unstoppable.wav
+    value: ab_6
+  - key: assets/resources/sound/skill/quake3.wav
+    value: ab_6
+  - key: assets/resources/textures/lightmap.rendertexture
+    value: ab_6
+  - key: assets/resources/sound/skill/quake1.wav
+    value: ab_6
+  - key: assets/resources/sound/wind.wav
+    value: ab_6
+  - key: assets/resources/skills/monstersingle.prefab
+    value: ab_6
+  - key: assets/resources/ui/createchar.prefab
     value: ab_6
   - key: assets/resources/ui/bloodscreen.prefab
     value: ab_6
-  - key: assets/resources/levelpublic/maincamera.prefab
+  - key: assets/resources/sound/pickup.wav
     value: ab_6
-  - key: assets/ui/createchar/createchar.png
+  - key: assets/resources/strdictionary.json
     value: ab_6
-  - key: assets/testscripts/wudi.mat
+  - key: assets/resources/sound/kongzhi.wav
     value: ab_6
-  - key: assets/ui/createchar/createchar.mat
+  - key: assets/resources/sound/9godlike.wav
     value: ab_6
-  - key: assets/resources/materials/wireframereborn.mat
+  - key: assets/resources/skills/aliattack.prefab
     value: ab_6
-  - key: assets/resources/materials/tankdead.mat
+  - key: assets/resources/oldskill/gousuobuff.prefab
     value: ab_6
-  - key: assets/resources/models/items/gousuo.prefab
+  - key: assets/resources/sound/skill/shockhit.wav
     value: ab_6
-  - key: assets/junk/particles/textures/eye_lwy_t_sun_29_single.png
+  - key: assets/resources/sound/bgm.mp3
     value: ab_6
-  - key: assets/resources/models/items/potion_armourer.prefab
+  - key: assets/resources/oldskill/daodanbuff.prefab
     value: ab_6
-  - key: assets/ui/createchar/createchar.prefab
+  - key: assets/resources/textfont.prefab
+    value: ab_6
+  - key: assets/resources/oldskill/slowdown2.prefab
+    value: ab_6
+  - key: assets/resources/sound/3triplekill.wav
+    value: ab_6
+  - key: assets/resources/oldskill/laserdamagehp.prefab
+    value: ab_6
+  - key: assets/resources/textures/motionblur.rendertexture
+    value: ab_6
+  - key: assets/resources/sound/8monsterkill.wav
+    value: ab_6
+  - key: assets/resources/textures/playermap.rendertexture
+    value: ab_6
+  - key: assets/resources/serverconfig.json
     value: ab_6
   - key: assets/resources/particles/atmosphere/mine_dust.prefab
     value: ab_6
-  - key: assets/alluis/ngui/examples/atlases/wooden/wooden atlas.png
+  - key: assets/resources/sound/skill/paodan3.wav
     value: ab_6
-  - key: assets/junk/particles/sparklestreak.png
+  - key: assets/resources/oldskill/stopmovebuff.prefab
     value: ab_6
-  - key: assets/resources/models/items/wudipotion.prefab
+  - key: assets/resources/sound/10holyshit.wav
     value: ab_6
-  - key: assets/alluis/ngui/examples/atlases/wooden/wooden atlas.mat
+  - key: assets/resources/oldskill/knockback.prefab
     value: ab_6
-  - key: assets/ui/chatui/chatui.mat
+  - key: assets/resources/textures/skilllight.rendertexture
     value: ab_6
-  - key: assets/resources/models/nuclearlight.prefab
+  - key: assets/resources/sound/2doublekill.wav
     value: ab_6
-  - key: assets/resources/levelpublic/leftcontroller.prefab
+  - key: assets/resources/oldskill/nucleardamagehp.prefab
     value: ab_6
-  - key: assets/junk/particles/textures/glow/yellowfuzz.png
-    value: ab_6
-  - key: assets/ui/itemicons/itemicons14.png
-    value: ab_6
-  - key: assets/junk/particles/textures/sequence/flamelicks3x2.mat
+  - key: assets/resources/ui/justblock.prefab
+    value: ab_7
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/standard assets/environment/water/water4/materials/water4simple.mat
+    value: ab_7
+  - key: assets/moba/art/test.mat
     value: ab_7
   - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/element/element_a.mat
     value: ab_7
-  - key: assets/junk/art/tankbullet/trail567_add02.mat
-    value: ab_7
   - key: assets/moba/moba heroes/creeps/moba creeps/melee/creepmelee_animtree.controller
+    value: ab_7
+  - key: assets/resources/ui/playermainwindow.prefab
     value: ab_7
   - key: assets/junk/art/materials/nuclear.mat
     value: ab_7
   - key: assets/resources/ui/itemnameui.prefab
+    value: ab_7
+  - key: assets/moba/scene/astar3.prefab
     value: ab_7
   - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/materials/vines.mat
     value: ab_7
@@ -862,34 +995,26 @@ MonoBehaviour:
     value: ab_7
   - key: assets/moba/skills/bowarrowknockbacklayout.prefab
     value: ab_7
-  - key: assets/junk/particles/playerskills/explodingshot/tank_zidan01.prefab
-    value: ab_7
   - key: assets/thirdparty/sharedtextures/sparklestreak3.mat
     value: ab_7
   - key: assets/moba/moba heroes/creeps/moba creeps/ranged/materials/ranged creep
       red.mat
     value: ab_7
-  - key: assets/junk/particles/textures/glow/glowyellowintense.mat
-    value: ab_7
-  - key: assets/junk/art/tankbullet/trail567_add01.mat
-    value: ab_7
   - key: assets/thirdparty/warlor_bruce/materials/warlord_complete_map.mat
     value: ab_7
   - key: assets/moba/moba heroes/creeps/moba creeps/melee/meshes/creep_melee_red.mat
     value: ab_7
-  - key: assets/junk/art/tankbullet/huan592_add.mat
-    value: ab_7
   - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/magiccircle_a/circle_a.mat
     value: ab_7
+  - key: assets/resources/ui/popupdamage.prefab
+    value: ab_7
   - key: assets/moba/moba heroes/creeps/moba creeps/siege/animations/siege_creep_move.fbx
-    value: ab_7
-  - key: assets/junk/art/tankbullet/xulie_huan18_4x4_add.mat
-    value: ab_7
-  - key: assets/junk/art/tankbullet/trail815_flow01_glow47.mat
     value: ab_7
   - key: assets/junk/art/tracerocket.mat
     value: ab_7
   - key: assets/moba/moba heroes/creeps/moba creeps/siege/mesh/creep_siege_blue.mat
+    value: ab_7
+  - key: assets/resources/versionconfig.bytes
     value: ab_7
   - key: assets/moba/moba heroes/creeps/moba creeps/melee/meshes/creep_melee_blue.mat
     value: ab_7
@@ -897,21 +1022,19 @@ MonoBehaviour:
     value: ab_7
   - key: assets/thirdparty/warlor_bruce/bruce.fbx
     value: ab_7
-  - key: assets/resources/ui/createchar.prefab
-    value: ab_7
   - key: assets/moba/moba heroes/creeps/moba creeps/animations/melee_creep_cheer.fbx
     value: ab_7
   - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/materials/tower.mat
     value: ab_7
-  - key: assets/junk/art/tankbullet/xulie_shandian32_4x4_add.mat
-    value: ab_7
   - key: assets/junk/particles/textures/multiparticle/sparklestreak2.mat
     value: ab_7
-  - key: assets/junk/particles/playerskills/explodingshot/tank_zidan03.prefab
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/tower_b_1.prefab
     value: ab_7
-  - key: assets/junk/particles/playerskills/explodingshot/tank_fashe01.prefab
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/materials/stone&cliff.mat
     value: ab_7
   - key: assets/moba/moba heroes/creeps/moba creeps/animations/creep_melee_run.fbx
+    value: ab_7
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/materials/rock_b.mat
     value: ab_7
   - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/materials/plants.mat
     value: ab_7
@@ -919,18 +1042,24 @@ MonoBehaviour:
     value: ab_7
   - key: assets/moba/moba heroes/creeps/moba creeps/animations/creep_archer_idle.fbx
     value: ab_7
-  - key: assets/junk/art/tankbullet/wenli888_add01.mat
-    value: ab_7
-  - key: assets/junk/particles/monsters/onfirebig.prefab
+  - key: assets/resources/ui/popupdamagepurple.prefab
     value: ab_7
   - key: assets/moba/moba heroes/creeps/moba creeps/ranged/materials/ranged creep
       blue.mat
     value: ab_7
   - key: assets/moba/moba heroes/creeps/moba creeps/siege/animations/siege_creep_attack.fbx
     value: ab_7
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/materials/tree.mat
+    value: ab_7
+  - key: assets/procore/probuilder/resources/materials/default_prototype.mat
+    value: ab_7
   - key: assets/resources/ui/timelabel.prefab
     value: ab_7
   - key: assets/thirdparty/fantasy enemy pack 01/crawling bug/materials/crawlingbug-blue.mat
+    value: ab_7
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/tower_b_3.prefab
+    value: ab_7
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/standard assets/environment/water/water4/prefabs/water4simple.prefab
     value: ab_7
   - key: assets/moba/moba heroes/creeps/moba creeps/ranged/creepranged_animtree.controller
     value: ab_7
@@ -938,13 +1067,21 @@ MonoBehaviour:
     value: ab_7
   - key: assets/thirdparty/z!m.o.b.a environment art pack/fx/magiccircle_a/circle_b.mat
     value: ab_7
-  - key: assets/moba/skills/explosive/warmup.prefab
+  - key: assets/resources/ui/playerwindow.prefab
+    value: ab_7
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/tower_a.prefab
     value: ab_7
   - key: assets/junk/lights/materials/playerlight.mat
     value: ab_7
-  - key: assets/resources/ui/myhudlabel.prefab
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/rock_b2.prefab
     value: ab_7
-  - key: assets/junk/particles/playerskills/explodingshot/tank_hit01.prefab
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/stone&cliff_d.prefab
+    value: ab_7
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/stone&cliff_l.prefab
+    value: ab_7
+  - key: assets/thirdparty/z!m.o.b.a environment art pack/prefabs/tree_e_1.prefab
+    value: ab_7
+  - key: assets/resources/ui/myhudlabel.prefab
     value: ab_7
   - key: assets/ui/loginui2/logomat.mat
     value: ab_8
@@ -952,17 +1089,17 @@ MonoBehaviour:
     value: ab_8
   - key: assets/junk/particles/textures/particle/redparticle.mat
     value: ab_8
-  - key: assets/resources/models/creep_archer_red.prefab
-    value: ab_8
   - key: assets/junk/particles/textures/glow/glowred.mat
     value: ab_8
   - key: assets/junk/lights/lava_circle_01.fbx
     value: ab_8
   - key: assets/ui/backgrounds/uibg.mat
     value: ab_8
-  - key: assets/junk/particles/beammat.mat
-    value: ab_8
   - key: assets/ui/fightui/fightui.prefab
+    value: ab_8
+  - key: assets/junk/particles/textures/sequence/flamelicks3x2.mat
+    value: ab_8
+  - key: assets/junk/art/tankbullet/trail567_add02.mat
     value: ab_8
   - key: assets/thirdparty/mobastorm2/textures/materials/galilei_weapon_color.mat
     value: ab_8
@@ -992,6 +1129,8 @@ MonoBehaviour:
   - key: assets/thirdparty/kriptofx/realistic effects pack v1/materials/effect18/fringe
       1.mat
     value: ab_8
+  - key: assets/junk/particles/playerskills/explodingshot/tank_zidan01.prefab
+    value: ab_8
   - key: assets/ui/fightui/fightfont.prefab
     value: ab_8
   - key: assets/thirdparty/kriptofx/realistic effects pack v1/materials/effect18/fire.mat
@@ -1000,7 +1139,15 @@ MonoBehaviour:
     value: ab_8
   - key: assets/thirdparty/kriptofx/realistic effects pack v1/materials/effect18/decal4.mat
     value: ab_8
-  - key: assets/resources/models/bruce.prefab
+  - key: assets/junk/particles/textures/glow/glowyellowintense.mat
+    value: ab_8
+  - key: assets/junk/art/tankbullet/trail567_add01.mat
+    value: ab_8
+  - key: assets/junk/art/tankbullet/huan592_add.mat
+    value: ab_8
+  - key: assets/junk/art/tankbullet/xulie_huan18_4x4_add.mat
+    value: ab_8
+  - key: assets/junk/art/tankbullet/trail815_flow01_glow47.mat
     value: ab_8
   - key: assets/junk/particles/textures/multiparticle/multi_sparkle_clear.mat
     value: ab_8
@@ -1012,13 +1159,19 @@ MonoBehaviour:
     value: ab_8
   - key: assets/ui/backgrounds/uibg.prefab
     value: ab_8
+  - key: assets/junk/art/tankbullet/xulie_shandian32_4x4_add.mat
+    value: ab_8
   - key: assets/junk/lights/stemple_gradient_03.fbx
     value: ab_8
-  - key: assets/resources/models/creep_melee_blue.prefab
+  - key: assets/junk/particles/playerskills/explodingshot/tank_zidan03.prefab
     value: ab_8
   - key: assets/junk/particles/playerskills/frostshield/wudishield.prefab
     value: ab_8
-  - key: assets/resources/light/playerlight.prefab
+  - key: assets/junk/particles/playerskills/explodingshot/tank_fashe01.prefab
+    value: ab_8
+  - key: assets/junk/art/tankbullet/wenli888_add01.mat
+    value: ab_8
+  - key: assets/junk/particles/monsters/onfirebig.prefab
     value: ab_8
   - key: assets/thirdparty/kriptofx/realistic effects pack v1/materials/effect18/shieldadd.mat
     value: ab_8
@@ -1032,29 +1185,29 @@ MonoBehaviour:
     value: ab_8
   - key: assets/junk/art/tankbullet/cube.controller
     value: ab_8
-  - key: assets/resources/levelpublic/shootsector.prefab
-    value: ab_8
   - key: assets/ui/mainui/mainuialtas.prefab
-    value: ab_8
-  - key: assets/resources/models/creep_archer_blue.prefab
     value: ab_8
   - key: assets/junk/particles/events/healthpotion.prefab
     value: ab_8
-  - key: assets/resources/models/crawlingbug-blue.prefab
+  - key: assets/moba/skills/explosive/warmup.prefab
     value: ab_8
   - key: assets/junk/art/pixel/laserline.prefab
     value: ab_8
-  - key: assets/resources/levelpublic/shootray.prefab
-    value: ab_8
   - key: assets/junk/particles/playerskills/explodingshot/tank_zidan02.prefab
+    value: ab_8
+  - key: assets/junk/particles/playerskills/explodingshot/tank_hit01.prefab
     value: ab_8
   - key: assets/resources/oldskill/addmpbuff.prefab
     value: ab_9
+  - key: assets/resources/models/creep_archer_red.prefab
+    value: ab_9
   - key: assets/resources/oldskill/wudi.prefab
     value: ab_9
-  - key: assets/resources/ui/selecthero.prefab
+  - key: assets/resources/levelpublic/shadowcamera.prefab
     value: ab_9
   - key: assets/resources/ui/recordui.prefab
+    value: ab_9
+  - key: assets/junk/particles/beammat.mat
     value: ab_9
   - key: assets/resources/ui/lefttimeui.prefab
     value: ab_9
@@ -1062,7 +1215,7 @@ MonoBehaviour:
     value: ab_9
   - key: assets/resources/skills/galiattack.prefab
     value: ab_9
-  - key: assets/resources/ui/shopui.prefab
+  - key: assets/resources/materials/playermap.mat
     value: ab_9
   - key: assets/resources/ui/mainui2.prefab
     value: ab_9
@@ -1074,13 +1227,13 @@ MonoBehaviour:
     value: ab_9
   - key: assets/resources/models/spring.prefab
     value: ab_9
+  - key: assets/resources/lightcamera.prefab
+    value: ab_9
   - key: assets/resources/ui/gmcmd.prefab
     value: ab_9
-  - key: assets/resources/zones/level_1_4_77.prefab
-    value: ab_9
-  - key: assets/resources/ui/tanknum.prefab
-    value: ab_9
   - key: assets/resources/ui/alphablock.prefab
+    value: ab_9
+  - key: assets/resources/models/bruce.prefab
     value: ab_9
   - key: assets/resources/ui/chatui.prefab
     value: ab_9
@@ -1102,7 +1255,11 @@ MonoBehaviour:
     value: ab_9
   - key: assets/resources/ui/mainloginui.prefab
     value: ab_9
+  - key: assets/resources/models/creep_melee_blue.prefab
+    value: ab_9
   - key: assets/resources/oldskill/singleattack.prefab
+    value: ab_9
+  - key: assets/resources/light/playerlight.prefab
     value: ab_9
   - key: assets/resources/models/creep_melee_red.prefab
     value: ab_9
@@ -1116,13 +1273,15 @@ MonoBehaviour:
     value: ab_9
   - key: assets/resources/skills/galiskill1_backup.prefab
     value: ab_9
-  - key: assets/resources/ui/loginui2.prefab
+  - key: assets/resources/levelpublic/shootsector.prefab
     value: ab_9
-  - key: assets/resources/zones/level_1_4_78.prefab
+  - key: assets/resources/ui/loginui2.prefab
     value: ab_9
   - key: assets/resources/oldskill/nuclear.prefab
     value: ab_9
   - key: assets/resources/ui/scoreui.prefab
+    value: ab_9
+  - key: assets/resources/models/creep_archer_blue.prefab
     value: ab_9
   - key: assets/resources/ui/bloodbar.prefab
     value: ab_9
@@ -1132,9 +1291,11 @@ MonoBehaviour:
     value: ab_9
   - key: assets/resources/models/maintower.prefab
     value: ab_9
+  - key: assets/resources/models/crawlingbug-blue.prefab
+    value: ab_9
   - key: assets/resources/ui/charcreate.prefab
     value: ab_9
-  - key: assets/resources/zones/level_1_4_76.prefab
+  - key: assets/resources/levelpublic/shootray.prefab
     value: ab_9
   - key: assets/resources/ui/charselect2.prefab
     value: ab_9
@@ -1148,3 +1309,5 @@ MonoBehaviour:
     value: ab_9
   - key: assets/resources/player/entity_jakei.prefab
     value: ab_9
+  - key: assets/moba/scene/moba.unity
+    value: scene_0

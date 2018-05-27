@@ -239,9 +239,32 @@ namespace AssetBundleBrowser.AssetBundleModel
             return m_dependencies;
         }
 
-        public int depCount = 0;
+        internal List<AssetInfo> ForceGetDependencies()
+        {
+            m_dependencies = new List<AssetInfo>();
+            if (AssetDatabase.IsValidFolder(m_AssetName))
+            {
+                //if we have a folder, its dependencies were already pulled in through alternate means.  no need to GatherFoldersAndFiles
+                //GatherFoldersAndFiles();
+            }
+            else
+            {
+                foreach (var dep in AssetDatabase.GetDependencies(m_AssetName, true))
+                {
+                    if (dep != m_AssetName)
+                    {
+                        var asset = Model.CreateAsset(dep, this);
+                        if (asset != null)
+                            m_dependencies.Add(asset);
+                    }
+                }
+            }
+            return m_dependencies;
+        }
+
+        //public int depCount = 0;
         internal HashSet<AssetInfo> depAssets;
-        public List<AssetInfo> m_ReverseDep = new List<AssetInfo>();
+        public HashSet<AssetInfo> m_ReverseDep = new HashSet<AssetInfo>();
         public void InitReverseDep()
         {
             var deps = GetDependencies();
@@ -250,7 +273,7 @@ namespace AssetBundleBrowser.AssetBundleModel
                 d.m_ReverseDep.Add(this);
             }
 
-            depCount = m_dependencies.Count;
+            //depCount = m_dependencies.Count;
             depAssets = new HashSet<AssetInfo>();
             foreach(var d in m_dependencies)
             {
@@ -262,7 +285,7 @@ namespace AssetBundleBrowser.AssetBundleModel
         {
             foreach(var r in m_ReverseDep)
             {
-                r.depCount--;
+                //r.depCount--;
                 r.depAssets.Remove(this);
             }
         }

@@ -84,7 +84,7 @@ public class AssetBundleMemoryManager : MonoBehaviour
     {
         var minEle = leastRU.FindMin();
         //没有反向依赖才可以释放
-        if (minEle.reverseDep.Count == 0)
+        if (minEle.reverseDep.Count == 0 && (Time.time-minEle.lastUsedTime) > 10)
         {
             leastRU.DeleteMin();
             ABLoader.Instance.abm.UnloadContainer(minEle);

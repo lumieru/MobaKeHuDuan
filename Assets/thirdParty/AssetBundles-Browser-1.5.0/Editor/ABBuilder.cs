@@ -24,8 +24,16 @@ public class ABBuilder
         if(chd1 == null)
         {
             GenFullBundle(tab);
+            //GenMobaSceneBundle();
         }
-        var abAssetList = CollectAllAsset();
+
+        var abAssetList = CollectAllAsset("full");
+        //var abAssetList = CollectAllAsset("scene1");
+        var twoAssetList = SplitAsset(abAssetList);
+        abAssetList = twoAssetList[0];
+        var sceneAssetList = twoAssetList[1];
+
+        //return;
         if(abAssetList == null)
         {
             return;
@@ -35,21 +43,12 @@ public class ABBuilder
         if (chd != null)
         {
             var bd = chd as BundleDataInfo;
-            /*
-            //收集full
-            var con = bd.m_ConcreteAssets;
-            var dep = bd.m_DependentAssets;
-
-            var allAsset = new List<AssetInfo>();
-            allAsset.AddRange(con);
-            allAsset.AddRange(dep);
-            */
             var allAsset = abAssetList;
             Debug.LogError("AbAssetList:"+abAssetList.Count);
-
             //删除
             Model.HandleBundleDelete(new List<BundleInfo>() { bd});
             mgTab.m_BundleTree.ReloadAndSelect(new List<int>());
+
 
             //切割Full
             var eachNum = allAsset.Count / abNum;
@@ -83,6 +82,19 @@ public class ABBuilder
                 curAbName++;
                 lsNb.Add(ab);
             }
+
+            var sceneAbId = 0;
+            foreach(var a in sceneAssetList)
+            {
+                var ab = CreateBundle("scene_" + sceneAbId);
+                EditorUtility.DisplayProgressBar("BuildAB:" + sceneAbId, "", sceneAbId / (sceneAssetList.Count+1) );
+                mgTab.m_BundleTree.ReloadAndSelect(ab.nameHashCode, false);
+                var list = new List<AssetInfo>() { a };
+                AddAssetToAB(ab, list);
+                sceneAbId++;
+                lsNb.Add(ab);
+            }
+
             mgTab.UpdateSelectedBundles(lsNb);
             EditorUtility.ClearProgressBar();
 
@@ -91,11 +103,37 @@ public class ABBuilder
     }
 
     /// <summary>
+    /// 将资源拆分为 普通资源 和 .unity 场景资源
+    /// </summary>
+    /// <param name="allAsset"></param>
+    /// <returns></returns>
+    private static List<List<AssetInfo>> SplitAsset(List<AssetInfo> allAsset)
+    {
+        var ret = new List<List<AssetInfo>>();
+        var fullAsset = new List<AssetInfo>();
+        var sceneAsset = new List<AssetInfo>();
+        foreach(var a in allAsset)
+        {
+            var isScene = a.fullAssetName.EndsWith(".unity");
+            if (isScene)
+            {
+                sceneAsset.Add(a);
+            }else
+            {
+                fullAsset.Add(a);
+            }
+        }
+        ret.Add(fullAsset);
+        ret.Add(sceneAsset);
+        return ret;
+    }
+    /// <summary>
+    /// 生成 一个AB 里面所有的资源List 
     /// List 前面资源 不会依赖于后面的资源
     /// </summary>
-    private static List<AssetInfo> CollectAllAsset()
+    private static List<AssetInfo> CollectAllAsset(string bundleName)
     {
-        var chd = Model.s_RootLevelBundles.GetChild("full");
+        var chd = Model.s_RootLevelBundles.GetChild(bundleName);
         if (chd != null)
         {
             //收集full
@@ -104,8 +142,8 @@ public class ABBuilder
             var dep = bd.m_DependentAssets;
 
             var allAsset = new List<AssetInfo>();
-            allAsset.AddRange(con);
             allAsset.AddRange(dep);
+            allAsset.AddRange(con);
             Debug.LogError("AllAsset:"+allAsset.Count+":"+con.Count+":"+dep.Count);
             //List中的Asset和Dependency中的Asset没有统一
 
@@ -159,7 +197,8 @@ public class ABBuilder
                 for(var i = 0; i < allAsset.Count;)
                 {
                     var a = allAsset[i];
-                    if(a.depCount <= 0)
+                    //if(a.depCount <= 0)
+                    if(a.depAssets.Count == 0)
                     {
                         EditorUtility.DisplayProgressBar("SortAsset" + a.displayName, a.displayName, (float)i / (float)(allAsset.Count+1) );
                         abAssetList.Add(a);
@@ -175,13 +214,26 @@ public class ABBuilder
                 EditorUtility.DisplayProgressBar("SortAsset" + sortCount++, ""+sortCount, sortCount/allCount );
             }
             EditorUtility.ClearProgressBar();
+            sb.AppendLine("AllAssetInfo:"+abAssetList.Count);
+            foreach (var a in abAssetList)
+            {
+                sb.AppendLine("__++__:" + a.fullAssetName);
+                foreach (var r in a.m_ReverseDep)
+                {
+                    sb.AppendLine("\t--" + r.fullAssetName);
+                }
+                foreach (var r in a.GetDependencies())
+                {
+                    sb.AppendLine("\t\t++" + r.fullAssetName);
+                }
+            }
 
             sb.AppendLine("AllAssetLeft:"+allAsset.Count);
             if(allAsset.Count > 0)
             {
                 foreach(var a in allAsset)
                 {
-                    sb.Append("##"+a.fullAssetName + ":" + a.depCount+"\n");
+                    sb.Append("##"+a.fullAssetName + ":" + a.depAssets.Count+"\n");
                     foreach(var d in a.depAssets)
                     {
                         sb.Append(".."+d.fullAssetName+"\n");
@@ -189,15 +241,20 @@ public class ABBuilder
                 }
                 foreach(var a in abAssetList)
                 {
-                    sb.AppendLine("__:"+a.fullAssetName);
+                    sb.AppendLine("__++__:"+a.fullAssetName);
                     foreach(var r in a.m_ReverseDep)
                     {
-                        sb.AppendLine("--"+r.fullAssetName);
+                        sb.AppendLine("\t--"+r.fullAssetName);
+                    }
+                    foreach(var r in a.GetDependencies())
+                    {
+                        sb.AppendLine("\t\t++" + r.fullAssetName);
                     }
                 }
                 File.WriteAllText(Path.Combine(Application.dataPath, "../result.txt"), sb.ToString());
                 return null;
             }
+            File.WriteAllText(Path.Combine(Application.dataPath, "../result.txt"), sb.ToString());
             return abAssetList;
         }
         return null;
@@ -232,7 +289,7 @@ public class ABBuilder
     /// <param name="tab"></param>
     internal static void GenFullBundle(AssetBundleManageTab tab)
     {
-        var nb = GenBundleMethod();
+        var nb = GenBundleMethod("full");
         tab.m_BundleTree.ReloadAndSelect(nb.nameHashCode, false);
         AddAsset(nb);
         var bd = nb as BundleDataInfo;
@@ -248,16 +305,16 @@ public class ABBuilder
     /// 将Reousrces 所有资源加入到Bundle中
     /// 生成一个内存中结构信息
     /// </summary>
-    internal static BundleInfo GenBundleMethod()
+    internal static BundleInfo GenBundleMethod(string bundleName)
     {
-        var chd = Model.s_RootLevelBundles.GetChild("full");
+        var chd = Model.s_RootLevelBundles.GetChild(bundleName);
         if (chd != null)
         {
             return chd;
         }
 
         //Model.Rebuild();
-        var newBundle = AssetBundleBrowser.AssetBundleModel.Model.CreateEmptyBundle(null, "full");
+        var newBundle = AssetBundleBrowser.AssetBundleModel.Model.CreateEmptyBundle(null, bundleName);
         return newBundle;
     }
 
@@ -277,10 +334,59 @@ public class ABBuilder
                 assetInfo.Add(asset);
             }
         }
+        var scene = GetSceneAsset();
+        assetInfo.Add(scene);
+
         Debug.LogError("AddAsset:" + assetInfo.Count);
         Model.MoveAssetToBundle(assetInfo, "full", String.Empty);
         Model.ExecuteAssetMove();
         newBundle.RefreshAssetList();
+    }
+
+    private static AssetInfo GetSceneAsset()
+    {
+        var path = Path.Combine(Application.dataPath, "Moba/Scene/moba.unity");
+        Debug.LogError(path);
+        var ap = FullPathToUnityPath(path);
+        var asset = Model.CreateAsset(ap, "full");
+        return asset;
+    }
+
+   
+    /// <summary>
+    /// 1:获取对应场景
+    /// 2：场景依赖资源列表
+    /// 3：ab--》场景放进去
+    /// 4：场景依赖资源 和 其它普通资源一起打包
+    /// 
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    private static AssetInfo GenMobaSceneBundle()
+    {
+        var abName = "scene1";
+        var newBundle = GenBundleMethod(abName);
+        var nb = newBundle;
+        var tab = mgTab;
+        tab.m_BundleTree.ReloadAndSelect(nb.nameHashCode, false);
+
+        var path = Path.Combine(Application.dataPath, "Moba/Scene/moba.unity");
+        Debug.LogError(path);
+        var ap = FullPathToUnityPath(path);
+        var asset = Model.CreateAsset(ap, abName);
+        var list = new List<AssetInfo>();
+        list.Add(asset);
+        Model.MoveAssetToBundle(list, abName, string.Empty);
+        Model.ExecuteAssetMove();
+        newBundle.RefreshAssetList();
+
+        var bd = nb as BundleDataInfo;
+        bd.GatherAllDep();
+
+        var lsNb = new List<BundleInfo>();
+        lsNb.Add(nb);
+        tab.UpdateSelectedBundles(lsNb);
+        return asset;
     }
 
     public static string FullPathToUnityPath(string full)
