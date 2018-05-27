@@ -38,6 +38,10 @@ namespace MyLib
                 Init();
             }
         }
+        public virtual void OnModelLoad()
+        {
+
+        }
         /// <summary>
         /// 初始化完模型调用该接口
         /// </summary>

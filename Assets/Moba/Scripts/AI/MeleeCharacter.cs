@@ -12,7 +12,12 @@ public class MeleeCharacter : AICharacter
     {
         base.Init();
         aniLength = new Dictionary<string, float>();
-        var ani = GetAttr().GetComponent<Animator>();
+        InitAni();
+    }
+
+    private void InitAni()
+    {
+        var ani = GetAttr().GetComponentInChildren<Animator>();
         animator = ani;
         if (animator != null)
         {
@@ -21,18 +26,23 @@ public class MeleeCharacter : AICharacter
             {
                 aniLength[c.name] = c.length;
             }
-        }else
+        }
+        else
         {
-            animation = GetAttr().GetComponent<Animation>();
-            if(animation != null)
+            animation = GetAttr().GetComponentInChildren<Animation>();
+            if (animation != null)
             {
-                foreach(AnimationState c in animation)
+                foreach (AnimationState c in animation)
                 {
                     aniLength[c.name] = c.length;
                 }
             }
 
         }
+    }
+    public override void OnModelLoad()
+    {
+        InitAni();
     }
 
     public override void SetIdle()
@@ -48,11 +58,11 @@ public class MeleeCharacter : AICharacter
     {
         if (animator != null)
         {
-            var ani = GetAttr().GetComponent<Animator>();
+            var ani = GetAttr().GetComponentInChildren<Animator>();
             ani.speed = 1;
             ani.CrossFade(name, 0.1f);
         }
-        else
+        else if(animation != null)
         {
             animation.CrossFade(name);
         }

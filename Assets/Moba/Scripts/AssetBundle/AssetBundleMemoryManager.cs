@@ -47,7 +47,14 @@ public class AssetBundleMemoryManager : MonoBehaviour
     {
         tranversed.Add(container);
         container.InitReverse();
-        leastRU.Add(ref container.handler, container);
+        if (container.handler != null)
+        {
+            leastRU.Replace(container.handler, container);
+        }
+        else
+        {
+            leastRU.Add(ref container.handler, container);
+        }
 
         var abm = ABLoader.Instance.abm;
         foreach(var dep in container.Dependencies)

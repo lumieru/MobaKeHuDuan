@@ -31,6 +31,10 @@ namespace MyLib
         {
             return ai;
         }
+        public void OnModelLoad()
+        {
+            ai.OnModelLoad();
+        }
 
         public List<MyLib.MyEvent.EventType> regEvt = null;
 

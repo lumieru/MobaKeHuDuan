@@ -534,8 +534,11 @@ namespace MyLib
                 }
             }
 
-            var Resource = Resources.Load<GameObject>(unitData.ModelName);
-            GameObject g = Instantiate(Resource) as GameObject;
+            var g = new GameObject("Npc");
+            //var Resource = Resources.Load<GameObject>(unitData.ModelName);
+            //GameObject g = Instantiate(Resource) as GameObject;
+            var loader = g.AddMissingComponent<MobaModelLoader>();
+            loader.StartCoroutine(loader.LoadModel2(unitData.ModelName));
             NpcAttribute npc = NGUITools.AddMissingComponent<NpcAttribute>(g);
 
             g.transform.parent = transform;
@@ -552,7 +555,6 @@ namespace MyLib
             Log.AI("Monster Create Certain AI  " + unitData.AITemplate + " " + type);
             var geMethod = m.MakeGenericMethod(type);
             geMethod.Invoke(null, new object[]{ g });// as AIBase;
-
 
             var netView = g.GetComponent<KBEngine.KBNetworkView>();
             //服务器返回的ViewId

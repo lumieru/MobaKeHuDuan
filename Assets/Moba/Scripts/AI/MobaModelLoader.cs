@@ -17,6 +17,23 @@ public class MobaModelLoader : MonoBehaviour {
         attr = GetComponent<NpcAttribute>();
     }
 
+    public IEnumerator LoadModel2(string m)
+    {
+        GameObject[] ret = new GameObject[1];
+        yield return ABLoader.Instance.LoadPrefab(m, ret);
+        var md = ret[0];
+        model = GameObject.Instantiate<GameObject>(md);
+        var scale = model.transform.localScale;
+        model.transform.parent = transform;
+        Util.InitGameObject(model);
+        model.transform.localScale = scale;
+        var attri = GetComponent<NpcAttribute>();
+        MyEventSystem.myEventSystem.PushLocalEvent(attri.GetLocalId(), MyEvent.EventType.UpdateModel);
+        skins = model.GetComponentsInChildren<SkinnedMeshRenderer>();
+
+        GetComponent<AIBase>().OnModelLoad();
+    }
+
     public IEnumerator LoadModel(int modelId)
     {
         var udata = Util.GetUnitData(true, modelId, 0);
@@ -31,6 +48,7 @@ public class MobaModelLoader : MonoBehaviour {
         var attri = GetComponent<NpcAttribute>();
         MyEventSystem.myEventSystem.PushLocalEvent(attri.GetLocalId(), MyEvent.EventType.UpdateModel);
         skins = model.GetComponentsInChildren<SkinnedMeshRenderer>();
+        GetComponent<AIBase>().OnModelLoad();
     }
 
     private bool inGrassYet = false;
