@@ -33,8 +33,5 @@ EditorBuildSettings:
     path: Assets/GameScene/LaunchScene.unity
     guid: 8cd6c36ee7a31ad4f8147fd9a813490e
   - enabled: 1
-    path: Assets/Moba/Scene/moba.unity
-    guid: d5be09586bae0ac4ea3ca6f4d94a9a7e
-  - enabled: 1
     path: Assets/GameScene/SelectHero.unity
     guid: 14e564f76f1f4a242b5e1f09b0353933
