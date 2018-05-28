@@ -16,7 +16,6 @@ public class LuaManager : MonoBehaviour
         luaEnv.AddLoader((ref string filePath) =>
         {
             var newPath = Path.Combine(Application.dataPath, "../LuaCode/" + filePath + ".lua");
-            //Debug.LogError("filePath:"+filePath+":"+newPath);
             var con = File.ReadAllText(newPath);
             return System.Text.Encoding.UTF8.GetBytes(con);
         });
@@ -30,15 +29,24 @@ public class LuaManager : MonoBehaviour
 
     private void InitLua()
     {
-        luaEnv.Global.Get("DoFile", out DoFile);
+        luaEnv.Global.Get("DoFile", out RequireFile);
         luaEnv.Global.Get("DoModule", out DoModule);
+    }
+
+    public static void LoadAndDoFile(string filePath)
+    {
+        var newPath = Path.Combine(Application.dataPath, "../LuaCode/" + filePath + ".lua");
+        var con = File.ReadAllText(newPath);
+        var bytes = System.Text.Encoding.UTF8.GetBytes(con);
+        luaEnv.DoString(bytes);
     }
 
     [CSharpCallLua]
     public delegate void S_VDel(string s1);
     [CSharpCallLua]
     public delegate LuaTable S_TDel(string s1);
-    public static S_VDel DoFile;
+    public static S_VDel RequireFile;
     public static S_TDel DoModule;
+
     public static LuaEnv luaEnv;
 }

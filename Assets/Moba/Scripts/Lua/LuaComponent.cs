@@ -15,7 +15,7 @@ public class LuaComponent : MonoBehaviour {
         }
         else
         {
-            LuaManager.DoFile(luaFile);
+            LuaManager.RequireFile(luaFile);
         }
     }
 
