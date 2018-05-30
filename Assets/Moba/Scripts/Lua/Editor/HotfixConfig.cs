@@ -19,6 +19,10 @@ public static class HotfixConfig
             var allTypes = Assembly.Load("Assembly-CSharp").GetTypes();
 
             //return allTypes.Select((a)=>a).ToList();
+            var excludeNames = new List<string>()
+            {
+                "AssetBundles",
+            };
 
             var pattern = @"class\s+(\w+)";
             var reg = new Regex(pattern);
@@ -55,12 +59,22 @@ public static class HotfixConfig
             var retList = new List<Type>();
             foreach(var t in allTypes)
             {
+                var fail = false;
+                foreach(var ex in excludeNames)
+                {
+                    if (t.FullName.Contains(ex))
+                    {
+                        fail = true;
+                        break;
+                    }
+                }
+                if (fail) continue;
                 if (fileTypes.Contains(t.Name))
                 {
                     retList.Add(t);
                 }
             }
-            Debug.LogError("Types:"+allTypes.Length+":"+retList.Count+":"+fileTypes.Count);
+            Debug.Log("Types:"+allTypes.Length+":"+retList.Count+":"+fileTypes.Count);
 
             var sb = new StringBuilder();
             sb.AppendLine(retList.Count.ToString());
