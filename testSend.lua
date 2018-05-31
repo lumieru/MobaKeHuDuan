@@ -1,0 +1,1 @@
+CS.MyLib.WindowMng.windowMng:ShowNotifyLog("TestSend")
