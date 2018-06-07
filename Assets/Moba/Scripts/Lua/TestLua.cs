@@ -12,6 +12,12 @@ public class TestLua : MonoBehaviour {
         LuaManager.LoadAndDoFile(luaFile);
     }
 
+    [ButtonCallFunc()]
+    public bool DoFile;
+    public void DoFileMethod()
+    {
+        LuaManager.RequireFile(luaFile);
+    }
     public void Update()
     {
         

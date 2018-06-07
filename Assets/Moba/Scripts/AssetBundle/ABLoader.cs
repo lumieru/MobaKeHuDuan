@@ -93,11 +93,19 @@ public class ABLoader : SerializedMonoBehaviour
             kvPair.Add(k.key, k.value);
         }
     }
-    private IEnumerator Start()
+    //private IEnumerator Start()
+    public IEnumerator InitLoader()
     {
         var async = abm.InitializeAsync();
         yield return async;
         initYet = async.Success;
+    }
+    private AssetBundle luaAb;
+    public IEnumerator LoadLuaAb()
+    {
+        var async = abm.GetBundleAsync("lua");
+        yield return async;
+        luaAb = async.AssetBundle;
     }
     /// <summary>
     /// Resources.Load
@@ -117,6 +125,25 @@ public class ABLoader : SerializedMonoBehaviour
         var go = ab.LoadAsset<GameObject>(path);
         ret[0] = go;
         AssetBundleMemoryManager.Instance.AddAB(container);
+    }
+
+    /// <summary>
+    /// 相对于LuaCode的路径
+    /// 并且没有.lua
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <returns></returns>
+    public byte[] LoadLua(string filePath)
+    {
+        var path = LuaResPathToAbPath(filePath);
+        Debug.LogError(path);
+        /*
+        var async = abm.GetBundleAsync("lua");
+        yield return async;
+        */
+        var txt = luaAb.LoadAsset<TextAsset>(path);
+        var bytes = txt.bytes;
+        return bytes;
     }
 
     public bool hasScene(string sceneName)
@@ -160,8 +187,15 @@ public class ABLoader : SerializedMonoBehaviour
 
 
 
+
     public string ResPathToAbPath(string resPath)
     {
         return Path.Combine("assets/resources", resPath+".prefab").ToLower().Replace("\\", "/");
+    }
+
+
+    public string LuaResPathToAbPath(string resPath)
+    {
+        return Path.Combine("assets/luacode", resPath + ".lua.txt").ToLower().Replace("\\", "/");
     }
 }

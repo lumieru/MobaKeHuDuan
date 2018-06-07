@@ -7,8 +7,68 @@ using UnityEditor;
 using System.IO;
 using System;
 
-public class ABBuilder
+public static class ABBuilder
 {
+
+    internal static void BuildLuaAB(AssetBundleManageTab tab)
+    {
+        mgTab = tab;
+
+        //从外部LuaCode 复制到Asset 目录中的LuaCode
+        //删除旧的目录
+        //复制整个目录
+        //打包一个AB
+        //修改每个lua文件名字 xxx.lua.txt 来确保可以被打包
+
+        var destPath = Path.Combine(Application.dataPath, "LuaCode");
+        var srcPath = Path.Combine(Application.dataPath, "../LuaCode");
+        if (Directory.Exists(destPath))
+        {
+            Directory.Delete(destPath, true);
+        }
+
+        Directory.CreateDirectory(destPath);
+        srcPath = Path.GetFullPath(srcPath);
+        destPath = Path.GetFullPath(destPath);
+
+        var dirInfo = new DirectoryInfo(srcPath);
+        var luaFiles = dirInfo.GetFiles("*.lua", SearchOption.AllDirectories);
+        foreach (var l in luaFiles)
+        {
+            var dirName = l.DirectoryName;
+            var newDir = dirName.Replace(srcPath, destPath);
+            if (!Directory.Exists(newDir))
+            {
+                Directory.CreateDirectory(newDir);
+            }
+
+            var srcFileName = l.FullName;
+
+            var destFileName = srcFileName.Replace(srcPath, destPath);
+            destFileName += ".txt";
+            File.Copy(srcFileName, destFileName);
+        }
+
+        GenLuaAB();
+    }
+    private static void GenLuaAB()
+    {
+        Model.ForceShare = true;
+        DeleteAll(new List<string>() { "lua"}, null);
+        var nb = GenBundleMethod("lua");
+        mgTab.m_BundleTree.ReloadAndSelect(nb.nameHashCode, false);
+
+        AddLuaToAB(nb);
+        var bd = nb as BundleDataInfo;
+        bd.GatherAllDep();
+
+        var lsNb = new List<BundleInfo>();
+        lsNb.Add(nb);
+        mgTab.UpdateSelectedBundles(lsNb);
+
+        Model.ForceShare = false;
+    }
+
     private static AssetBundleManageTab mgTab;
 
     public static float abNum = 11;
@@ -17,7 +77,7 @@ public class ABBuilder
         Model.ForceShare = true;
 
         mgTab = tab;
-        DeleteAll();
+        DeleteAll(null, null);
 
         //重新初始化Full信息
         var chd1 = Model.s_RootLevelBundles.GetChild("full");
@@ -100,6 +160,7 @@ public class ABBuilder
 
         }
         Model.ForceShare = false;
+        BuildLuaAB(tab);
     }
 
     /// <summary>
@@ -260,12 +321,22 @@ public class ABBuilder
         return null;
     }
 
-    private static void DeleteAll()
+    private static void DeleteAll(List<string> toDelete, List<string> toKeep)
     {
         var lb = new List<BundleInfo>();
         foreach (var c in Model.s_RootLevelBundles.m_Children)
         {
-            lb.Add(c.Value);
+            if (toDelete != null)
+            {
+                if (toDelete.Contains(c.Value.m_Name.bundleName))
+                {
+                    lb.Add(c.Value);
+                }
+            }
+            else
+            {
+                lb.Add(c.Value);
+            }
         }
         Model.HandleBundleDelete(lb);
         mgTab.m_BundleTree.ReloadAndSelect(new List<int>());
@@ -317,6 +388,27 @@ public class ABBuilder
         var newBundle = AssetBundleBrowser.AssetBundleModel.Model.CreateEmptyBundle(null, bundleName);
         return newBundle;
     }
+    static void AddLuaToAB(BundleInfo newBundle)
+    {
+        var path = Path.Combine(Application.dataPath, "LuaCode");
+        Debug.LogError(path);
+        var dirInfo = new DirectoryInfo(path);
+        var allFiles = dirInfo.GetFiles("*.lua.txt", SearchOption.AllDirectories);
+        var assetInfo = new List<AssetInfo>();
+        foreach(var a in allFiles)
+        {
+            var ap = FullPathToUnityPath(a.FullName);
+            var asset = Model.CreateAsset(ap, newBundle.m_Name.bundleName);
+            if (asset != null)
+            {
+                assetInfo.Add(asset);
+            }
+        }
+
+        Model.MoveAssetToBundle(assetInfo, newBundle.m_Name.bundleName, string.Empty);
+        Model.ExecuteAssetMove();
+        newBundle.RefreshAssetList();
+    }
 
     internal static void AddAsset(BundleInfo newBundle)
     {
@@ -328,7 +420,7 @@ public class ABBuilder
         foreach (var a in allFiles)
         {
             var ap = FullPathToUnityPath(a.FullName);
-            var asset = Model.CreateAsset(ap, "full");
+            var asset = Model.CreateAsset(ap, newBundle.m_Name.bundleName);
             if (asset != null)
             {
                 assetInfo.Add(asset);
@@ -338,7 +430,7 @@ public class ABBuilder
         assetInfo.Add(scene);
 
         Debug.LogError("AddAsset:" + assetInfo.Count);
-        Model.MoveAssetToBundle(assetInfo, "full", String.Empty);
+        Model.MoveAssetToBundle(assetInfo, newBundle.m_Name.bundleName, String.Empty);
         Model.ExecuteAssetMove();
         newBundle.RefreshAssetList();
     }

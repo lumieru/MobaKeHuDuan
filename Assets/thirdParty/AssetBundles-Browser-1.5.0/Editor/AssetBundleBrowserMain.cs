@@ -199,6 +199,10 @@ namespace AssetBundleBrowser
                 */
                 ABBuilder.SplitAB(m_ManageTab);
             }
+            if (GUILayout.Button("LuaBuild"))
+            {
+                ABBuilder.BuildLuaAB(m_ManageTab);
+            }
             float toolbarWidth = position.width - k_ToolbarPadding * 4 - m_RefreshTexture.width;
             //string[] labels = new string[2] { "Configure", "Build"};
             string[] labels = new string[3] { "Configure", "Build", "Inspect" };

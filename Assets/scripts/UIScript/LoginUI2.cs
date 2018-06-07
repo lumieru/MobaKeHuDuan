@@ -17,17 +17,18 @@ namespace MyLib
             SetCallback("StartServer", OnServer);
             sync = GetInput("SyncInput");
             popList = GetName("ServerList").GetComponent<UIPopupList>();
+            InitStart();
         }
         private List<string> ips = new List<string>()
         {
             "192.168.3.118",
-            "127.0.0.1",
-            "127.0.0.1",
-            "127.0.0.1",
-            "127.0.0.1",
+            "localhost",
+            "localhost",
+            "localhost",
+            "localhost",
         };
 
-        private void Start()
+        private void InitStart()
         {
             if (!SaveGame.saveGame.IsTest && !NetDebug.netDebug.TestAndroid)
             {
@@ -99,11 +100,21 @@ namespace MyLib
                     }
                 }
             }
-
+            InitServer();
             if (NetDebug.netDebug.JumpLogin)
             {
                 OnStart(null);
             }
+        }
+
+        private void InitServer()
+        {
+            var ca = ClientApp.Instance;
+            var ind = popList.items.IndexOf(popList.value);
+            ca.QueryServerIP = ips[ind];
+            ca.testPort = System.Convert.ToInt32(port.value);
+            ca.syncFreq = System.Convert.ToSingle(sync.value);
+            ClientApp.Instance.AfterInitServer();
         }
 
         private bool serverYet = false;

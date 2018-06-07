@@ -15,22 +15,24 @@ public class LuaManager : MonoBehaviour
         luaEnv = new LuaEnv();
         luaEnv.AddLoader((ref string filePath) =>
         {
+            /*
             var newPath = Path.Combine(Application.dataPath, "../LuaCode/" + filePath + ".lua");
             var con = File.ReadAllText(newPath);
             return System.Text.Encoding.UTF8.GetBytes(con);
+            */
+            return ABLoader.Instance.LoadLua(filePath);
         });
+        //InitLua();
+    }
 
+    public void InitLua()
+    {
         luaEnv.DoString(@"
             require 'Main'
         ");
-        InitLua();
-        startYet = true;
-    }
-
-    private void InitLua()
-    {
         luaEnv.Global.Get("DoFile", out RequireFile);
         luaEnv.Global.Get("DoModule", out DoModule);
+        startYet = true;
     }
 
     public static void LoadAndDoFile(string filePath)
