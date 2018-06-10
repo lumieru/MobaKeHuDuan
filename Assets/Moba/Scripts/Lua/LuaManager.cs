@@ -15,12 +15,11 @@ public class LuaManager : MonoBehaviour
         luaEnv = new LuaEnv();
         luaEnv.AddLoader((ref string filePath) =>
         {
-            /*
             var newPath = Path.Combine(Application.dataPath, "../LuaCode/" + filePath + ".lua");
             var con = File.ReadAllText(newPath);
+            filePath = filePath + ".lua";
             return System.Text.Encoding.UTF8.GetBytes(con);
-            */
-            return ABLoader.Instance.LoadLua(filePath);
+            //return ABLoader.Instance.LoadLua(filePath);
         });
         //InitLua();
     }
