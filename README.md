@@ -1,6 +1,5 @@
 ### 系统架构视频详解
 
-http://www.taikr.com/course/967
 
 
 ###FAQ 常见问题
