@@ -1,5 +1,6 @@
 ### 系统架构视频详解
 
+http://edu.manew.com/my/course/655
 
 
 ###FAQ 常见问题
